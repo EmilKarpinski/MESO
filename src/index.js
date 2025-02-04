@@ -6,19 +6,22 @@ const Word_List = {
     "W2":["ANIMAL", "Not a plant"],
     "W3":["APPLE", "One a day to keep the MDs away"],
     "W4":["FAKE", "Not real"],
-    "W5":["VENOM", "Often mistaken for poison"]
+    "W5":["VENOM", "Often mistaken for poison"],
+    "W6":["SSS", "A hissing like sound"]
 };
 
 // Stores the central theme word
-const ThemeWord = "SNAKE";
+const ThemeWord = "SNAKES";
 
 // QoL variables
 // AlreadyWonFlag is a boolean that stores if someone has already won. If they have it stops reading keyboard commands and stops the popup from appearing. 
 let AlreadyWonFlag = false; 
 
-// Two constants which constrain the grid size. Eventually this will be in a seperate file or calculated from the words themselves, but leaving this here for now.
-const GridNumCols = 15;
-const GridNumRows = 5;
+// Two constants which constrain the grid size. 
+// Columns will probably always be fixed as the white space padding on either side doesn't matter.
+// Number of rows is dependant on the size of the word list, so we just get that here.
+const GridNumCols = 17;
+const GridNumRows = Object.keys(Word_List).length;
 
 // Two more variables which track where the cursor currently is
 // These use let because we're gonna be reassigning them throughout the program

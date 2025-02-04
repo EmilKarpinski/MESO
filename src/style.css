@@ -51,8 +51,10 @@ body {
   /* sets the rows (6) and the columns (5) */
   /* Manually setting this for now. I'm not sure how to get them to talk, so this is hardcoded at the moment. 
   Ideally this should take the same info in the index.js and set it automatically or make is so it doesn't matter. */
-  grid-template-rows: repeat(5, auto);
-  grid-template-columns: repeat(15, auto);
+  /* I'm keeping this set to 15x9 which allows for a max of 9 words with 7 character long clues. Might consider upping to 17 to allow 8-char words though */
+  /* Not sure the rows thing here actually does anything. It seems I can go above this number in the index.js file and it generates the grid just fine */
+  grid-template-rows: repeat(9, auto);
+  grid-template-columns: repeat(17, auto);
 }
 
 .box {
