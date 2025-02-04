@@ -1,17 +1,13 @@
 // Tutorial from here: https://www.youtube.com/watch?v=oKM2nQdQkIU
 
-// Stores the words and clues
-const Word_List = {
-    "W1":["FANGS", "Pair of teeth"], 
-    "W2":["ANIMAL", "Not a plant"],
-    "W3":["APPLE", "One a day to keep the MDs away"],
-    "W4":["FAKE", "Not real"],
-    "W5":["VENOM", "Often mistaken for poison"],
-    "W6":["SSS", "A hissing like sound"]
-};
+// Importing the puzzle parameters
+import { Puzzle_Word_List, Puzzle_ThemeWord } from './Puzzle.js';
 
-// Stores the central theme word
-const ThemeWord = "SNAKES";
+// Setting variables to the imported puzzle parameters
+// The Word list which contains the crossword words and puzzles
+// The ThemeWord which contains the central word the individual words are related to.
+const Word_List = Puzzle_Word_List;
+const ThemeWord = Puzzle_ThemeWord;
 
 // QoL variables
 // AlreadyWonFlag is a boolean that stores if someone has already won. If they have it stops reading keyboard commands and stops the popup from appearing. 
