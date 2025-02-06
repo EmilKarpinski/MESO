@@ -61,7 +61,7 @@ body {
   /* Sets the size of the boxes and the border */
   width: 60px;
   height: 60px;
-  border: 1px solid black;
+  border: 0px solid black;
   /* Changed the margin here to 0 to have the boxes side by side */
   margin: 1px;
   color: black;
