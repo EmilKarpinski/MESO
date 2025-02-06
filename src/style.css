@@ -152,3 +152,13 @@ hr {
   height: 25px;
   margin-right: 0.75rem;
 }
+
+.helpbutton{
+  display: flex;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
