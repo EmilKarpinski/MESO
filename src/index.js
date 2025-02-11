@@ -1,7 +1,7 @@
 // Tutorial from here: https://www.youtube.com/watch?v=oKM2nQdQkIU
 
 // Importing some packages to make this whole thing pretty
-import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/+esm'
+import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/+esm';
 
 // Importing the puzzle parameters
 import { Puzzle_Word_List, Puzzle_ThemeWord } from './Puzzle.js';
@@ -479,6 +479,7 @@ function WinDisplay(){
         confirmButtonText: 'Thanks For Playing',
         backdrop: 'rgba(212, 233, 214, 0.4)'
       })
+    // Would like to eventually also add some animation here (like the fireworks library)
 }
 
 // called here so that it runs on startup (i.e. not nested in something.)
