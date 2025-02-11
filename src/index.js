@@ -482,6 +482,44 @@ function WinDisplay(){
     // Would like to eventually also add some animation here (like the fireworks library)
 }
 
+// This listens for a click on the "?" in the main page and then prings the help controls
+// No idea why thefunction isn't refered to with the () here (i.e. PrintHelpControls()), but if you include them it prints right when the game starts.
+document.addEventListener('DOMContentLoaded', function () {
+    var HelpPressed = document.getElementById('HelpButton');
+    if (HelpPressed) {
+        HelpPressed.addEventListener('click', PrintHelpControls);
+    }
+  });
+
+// Prints a series of three pop-ups that explain the goal of the game and the controls. 
+// These are all nested so one comes after the other.
+function PrintHelpControls() {
+    Swal.fire({
+        title: "Goal",
+        text: "The goal of the game is to first solve each word given the clues, then find the linking theme word (the \"linkr\").",
+        icon: "info",
+        confirmButtonColor: "#3085d6",
+        confirmButtonText: "Next &rarr;"
+    }).then(() => {
+        Swal.fire({
+            imageUrl: "./src/Assets/Linkr_UpDown.png",
+            title: "Controls",
+            padding: "3em",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "Next &rarr;",
+            text: "Use the Up and Down arrow keys to move between words.",
+        }).then(() => {
+            Swal.fire({
+                imageUrl: "./src/Assets/Linkr_LeftToRight.png",
+                title: "Controls",
+                padding: "3em",
+                confirmButtonColor: "Green",
+                confirmButtonText: "Back to Game",
+                text: "Use the Left and Right arrow keys to slide the current word left and right.",
+            });
+        });
+    });
+}
 // called here so that it runs on startup (i.e. not nested in something.)
 startup();
 
