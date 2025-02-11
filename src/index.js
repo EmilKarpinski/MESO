@@ -1,5 +1,8 @@
 // Tutorial from here: https://www.youtube.com/watch?v=oKM2nQdQkIU
 
+// Importing some packages to make this whole thing pretty
+import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/+esm'
+
 // Importing the puzzle parameters
 import { Puzzle_Word_List, Puzzle_ThemeWord } from './Puzzle.js';
 
@@ -461,10 +464,21 @@ function isWinner(){
         if (CentralWord == ThemeWord && AlreadyWonFlag == false){
             // Should set a flag to stop keyboard events alerts popping up after.
             AlreadyWonFlag = true;
-            alert("Congratulation! You Win!");
+            // alert("Congratulation! You Win!");
+            WinDisplay();
 
         }
     },100);
+}
+function WinDisplay(){
+    // Makes a fancier alert box using sweetalerts2
+    Swal.fire({
+        imageUrl: "./src/Assets/WinnerCrown.png",
+        padding: "3em",
+        text: 'Congratulations on completing today\'s puzzle. \n Come back tomorrow for another!',
+        confirmButtonText: 'Thanks For Playing',
+        backdrop: 'rgba(212, 233, 214, 0.4)'
+      })
 }
 
 // called here so that it runs on startup (i.e. not nested in something.)
