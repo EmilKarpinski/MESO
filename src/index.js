@@ -495,9 +495,12 @@ document.addEventListener('DOMContentLoaded', function () {
 // These are all nested so one comes after the other.
 function PrintHelpControls() {
     Swal.fire({
-        title: "Goal",
-        text: "The goal of the game is to first solve each word given the clues, then find the linking theme word (the \"linkr\").",
-        icon: "info",
+        title: "Welcome to MESO",
+        text: "A mesostic is a porm where the lines contain an intersecting vertical phrase. The goal of the game is to first solve each word given the clues, then find the central theme word that links them all.",
+        imageUrl: "./src/Assets/Meso_Logo.png",
+        imageHeight: 200,
+        imageWidth: 250,
+        padding: "3em",
         confirmButtonColor: "#3085d6",
         confirmButtonText: "Next &rarr;"
     }).then(() => {
