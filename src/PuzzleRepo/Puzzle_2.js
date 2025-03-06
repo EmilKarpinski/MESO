@@ -1,11 +1,11 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
     "W1":["FISH", "Most of a mermaid's friends (probably)"], 
-    "W2":["WHITE", ""],
-    "W3":["JAWS", ""],
-    "W4":["PREDATOR", ""],
-    "W5":["TIGER", ""],
-    "W6":["SEA", ""]
+    "W2":["WHITE", "The color of a 'great' predator's belly"],
+    "W3":["JAWS", "Teeth in a blockbuster thriller"],
+    "W4":["PREDATOR", "Always hunting for a meal"],
+    "W5":["TIGER", "Stripes and a roar"],
+    "W6":["SEA", "The big blue, no land in sight"]
 };
 
 // Storing the central theme word
