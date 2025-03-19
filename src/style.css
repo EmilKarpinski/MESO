@@ -1,6 +1,7 @@
 html,
 body {
   background: #F4F3F2;
+  zoom: 0.8;
 }
 /* Colours for the javascript stuff */
 :root {
