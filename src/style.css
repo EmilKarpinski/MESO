@@ -1,12 +1,6 @@
 html,
 body {
   background: #F4F3F2;
-  width: 95vw;
-  height: 95vh;
-}
-div {
-  width: 100vw;
-  height: 100vh;
 }
 /* Colours for the javascript stuff */
 :root {
