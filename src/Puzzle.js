@@ -1,12 +1,15 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["FANGS", "Sharp pair of teeths"], 
-    "W2":["ANIMAL", "The kingdom of beasts"],
-    "W3":["APPLE", "One a day to keep the MDs away"],
-    "W4":["FAKE", "Not real"],
-    "W5":["VENOM", "Poisonous substance from a bite"]
-    // "W6":["SSS", "A hissing like sound"]
+    "W1":["ECOLI", "Microbial workhorse (no punctuation)"], 
+    "W2":["MAMMOTH", "Bit bigger than a woolly mouse"],
+    "W3":["MULTIPLEX", "_________ all the things! (Do a bunch)"],
+    "W4":["CRISPR", "2020 Nobel Prize in Chemistry"],
+    "W5":["RECODE", "Remove a codon from an orgism"],
+    "W6":["SYNTHESIS", "1MB+ plus around the corner? DNA _________"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "SNAKE";
+export const Puzzle_ThemeWord = "CHURCH";
+
+// Exporting the puzzle author
+export const Puzzle_Author = "Emil Karpinski"

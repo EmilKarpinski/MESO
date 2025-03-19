@@ -1,12 +1,12 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["GIFT", ""], 
-    "W2":["LILY", ""],
-    "W3":["BLOOM", ""],
-    "W4":["WILD", ""],
-    "W5":["HONEY", ""],
-    "W6":["COLORS", ""],
-    "W7":["ROSE", ""]
+    "W1":["GIFT", "A surprise in a box, not a surprise visit"], 
+    "W2":["PLANT", "To place something suspiciously"],
+    "W3":["BLOOM", "What a garden is full of in spring"],
+    "W4":["WILD", "Not tame or domesticated"],
+    "W5":["HONEY", "Sweet, sticky treat from bees"],
+    "W6":["COLORS", "e.g. Red, white, and blue"],
+    "W7":["ROSE", "A symbol of love"]
 };
 
 // Storing the central theme word

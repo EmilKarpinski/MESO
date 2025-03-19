@@ -4,13 +4,17 @@
 import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/+esm';
 
 // Importing the puzzle parameters
-import { Puzzle_Word_List, Puzzle_ThemeWord } from './Puzzle.js';
+import { Puzzle_Word_List, Puzzle_ThemeWord, Puzzle_Author } from './Puzzle.js';
 
 // Setting variables to the imported puzzle parameters
 // The Word list which contains the crossword words and puzzles
 // The ThemeWord which contains the central word the individual words are related to.
 const Word_List = Puzzle_Word_List;
 const ThemeWord = Puzzle_ThemeWord;
+const Author = Puzzle_Author; 
+
+// Writing the puzzle author to the page.
+document.getElementById('Author').innerHTML="Puzzle By: " + Author;
 
 // QoL variables
 // AlreadyWonFlag is a boolean that stores if someone has already won. If they have it stops reading keyboard commands and stops the popup from appearing. 
