@@ -1,8 +1,12 @@
 html,
 body {
   background: #F4F3F2;
-  zoom: 0.8;
 }
+#my{
+  zoom: 10%;
+}
+
+
 /* Colours for the javascript stuff */
 :root {
   --default: #121213;
