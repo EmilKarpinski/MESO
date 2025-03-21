@@ -283,7 +283,8 @@ function registerKeyboardEvents(){
         if (AlreadyWonFlag ==false){
             // Preforming checks for various keys. 
             // First checking for backspace which will call a function to delete the previous letter.
-            if (key == 'Backspace'){
+            // Also adding a check here to see if the current row has the correct word (CorrectRow[CurrRow] != 1). If so I disable editing the text of that row.
+            if (key == 'Backspace' && CorrectRow[CurrRow] != 1){
                 removeLetter(); 
             }
             // Might also consider adding a delete key here.
@@ -305,7 +306,8 @@ function registerKeyboardEvents(){
                 MoveLeft(); 
             }
             // Lastly checks to see if a letter is pressed (using the isLetter function), and adds it to the current word.
-            if (isLetter(key)){
+            // Also adding a check here to see if the current row has the correct word (CorrectRow[CurrRow] != 1). If so I disable editing the text of that row.
+            if (isLetter(key) && CorrectRow[CurrRow] != 1){
                 addLetter(key); 
             }
         }
@@ -559,20 +561,32 @@ function PrintHelpControls() {
         confirmButtonText: "Next &rarr;"
     }).then(() => {
         Swal.fire({
-            imageUrl: "./src/Assets/Linkr_UpDown.png",
             title: "Controls",
+            text: "Use your keyboard to enter the word for each clue. Correct words change color.",
+            // TO DO: ADD A BETTER IMAGE HERE
+            imageUrl: "./src/Assets/Meso_Logo.png",
+            imageHeight: 200,
+            imageWidth: 250,
             padding: "3em",
             confirmButtonColor: "#3085d6",
             confirmButtonText: "Next &rarr;",
-            text: "Use the Up and Down arrow keys to move between words.",
         }).then(() => {
             Swal.fire({
-                imageUrl: "./src/Assets/Linkr_LeftToRight.png",
+                imageUrl: "./src/Assets/Linkr_UpDown.png",
                 title: "Controls",
                 padding: "3em",
-                confirmButtonColor: "Green",
-                confirmButtonText: "Back to Game",
-                text: "Use the Left and Right arrow keys to slide the current word left and right.",
+                confirmButtonColor: "#3085d6",
+                confirmButtonText: "Next &rarr;",
+                text: "Use the Up and Down arrow keys to move between words.",
+            }).then(() => {
+                Swal.fire({
+                    imageUrl: "./src/Assets/Linkr_LeftToRight.png",
+                    title: "Controls",
+                    padding: "3em",
+                    confirmButtonColor: "Green",
+                    confirmButtonText: "Back to Game",
+                    text: "Use the Left and Right arrow keys to slide the current word left and right.",
+                });
             });
         });
     });
