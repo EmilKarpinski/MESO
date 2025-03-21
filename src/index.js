@@ -560,8 +560,8 @@ function PrintHelpControls() {
             html: "Use your keyboard to enter the word for each clue. <br />Correct words change color.",
             // TO DO: ADD A BETTER IMAGE HERE
             imageUrl: "./src/Assets/MESO_KeyboardControls.png",
-            // imageHeight: 200,
-            // imageWidth: 250,
+            imageHeight: 420,
+            imageWidth: 400,
             padding: "3em",
             confirmButtonColor: "#3085d6",
             confirmButtonText: "Next &rarr;",
