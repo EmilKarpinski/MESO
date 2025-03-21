@@ -69,24 +69,19 @@ const boxtype = {
 
 // Startup function. 
 function startup(){
-    //alert('TEST');
-    // console.log(Word_List.W1[0].length);
     // I believe this retrieves the parameters for the game for the style.css file. 
     const game = document.getElementById('game');
     drawGrid(game);
     drawClues(clue);
 
+    // Adding a function here to welcome first time users and direct them to the help menu
+    FirstTime(); 
+
     // Tesitng the updateGrid function.
-    // boxtype.grid[0][7] = "empty";
-    // state.grid[1][7] = "A";
     updateGrid();
 
     // Gets what the user is pressing.
     registerKeyboardEvents();
-
-    // Reveals what the secret word to guess is in the console log
-    // console.log(state.secret);
-
 }
 
 // Creates the main grid, but drawing boxes
@@ -590,6 +585,35 @@ function PrintHelpControls() {
             });
         });
     });
+}
+// Function to welcome the player for the first time, direct them to the help menu, and ask them if they'd like to disable the welcome menu with a cookie.
+function FirstTime(){
+    // Checking if there's a cookie asking for the welcome message to be disabled. 
+    // If not displaying the welcome message.
+    if (document.cookie == "MesoWelcomeDisabled"){
+        return;
+    }
+    // If a cookie is not detected, show the welcome pop-up and ask if the user wants to disable future welcome popups.
+    else{
+        Swal.fire({
+            title: "Welcome to MESO",
+            html: "Gameplay instructions are available by clicking on the question mark (?) in the top right corner.<br /><br />Would you like to disbale this popup in the future?<br /><br /><i>Note: MESO currently does not work on mobile.</i>",
+            imageUrl: "./src/Assets/Meso_Logo.png",
+            imageHeight: 200,
+            imageWidth: 250,
+            padding: "3em",
+            showCancelButton: true,
+            confirmButtonColor: "#3A8F30",
+            confirmButtonText: "Yes,Disable",
+            cancelButtonText: "No, keep it for now!",
+            cancelButtonColor: "#C73838",
+          }).then((result) => {
+            // If they would like to disable future popups we set a cookie to remember this choice.
+            if (result.isConfirmed) {
+                document.cookie = "MesoWelcomeDisabled";
+            }
+          });
+    }
 }
 // called here so that it runs on startup (i.e. not nested in something.)
 startup();
