@@ -557,11 +557,11 @@ function PrintHelpControls() {
     }).then(() => {
         Swal.fire({
             title: "Controls",
-            text: "Use your keyboard to enter the word for each clue. Correct words change color.",
+            html: "Use your keyboard to enter the word for each clue. <br />Correct words change color.",
             // TO DO: ADD A BETTER IMAGE HERE
-            imageUrl: "./src/Assets/Meso_Logo.png",
-            imageHeight: 200,
-            imageWidth: 250,
+            imageUrl: "./src/Assets/MESO_KeyboardControls.png",
+            // imageHeight: 200,
+            // imageWidth: 250,
             padding: "3em",
             confirmButtonColor: "#3085d6",
             confirmButtonText: "Next &rarr;",
