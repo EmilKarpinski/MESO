@@ -66,7 +66,19 @@ body {
   border: 0px solid black;
   /* Changed the margin here to 0 to have the boxes side by side */
   margin: 1px;
-  color: black;
+  /* color: black; */
+  /* text-transform: uppercase; */
+  /* centers and formats the text */
+  /* display: grid; */
+  /* place-items: center; */
+  /* font settings */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-size: 2.4rem; */
+}
+
+.box.empty {
+  background: var(--empty);
+  color: black; 
   text-transform: uppercase;
   /* centers and formats the text */
   display: grid;
@@ -76,24 +88,87 @@ body {
   font-size: 2.4rem;
 }
 
-.box.empty {
-  background: var(--empty);
-}
-
 .box.wrong {
   background: var(--wrong);
   border: 3px solid black; 
+  color: black; 
+  text-transform: uppercase;
+  /* centers and formats the text */
+  display: grid;
+  place-items: center;
+  /* font settings */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+}
+
+.box.wrong-correct {
+  background: var(--wrong);
+  border: 3px solid black;
+  color: purple; 
+  text-transform: uppercase;
+  /* centers and formats the text */
+  display: grid;
+  place-items: center;
+  /* font settings */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
 }
 
 .box.right {
   background: var(--right);
-  border: 3px solid black; 
+  border: 3px solid black;
+  color: black; 
+  text-transform: uppercase;
+  /* centers and formats the text */
+  display: grid;
+  place-items: center;
+  /* font settings */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.4rem; 
+}
+
+.box.right-correct {
+  background: var(--right);
+  border: 3px solid black;
+  color: purple; 
+  text-transform: uppercase;
+  /* centers and formats the text */
+  display: grid;
+  place-items: center;
+  /* font settings */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
 }
 
 .box.active {
   background: var(--empty);
   border: 3px solid red;
+  color: black; 
+  text-transform: uppercase;
+  /* centers and formats the text */
+  display: grid;
+  place-items: center;
+  /* font settings */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
 }
+
+.box.active-correct {
+  background: var(--empty);
+  border: 3px solid red;
+  color: purple; 
+  text-transform: uppercase;
+  /* centers and formats the text */
+  display: grid;
+  place-items: center;
+  /* font settings */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
 
 .animated {
   animation: flip 0.5s ease;

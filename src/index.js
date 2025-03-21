@@ -31,6 +31,11 @@ const GridNumRows = Object.keys(Word_List).length;
 let CurrRow = 0; 
 let CurrCol = 0; 
 
+// Creating a 1D array which stores if the word in that row is correct (1) or wrong (0). Starting this with 10, then setting the length of it equal to the number of rows in the puzzle.
+let CorrectRow = [0,0,0,0,0,0,0,0,0,0];
+CorrectRow.length = GridNumRows;
+
+
 // One final variable which stores the reference column for the middle of the puzzle which never moves.
 const MidCol = (GridNumCols-1)/2;
 
@@ -202,24 +207,67 @@ function UpdateBox(row, col){
     const box = document.getElementById(`box${row}${col}`); 
     box.textContent=state.grid[row][col];
     if (boxtype.grid[row][col] == "middle"){
-        box.classList.add('right');
-        box.classList.remove('wrong');
-        box.classList.remove('active');
+        if (CorrectRow[row] == 1){
+            box.classList.add('right-correct');
+            box.classList.remove('right');
+            box.classList.remove('wrong');
+            box.classList.remove('active');
+            box.classList.remove('wrong-correct');
+            box.classList.remove('active-correct');
+        }
+        else {
+            box.classList.add('right');
+            box.classList.remove('right-correct');
+            box.classList.remove('wrong');
+            box.classList.remove('active');
+            box.classList.remove('wrong-correct');
+            box.classList.remove('active-correct');
+        }
     }
     else if (boxtype.grid[row][col] == "word"){
-        box.classList.add('wrong');
-        box.classList.remove('right');
-        box.classList.remove('active');
+        if (CorrectRow[row] == 1){
+            box.classList.add('wrong-correct');
+            box.classList.remove('right');
+            box.classList.remove('wrong');
+            box.classList.remove('active');
+            box.classList.remove('right-correct');
+            box.classList.remove('active-correct');
+
+        }
+        else {
+            box.classList.add('wrong');
+            box.classList.remove('right');
+            box.classList.remove('active');
+            box.classList.remove('right-correct');
+            box.classList.remove('wrong-correct');
+            box.classList.remove('active-correct');
+        }
     }
     else if (boxtype.grid[row][col] == "empty"){
         box.classList.remove('right');
         box.classList.remove('wrong');
         box.classList.remove('active');
+        box.classList.remove('right-correct');
+        box.classList.remove('wrong-correct');
+        box.classList.remove('active-correct');
     }
     if (boxtype.grid[row][col] == "active"){
-        box.classList.remove('right');
-        box.classList.remove('wrong');
-        box.classList.add('active');
+        if (CorrectRow[row] == 1){
+            box.classList.add('active-correct');
+            box.classList.remove('right');
+            box.classList.remove('wrong');
+            box.classList.remove('active');
+            box.classList.remove('right-correct');
+            box.classList.remove('wrong-correct');
+        }
+        else {
+            box.classList.add('active');
+            box.classList.remove('right');
+            box.classList.remove('wrong');
+            box.classList.remove('right-correct');
+            box.classList.remove('wrong-correct');
+            box.classList.remove('active-correct');
+        }
     }
 }
 
@@ -262,11 +310,11 @@ function registerKeyboardEvents(){
             }
         }
 
-
-        // After capturing the keystroke and making the requisite changes, we update the grid which resets the colouring and text contents.
-        updateGrid(); 
         // Then we check if the person has correctly solved all the clue puzzles and the central theme word
         isWinner(); 
+        // After capturing the keystroke and making the requisite changes, we update the grid which resets the colouring and text contents.
+        updateGrid(); 
+
     }
 }
 
@@ -454,10 +502,12 @@ function isWinner(){
         // Get the word in each row (empty strings are removed), and see if it matches the row entry in the word list.
         // If not return and do nothing.
         if (state.grid[i].reduce((prev, curr) => prev + curr) != Word_List[(Object.keys(Word_List)[i])][0]){
-            return;
+            CorrectRow[i] = 0;
+            // return;
         }
         // If it does take the character in the central theme word and append it.
         else{
+            CorrectRow[i] = 1;
             CentralWord += state.grid[i][MidCol];
         }
     }
