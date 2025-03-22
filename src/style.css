@@ -10,7 +10,7 @@ body {
   --default: #121213;
   --empty: #FFECA1;
   --wrong: #F8EBC9;
-  --right: #4A9D51; 
+  --right: #CFFF8F; 
 }
 
 
@@ -29,6 +29,35 @@ body {
   align-items: start;
   margin-top: 0rem;
   width: 100%;
+}
+
+.title {
+  color: black;
+  text-align: center;
+  font-family: Garamond;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-size: 4rem;
+  /* font-weight: 900; */
+  margin-bottom: 0;
+  position: relative;
+}
+
+.title-word-clone {
+  position: absolute;
+  left: calc(50% + 75px);
+  transform: rotate(25deg);
+  color: purple;
+  font-size: 1.2rem;
+}
+
+.cluetitle {
+  color: black;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.7rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  position: relative;
 }
 
 .ClueBox{
@@ -66,26 +95,18 @@ body {
   border: 0px solid black;
   /* Changed the margin here to 0 to have the boxes side by side */
   margin: 1px;
-  /* color: black; */
-  /* text-transform: uppercase; */
-  /* centers and formats the text */
-  /* display: grid; */
-  /* place-items: center; */
-  /* font settings */
-  /* font-family: Arial, Helvetica, sans-serif; */
-  /* font-size: 2.4rem; */
 }
 
 .box.empty {
   background: var(--empty);
-  color: black; 
+  color: slategray; 
   text-transform: uppercase;
   /* centers and formats the text */
   display: grid;
   place-items: center;
   /* font settings */
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
 }
 
 .box.wrong {
@@ -97,21 +118,21 @@ body {
   display: grid;
   place-items: center;
   /* font settings */
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
 }
 
 .box.wrong-correct {
   background: var(--wrong);
   border: 3px solid black;
-  color: purple; 
+  color: #8F0171; 
   text-transform: uppercase;
   /* centers and formats the text */
   display: grid;
   place-items: center;
   /* font settings */
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -124,21 +145,21 @@ body {
   display: grid;
   place-items: center;
   /* font settings */
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.4rem; 
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem; 
 }
 
 .box.right-correct {
   background: var(--right);
   border: 3px solid black;
-  color: purple; 
+  color: #8F0171; 
   text-transform: uppercase;
   /* centers and formats the text */
   display: grid;
   place-items: center;
   /* font settings */
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -151,51 +172,22 @@ body {
   display: grid;
   place-items: center;
   /* font settings */
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
 }
 
 .box.active-correct {
   background: var(--empty);
   border: 3px solid red;
-  color: purple; 
+  color: #8F0171; 
   text-transform: uppercase;
   /* centers and formats the text */
   display: grid;
   place-items: center;
   /* font settings */
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
   font-weight: bold;
-}
-
-
-
-.title {
-  color: black;
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 4rem;
-  /* font-weight: 900; */
-  margin-bottom: 0;
-  position: relative;
-}
-.cluetitle {
-  color: black;
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2.7rem;
-  margin-bottom: 0;
-  font-weight: bold;
-  position: relative;
-}
-
-.title-word-clone {
-  position: absolute;
-  left: calc(50% + 75px);
-  transform: rotate(25deg);
-  color: purple;
-  font-size: 1.2rem;
 }
 
 hr {
