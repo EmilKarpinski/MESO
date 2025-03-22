@@ -170,9 +170,6 @@ body {
 }
 
 
-.animated {
-  animation: flip 0.5s ease;
-}
 
 .title {
   color: black;
