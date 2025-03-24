@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["CASTLE", ""], 
-    "W2":["KNIGHT", ""],
-    "W3":["QUEEN", ""],
-    "W4":["BISHOP", ""],
-    "W5":["SQUARE", ""]
+    "W1":["CASTLE", "A home for royalty"], 
+    "W2":["KNIGHT", "In shining armor"],
+    "W3":["QUEEN", "Yas, slay _____"],
+    "W4":["BISHOP", "A church official with a big hat"],
+    "W5":["SQUARE", "The shape that's always right—literally"]
 };
 
 // Storing the central theme word

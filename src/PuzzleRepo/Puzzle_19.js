@@ -5,7 +5,7 @@ export const Puzzle_Word_List = {
     "W3":["CHESS", ""],
     "W4":["FORT", "You build one with blankets"],
     "W5":["HOWL", "Miyazaki wizard voiced by Christian Bale"],
-    "W6":["SIEGE", ""]
+    "W6":["SIEGE", "To surround an assault (a structure)"]
 };
 
 // Storing the central theme word

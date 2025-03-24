@@ -1,15 +1,15 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["EGGS", ""], 
-    "W2":["LAMB", ""],
-    "W3":["SPRING", ""],
-    "W4":["HUNT", ""],
-    "W5":["JESUS", ""],
-    "W6":["BRUNCH", ""]
+    "W1":["", ""], 
+    "W2":["", ""],
+    "W3":["", ""],
+    "W4":["", ""],
+    "W5":["", ""],
+    "W6":["", ""]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "EASTER";
+export const Puzzle_ThemeWord = "SPORTS";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"

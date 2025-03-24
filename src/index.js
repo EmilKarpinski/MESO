@@ -526,7 +526,7 @@ function WinDisplay(){
     Swal.fire({
         imageUrl: "./src/Assets/WinnerCrown.png",
         padding: "3em",
-        text: 'Congratulations on completing today\'s puzzle. \n Come back tomorrow for another!',
+        text: 'Congratulations on completing today\'s puzzle. \n New puzzles every weekday by 10am EST!',
         confirmButtonText: 'Thanks For Playing',
         backdrop: 'rgba(212, 233, 214, 0.4)'
       })

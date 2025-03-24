@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["SAFARI", ""], 
-    "W2":["HORN", ""],
+    "W1":["SAFARI", "The ultimate 'nature walk'"], 
+    "W2":["HORN", "Can announce 'I'm here' or 'Get out of my way'"],
     "W3":["AFRICA", "Famous song by Toto"],
-    "W4":["TANK", ""],
-    "W5":["ZOOS", ""]
+    "W4":["TANK", "Can hold soldiers or fish"],
+    "W5":["ZOOS", "Local park of exotic animals"]
 };
 
 // Storing the central theme word
