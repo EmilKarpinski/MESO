@@ -10,3 +10,6 @@ export const Puzzle_Word_List = {
 
 // Storing the central theme word
 export const Puzzle_ThemeWord = "SHARKS";
+
+// Exporting the puzzle author
+export const Puzzle_Author = "Emil Karpinski"
