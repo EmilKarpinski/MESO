@@ -558,10 +558,9 @@ function PrintHelpControls() {
         Swal.fire({
             title: "Controls",
             html: "Use your keyboard to enter the word for each clue. <br />Correct words change color.",
-            // TO DO: ADD A BETTER IMAGE HERE
             imageUrl: "./src/Assets/MESO_KeyboardControls.png",
-            imageHeight: 420,
-            imageWidth: 400,
+            imageHeight: 220,
+            imageWidth: 350,
             padding: "3em",
             confirmButtonColor: "#3085d6",
             confirmButtonText: "Next &rarr;",
