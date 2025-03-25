@@ -4,7 +4,7 @@ export const Puzzle_Word_List = {
     "W2":["MAMMOTH", "Bit bigger than a woolly mouse"],
     "W3":["MULTIPLEX", "_________ all the things! (Do a bunch)"],
     "W4":["CRISPR", "2020 Nobel Prize in Chemistry"],
-    "W5":["RECODE", "Remove a codon from an orgism"],
+    "W5":["RECODE", "Remove a codon from an organism"],
     "W6":["SYNTHESIS", "1MB+ plus around the corner? DNA _________"]
 };
 
