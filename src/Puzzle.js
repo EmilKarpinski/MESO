@@ -1,6 +1,6 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["FANGS", "Sharp pair of teeths like on a bat or vampire"], 
+    "W1":["FANGS", "Sharp pair of teeth like on a bat or vampire"], 
     "W2":["ANIMAL", "The kingdom of beasts"],
     "W3":["APPLE", "One a day to keep the MDs away"],
     "W4":["FAKE", "Not real or an imitation"],
