@@ -285,7 +285,7 @@ function registerKeyboardEvents(){
             // Might also consider adding a delete key here.
 
             // Checking if the down arrow key is pressed which shifts the active focus to another row.
-            if (key == 'ArrowDown'){
+            if (key == 'ArrowDown' || key == 'Tab'){
                 MoveDown(); 
             }
             // Checking if the up arrow key is pressed which shifts the active focus to another row.
