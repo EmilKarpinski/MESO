@@ -508,6 +508,26 @@ function isWinner(){
             CentralWord += state.grid[i][MidCol];
         }
     }
+
+    console.log(CorrectRow);
+    console.log(CorrectRow.includes(0));
+    // Calling a function here to alert the user that 
+    if (CorrectRow.includes(0) == false && document.cookie != "FirstTimeHint"){
+        // Making a popup here that only appears the first time the user plays to tell them to rearrange the words.
+        Swal.fire({
+            position: "top-end",
+            imageUrl: "./src/Assets/Linkr_LeftToRight.png",
+            title: "Well Done",
+            padding: "3em",
+            confirmButtonColor: "Green",
+            confirmButtonText: "Back to Game",
+            text: 'Almost there. Now move the rows left and right to align and reveal the vertical word that links all the words together. Remember all the words are related to the hidden vertical word!',
+            backdrop: 'rgba(212, 233, 214, 0.4)'
+          })
+        // Setting a cookie so this doesn't display again.
+        document.cookie = "FirstTimeHint";
+    }
+
     // Checking to see if the central word is correct
     // Wrapping this in a timeout function set to 0.1s otherwise it prints the alert before the screen updates and freezes the update.
     setTimeout(() => {
@@ -596,7 +616,7 @@ function FirstTime(){
     else{
         Swal.fire({
             title: "Welcome to MESO",
-            html: "Gameplay instructions are available by clicking on the question mark (?) in the top right corner.<br /><br />Would you like to disbale this popup in the future?<br /><br /><i>Note: MESO currently does not work on mobile.</i>",
+            html: "Gameplay instructions are available by clicking on the question mark (?) in the top right corner.<br /><br />Would you like to disable this popup in the future?<br /><br /><i>Note: MESO currently does not work on mobile.</i>",
             imageUrl: "./src/Assets/Meso_Logo.png",
             imageHeight: 200,
             imageWidth: 250,
