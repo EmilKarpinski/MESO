@@ -20,6 +20,9 @@ document.getElementById('Author').innerHTML="Puzzle By: " + Author;
 // AlreadyWonFlag is a boolean that stores if someone has already won. If they have it stops reading keyboard commands and stops the popup from appearing. 
 let AlreadyWonFlag = false; 
 
+// Declaring an empty object to store to store cookies.
+const CookieState = {};
+
 // Two constants which constrain the grid size. 
 // Columns will probably always be fixed as the white space padding on either side doesn't matter.
 // Number of rows is dependant on the size of the word list, so we just get that here.
@@ -71,8 +74,12 @@ const boxtype = {
 function startup(){
     // I believe this retrieves the parameters for the game for the style.css file. 
     const game = document.getElementById('game');
+
     drawGrid(game);
     drawClues(clue);
+
+    // Adding a function here to drop starting cookies on an users computer which we use to show/not show some popups.
+    GetCookies();
 
     // Adding a function here to welcome first time users and direct them to the help menu
     FirstTime(); 
@@ -509,10 +516,8 @@ function isWinner(){
         }
     }
 
-    console.log(CorrectRow);
-    console.log(CorrectRow.includes(0));
     // Calling a function here to alert the user that 
-    if (CorrectRow.includes(0) == false && document.cookie != "FirstTimeHint"){
+    if (CorrectRow.includes(0) == false && CookieState["FirstTimeHint"]  == "true"){
         // Making a popup here that only appears the first time the user plays to tell them to rearrange the words.
         Swal.fire({
             position: "top-end",
@@ -525,7 +530,7 @@ function isWinner(){
             backdrop: 'rgba(212, 233, 214, 0.4)'
           })
         // Setting a cookie so this doesn't display again.
-        document.cookie = "FirstTimeHint";
+        document.cookie = "FirstTimeHint=false";
     }
 
     // Checking to see if the central word is correct
@@ -609,7 +614,7 @@ function PrintHelpControls() {
 function FirstTime(){
     // Checking if there's a cookie asking for the welcome message to be disabled. 
     // If not displaying the welcome message.
-    if (document.cookie == "MesoWelcomeDisabled"){
+    if (CookieState["MesoWelcomeDisabled"] == "true"){
         return;
     }
     // If a cookie is not detected, show the welcome pop-up and ask if the user wants to disable future welcome popups.
@@ -629,12 +634,35 @@ function FirstTime(){
           }).then((result) => {
             // If they would like to disable future popups we set a cookie to remember this choice.
             if (result.isConfirmed) {
-                document.cookie = "MesoWelcomeDisabled";
+                document.cookie = "MesoWelcomeDisabled=true;";
             }
           });
     }
 }
+// Function checks if cookies are already present on the users computer, and if not then sets the placeholders
+function GetCookies(){
+    if (document.cookie != ""){
+        // Getting the cookie string
+        let cookieString = document.cookie.split('; ');
+
+        // Lopping through all obtained cookies to seed the object with key value pairs.
+        for (let c = 0; c < cookieString.length; c++){
+            let ThisCookie = cookieString[c].split('=');
+            let KEY = ThisCookie[0];
+            let VALUE = ThisCookie[1];
+            CookieState[KEY] = VALUE;
+        }
+    }
+    // Else if there are no cookies, setting the two required cookies.
+    else {
+        document.cookie = "MesoWelcomeDisabled=false;"
+        document.cookie = "FirstTimeHint=true;"
+    }
+}
+
+
 // called here so that it runs on startup (i.e. not nested in something.)
 startup();
+
 
 
