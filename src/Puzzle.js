@@ -1,14 +1,15 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["FANGS", "Sharp pair of teeth like on a bat or vampire"], 
-    "W2":["ANIMAL", "The kingdom of beasts"],
-    "W3":["APPLE", "One a day to keep the MDs away"],
-    "W4":["FAKE", "Not real or an imitation"],
-    "W5":["VENOM", "Toxic substance delivered during a bite"]
+    "W1":["OFFSIDE", "Rule to prevent cherry picking in sports"], 
+    "W2":["COACH", "Trainer with a whistle"],
+    "W3":["REDCARD", "A colorful one-way ticket to the bench (two words)"],
+    "W4":["CLEATS", "Shoes that give you traction, not fashion"],
+    "W5":["TEAM", "There's no 'I' in ____"],
+    "W6":["STRIPES", "A tiger's fashion statement"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "SNAKE";
+export const Puzzle_ThemeWord = "SOCCER";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"
