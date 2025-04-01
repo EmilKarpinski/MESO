@@ -293,6 +293,10 @@ function registerKeyboardEvents(){
 
             // Checking if the down arrow key is pressed which shifts the active focus to another row.
             if (key == 'ArrowDown' || key == 'Tab'){
+                // Prevents the tab key from moving around the rest of the window. 
+                if (key == 'Tab'){
+                    e.preventDefault();
+                }
                 MoveDown(); 
             }
             // Checking if the up arrow key is pressed which shifts the active focus to another row.
