@@ -1,11 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["", ""], 
-    "W2":["", ""],
-    "W3":["", ""],
-    "W4":["", ""],
-    "W5":["", ""],
-    "W6":["", ""]
+    "W1":["FLIES", ""], 
+    "W2":["KERMIT", "Famous street-wise puppet"],
+    "W3":["HOP", ""],
+    "W4":["TONGUE", ""],
+    "W5":["SWAMP", ""]
 };
 
 // Storing the central theme word

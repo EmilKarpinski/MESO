@@ -1,15 +1,14 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["EGGS", ""], 
-    "W2":["LAMB", ""],
-    "W3":["SPRING", ""],
-    "W4":["HUNT", ""],
-    "W5":["JESUS", ""],
-    "W6":["BRUNCH", ""]
+    "W1":["NILE", "River that flows through Cairo"], 
+    "W2":["GLYPHS", "Ancient writing, heiro______"],
+    "W3":["PYRAMID", "Triangular or square geometry"],
+    "W4":["SPHINX", "A human-like cat"],
+    "W5":["TOMB", "Ancient resting place"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "EASTER";
+export const Puzzle_ThemeWord = "EGYPT";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"

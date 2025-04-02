@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["BOARDWALK", ""], 
-    "W2":["CASTLE", ""],
-    "W3":["SAND", ""],
-    "W4":["OCEAN", ""],
-    "W5":["SHORE", ""]
+    "W1":["BOARDWALK", "Wooden promenade"], 
+    "W2":["CASTLE", "Fortress fit for a king"],
+    "W3":["SAND", "It's coarse and rough and irritating and it gets everywhere"],
+    "W4":["OCEAN", "Big blue"],
+    "W5":["SHORE", "Water's edge"]
 };
 
 // Storing the central theme word
