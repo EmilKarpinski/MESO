@@ -1,15 +1,15 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["OFFSIDE", "Rule to prevent cherry picking in sports"], 
-    "W2":["COACH", "Trainer with a whistle"],
-    "W3":["REDCARD", "A colorful one-way ticket to the bench (two words)"],
-    "W4":["CLEATS", "Shoes that give you traction, not fashion"],
-    "W5":["TEAM", "There's no 'I' in ____"],
-    "W6":["STRIPES", "A tiger's fashion statement"]
+    "W1":["FISH", "Most of a mermaid's friends (probably)"], 
+    "W2":["WHITE", "The color of a 'great' predator's belly"],
+    "W3":["JAWS", "Teeth in a blockbuster thriller"],
+    "W4":["PREDATOR", "Always hunting for a meal"],
+    "W5":["ATTACK", "Verb for an aggressive move"],
+    "W6":["SEA", "The big blue, no land in sight"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "SOCCER";
+export const Puzzle_ThemeWord = "SHARKS";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"
