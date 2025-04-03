@@ -3,7 +3,7 @@ export const Puzzle_Word_List = {
     "W1":["FRESH", "Not canned or frozen"], 
     "W2":["GRAPES", "Used to make wine"],
     "W3":["COCONUT", "Tropical treat with a hard shell"],
-    "W4":["CITRUS", "Sour and zesty, perfect for juice"],
+    "W4":["CITRUS", "Sour and zesty, perfect for juice (category)"],
     "W5":["TREES", "If they could they wood leaf in the winter"]
 };
 

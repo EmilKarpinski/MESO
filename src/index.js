@@ -519,7 +519,6 @@ function isWinner(){
             CentralWord += state.grid[i][MidCol];
         }
     }
-
     // Calling a function here to alert the user that 
     if (CorrectRow.includes(0) == false && CookieState["FirstTimeHint"]  == "true"){
         // Making a popup here that only appears the first time the user plays to tell them to rearrange the words.
@@ -535,6 +534,7 @@ function isWinner(){
           })
         // Setting a cookie so this doesn't display again.
         document.cookie = "FirstTimeHint=false";
+        CookieState["FirstTimeHint"]  = "false";
     }
 
     // Checking to see if the central word is correct

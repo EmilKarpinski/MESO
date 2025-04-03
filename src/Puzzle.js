@@ -1,15 +1,14 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["FISH", "Most of a mermaid's friends (probably)"], 
-    "W2":["WHITE", "The color of a 'great' predator's belly"],
-    "W3":["JAWS", "Teeth in a blockbuster thriller"],
-    "W4":["PREDATOR", "Always hunting for a meal or Arnold Schwarzenegger"],
-    "W5":["ATTACK", "Verb for an aggressive move (not defend)"],
-    "W6":["SEA", "The big blue, no land in sight"]
+    "W1":["FRESH", "Not canned or frozen"], 
+    "W2":["GRAPES", "Used to make wine"],
+    "W3":["COCONUT", "Tropical treat with a hard shell"],
+    "W4":["CITRUS", "Sour and zesty, perfect for juice (category)"],
+    "W5":["TREES", "If they could they wood leaf in the winter"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "SHARKS";
+export const Puzzle_ThemeWord = "FRUIT";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"
