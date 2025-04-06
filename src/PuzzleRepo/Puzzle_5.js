@@ -6,7 +6,7 @@ export const Puzzle_Word_List = {
     "W4":["WILD", "Not tame or domesticated"],
     "W5":["HONEY", "Sweet, sticky treat from bees"],
     "W6":["COLORS", "e.g. Red, white, and blue"],
-    "W7":["ROSE", "A symbol of love"]
+    "W7":["ROSE", "A florcal symbol of love"]
 };
 
 // Storing the central theme word

@@ -1,11 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["", ""], 
-    "W2":["", ""],
-    "W3":["", ""],
-    "W4":["", ""],
-    "W5":["", ""],
-    "W6":["", ""]
+    "W1":["CANS", ""], 
+    "W2":["COKE", ""],
+    "W3":["DIET", ""],
+    "W4":["GINGERALE", ""],
+    "W5":["SUGAR", ""]
 };
 
 // Storing the central theme word
