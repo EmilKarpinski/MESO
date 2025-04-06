@@ -1,11 +1,11 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["HUGO", ""], 
-    "W2":["OSCAR", ""],
-    "W3":["NEBULA", ""],
-    "W4":["NOBEL", ""],
-    "W5":["PULITZER", ""],
-    "W6":["AWARDS", ""]
+    "W1":["HUGO", "Worldcon award for best science fiction"], 
+    "W2":["OSCAR", "A little golden man who loves the movies"],
+    "W3":["NEBULA", "A space cloud"],
+    "W4":["NOBEL", "Prestigious award in physics, chemistry, literature, or medicine"],
+    "W5":["PULITZER", "Outstanding achievment in American journalism and literary arts"],
+    "W6":["AWARDS", "What you might win after a competition or for as a prize"]
 };
 
 // Storing the central theme word
