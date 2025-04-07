@@ -3,7 +3,7 @@ export const Puzzle_Word_List = {
     "W1":["NILE", "River that flows through Cairo"], 
     "W2":["GLYPHS", "Ancient writing, heiro______"],
     "W3":["PYRAMID", "Triangular or square geometry"],
-    "W4":["SPHINX", "A human-like cat"],
+    "W4":["SPHINX", "A human-like cat and keeper of riddles"],
     "W5":["TOMB", "Ancient resting place"]
 };
 
