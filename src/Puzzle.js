@@ -1,14 +1,14 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["NILE", "River that flows through Cairo"], 
-    "W2":["GLYPHS", "Ancient writing, heiro______"],
-    "W3":["PYRAMID", "Triangular or square geometry"],
-    "W4":["SPHINX", "A human-like cat and keeper of riddles"],
-    "W5":["TOMB", "Ancient resting place"]
+    "W1":["CASTLE", "A home for royalty"], 
+    "W2":["KNIGHT", "In shining armor"],
+    "W3":["QUEEN", "Yas, slay _____"],
+    "W4":["BISHOP", "A church official with a big hat"],
+    "W5":["SQUARE", "The shape that's always right—literally"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "EGYPT";
+export const Puzzle_ThemeWord = "CHESS";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"
