@@ -679,6 +679,7 @@ const BoxList = document.getElementsByClassName('box');
 // Loops through the BoxList and adds the event listers and responses to them.
 for (var i = 0; i < BoxList.length; i++){
     BoxList[i].addEventListener("click", BoxClicked);
+    BoxList[i].focus();
 }
 
 // Function that makes the clicked box the active box. 
