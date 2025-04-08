@@ -679,12 +679,12 @@ const BoxList = document.getElementsByClassName('box');
 // Loops through the BoxList and adds the event listers and responses to them.
 for (var i = 0; i < BoxList.length; i++){
     BoxList[i].addEventListener("click", BoxClicked);
-    BoxList[i].focus();
 }
 
 // Function that makes the clicked box the active box. 
 function BoxClicked(){
     if (this.classList.contains("right") || this.classList.contains("wrong")){
+        this.focus();
         // Getting the position of the box clicked by parsing the ID string.
         // There's a max of 9 rows so I don't think the first vlaue should ever be more than 1 digit, wheras col can be multiple.
         let ClickRow = Number(this.id.substring(3,4));
