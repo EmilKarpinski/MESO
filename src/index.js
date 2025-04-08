@@ -362,7 +362,7 @@ function addLetter(letter){
     state.grid[CurrRow][CurrCol] = letter.toUpperCase();
 
     // Checks if the current row has any space left or if you are in the last column
-    if (CurrCol === (GridNumCols-1) || boxtype.grid[CurrRow][CurrCol+1] == "empty"){
+    if (CurrCol == (GridNumCols-1) || boxtype.grid[CurrRow][CurrCol+1] == "empty"){
         return;
     } 
     else {
@@ -562,14 +562,6 @@ function WinDisplay(){
     // Would like to eventually also add some animation here (like the fireworks library)
 }
 
-// This listens for a click on the "?" in the main page and then prings the help controls
-// No idea why thefunction isn't refered to with the () here (i.e. PrintHelpControls()), but if you include them it prints right when the game starts.
-document.addEventListener('DOMContentLoaded', function () {
-    var HelpPressed = document.getElementById('HelpButton');
-    if (HelpPressed) {
-        HelpPressed.addEventListener('click', PrintHelpControls);
-    }
-  });
 
 // Prints a series of three pop-ups that explain the goal of the game and the controls. 
 // These are all nested so one comes after the other.
@@ -668,5 +660,41 @@ function GetCookies(){
 // called here so that it runs on startup (i.e. not nested in something.)
 startup();
 
+// Running things that need to happen after evertything is made. i.e. After the startup.
+// Adding an event listener for the help button. 
+// This can technically be before startup since the help button is drawn in the html, but adding here for consistencies sake.
 
+// This listens for a click on the "?" in the main page and then prings the help controls
+// No idea why thefunction isn't refered to with the () here (i.e. PrintHelpControls()), but if you include them it prints right when the game starts.
+document.addEventListener('DOMContentLoaded', function () {
+    var HelpPressed = document.getElementById('HelpButton');
+    if (HelpPressed) {
+        HelpPressed.addEventListener('click', PrintHelpControls);
+    }
+});
+
+
+// Adding Event Listeners for the boxes
+const BoxList = document.getElementsByClassName('box');
+// Loops through the BoxList and adds the event listers and responses to them.
+for (var i = 0; i < BoxList.length; i++){
+    BoxList[i].addEventListener("click", BoxClicked);
+}
+
+// Function that makes the clicked box the active box. 
+function BoxClicked(){
+    if (this.classList.contains("right") || this.classList.contains("wrong")){
+        // Getting the position of the box clicked by parsing the ID string.
+        // There's a max of 9 rows so I don't think the first vlaue should ever be more than 1 digit, wheras col can be multiple.
+        let ClickRow = Number(this.id.substring(3,4));
+        let ClickCol = Number(this.id.substring(4));
+
+        // Reseting the Box state to reset box classes to default, then setting the clicked box to be active. 
+        ResetBoxState(); 
+        boxtype.grid[ClickRow][ClickCol] = "active";
+        CurrCol = ClickCol;
+        CurrRow = ClickRow;
+    }
+    updateGrid(); 
+}
 
