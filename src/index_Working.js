@@ -690,7 +690,7 @@ for (var i = 0; i < BoxList.length; i++){
 
 console.log(boxtype.grid);
 
-function BoxClicked(ClickEvent){
+function BoxClicked(){
     if (this.classList.contains("right") || this.classList.contains("wrong")){
         let ClickRow = this.id.substring(3,4);
         let ClickCol = this.id.substring(4);
