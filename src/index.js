@@ -676,10 +676,6 @@ document.addEventListener('DOMContentLoaded', function () {
     HiddenInput.focus();
 });
 
-
-
-
-
 // Adding Event Listeners for the boxes
 const BoxList = document.getElementsByClassName('box');
 // Loops through the BoxList and adds the event listers and responses to them.
