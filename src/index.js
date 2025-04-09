@@ -672,11 +672,8 @@ document.addEventListener('DOMContentLoaded', function () {
         HelpPressed.addEventListener('click', PrintHelpControls);
     }
     // Adding an input element off screen as well to catch input on mobile.
-        const input = document.createElement('input');
-        input.style.position = 'absolute';
-        input.style.left = '-9999px';
-        document.body.appendChild(input);
-        input.focus();
+    const HiddenInput = document.createElement('HiddenInput');
+    HiddenInput.focus();
 });
 
 
@@ -694,7 +691,7 @@ for (var i = 0; i < BoxList.length; i++){
 function BoxClicked(){
     if (this.classList.contains("right") || this.classList.contains("wrong")){
 
-        document.getElementById('input').focus(); 
+        HiddenInput.focus();
         // Getting the position of the box clicked by parsing the ID string.
         // There's a max of 9 rows so I don't think the first vlaue should ever be more than 1 digit, wheras col can be multiple.
         let ClickRow = Number(this.id.substring(3,4));
