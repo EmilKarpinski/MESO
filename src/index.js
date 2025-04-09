@@ -671,9 +671,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (HelpPressed) {
         HelpPressed.addEventListener('click', PrintHelpControls);
     }
-    // I think I should add a hidden input field here in the -9999px position that retains focus. 
-    // THat might be the only way to get keydown effects. 
+    // Adding an input element off screen as well to catch input on mobile.
+        const input = document.createElement('input');
+        input.style.position = 'absolute';
+        input.style.left = '-9999px';
+        document.body.appendChild(input);
+        input.focus();
 });
+
+
+
 
 
 // Adding Event Listeners for the boxes
