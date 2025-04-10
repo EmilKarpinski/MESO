@@ -637,6 +637,7 @@ function FirstTime(){
 }
 // Function checks if cookies are already present on the users computer, and if not then sets the placeholders
 function GetCookies(){
+    console.log(document.cookie);
     if (document.cookie != ""){
         // Getting the cookie string
         let cookieString = document.cookie.split('; ');
