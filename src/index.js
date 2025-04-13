@@ -688,7 +688,7 @@ for (var i = 0; i < BoxList.length; i++){
 
 // Function that makes the clicked box the active box. 
 function BoxClicked(){
-    if (this.classList.contains("right") || this.classList.contains("wrong")){
+    if (this.classList.contains("right") || this.classList.contains("wrong") || this.classList.contains("right-correct") || this.classList.contains("wrong-correct") ){
 
         // Opens the keyboard on mobile.
         HiddenInput.focus();
