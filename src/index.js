@@ -700,6 +700,12 @@ function BoxClicked(){
         CurrCol = ClickCol;
         CurrRow = ClickRow;
     }
+    else if (this.classList.contains("active")){
+        HiddenInput.focus();
+    }
+    else if (this.classList.contains("empty")){
+        HiddenInput.blur();
+    }
     updateGrid(); 
 }
 
