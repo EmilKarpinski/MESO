@@ -682,6 +682,8 @@ const BoxList = document.getElementsByClassName('box');
 // Loops through the BoxList and adds the event listers and responses to them.
 for (var i = 0; i < BoxList.length; i++){
     BoxList[i].addEventListener("click", BoxClicked);
+    // BoxList[i].addEventListener("drag", BoxDragged);
+    BoxList[i].addEventListener("mousedown", BoxDragged);
 }
 
 // Function that makes the clicked box the active box. 
@@ -714,3 +716,46 @@ function BoxClicked(){
     updateGrid(); 
 }
 
+// Function which kicks in when a box is being dragged.
+function BoxDragged(event){
+
+    // Stores the original start X and Y position.
+    // Storing Y here, but I think eventually I only need to concern myself with X since the user can't drag boxes up and down.
+    let StartX = event.clientX;
+    let StartY = event.clientY;
+
+    // Function which kicks in repeatedly while the box is being actively being dragged.
+    // This checks the current X and Y positions and compares them to the original X and Y positions to see if the boxes should be shifted or not.
+    const MouseMovingFunction = (e) => {
+        // Stores the current X and Y cords
+        let CurrX = e.clientX;
+        let CurrY = e.clientY;
+
+        console.log(this.id);
+        console.log("Dragging");
+        console.log(Math.abs(CurrX - StartX));
+        if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) > 0){
+            console.log("MoveRight");
+            MoveRight();
+            StartX = CurrX;
+
+        }
+        else if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) < 0){
+            console.log("MoveLeft");
+            MoveLeft();
+            StartX = CurrX;
+        }
+        updateGrid();
+      };
+    
+    // Function which triggers when the user let's go of the mouse button. 
+    // It only removes the event listers that control when the mouse is moving (MouseMovingFunction) and the function for when the mouse button is let go (MouseMovingFunction)
+    const MouseUpFunction = () => {
+        document.removeEventListener('mousemove', MouseMovingFunction);
+        document.removeEventListener('mouseup', MouseUpFunction);
+    };
+
+    // Adds two event listeners that need to follow this event - mouse movement, and mouse up.
+    document.addEventListener('mousemove', MouseMovingFunction);
+    document.addEventListener('mouseup', MouseUpFunction);
+}
