@@ -688,6 +688,7 @@ for (var i = 0; i < BoxList.length; i++){
 function BoxClicked(){
     if (this.classList.contains("right") || this.classList.contains("wrong")){
 
+        // Opens the keyboard on mobile.
         HiddenInput.focus();
         // Getting the position of the box clicked by parsing the ID string.
         // There's a max of 9 rows so I don't think the first vlaue should ever be more than 1 digit, wheras col can be multiple.
@@ -700,9 +701,14 @@ function BoxClicked(){
         CurrCol = ClickCol;
         CurrRow = ClickRow;
     }
+    // Checks if the clicked box is active and opens the keyboard
     else if (this.classList.contains("active")){
         HiddenInput.focus();
+        console.log("TEST");
+        console.log("2");
+        state.grid[CurrRow][CurrCol] = "F";
     }
+    // Checks if a box that is empty/hidden is clicked and hides the keyboard
     else if (this.classList.contains("empty")){
         HiddenInput.blur();
     }
