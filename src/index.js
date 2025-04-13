@@ -702,11 +702,10 @@ function BoxClicked(){
         CurrRow = ClickRow;
     }
     // Checks if the clicked box is active and opens the keyboard
+    // Adding the second line here which does nothing, but it wasn't working originally, so testing if having this in here helps. 
     else if (this.classList.contains("active")){
         HiddenInput.focus();
-        console.log("TEST");
-        console.log("2");
-        state.grid[CurrRow][CurrCol] = "F";
+        boxtype.grid[CurrRow][CurrCol] = "active";
     }
     // Checks if a box that is empty/hidden is clicked and hides the keyboard
     else if (this.classList.contains("empty")){
