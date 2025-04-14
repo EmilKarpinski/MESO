@@ -94,6 +94,13 @@ body {
   border: 0px solid black;
   /* Changed the margin here to 0 to have the boxes side by side */
   margin: 1px;
+  /* Everything from here down just makes the text unselectable by mouse to make it look a little prettier during dragging */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .box.empty {

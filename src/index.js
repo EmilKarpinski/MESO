@@ -745,6 +745,7 @@ function BoxDragged(event){
             MoveLeft();
             StartX = CurrX;
         }
+        isWinner(); 
         updateGrid();
       };
     
