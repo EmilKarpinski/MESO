@@ -682,8 +682,8 @@ const BoxList = document.getElementsByClassName('box');
 // Loops through the BoxList and adds the event listers and responses to them.
 for (var i = 0; i < BoxList.length; i++){
     BoxList[i].addEventListener("click", BoxClicked);
-    // BoxList[i].addEventListener("drag", BoxDragged);
     BoxList[i].addEventListener("mousedown", BoxDragged);
+    BoxList[i].addEventListener("touchstart", BoxDraggedMobile);
 }
 
 // Function that makes the clicked box the active box. 
@@ -695,17 +695,6 @@ function BoxClicked(){
 
         // Put a function here since when we click and drag we also want to set the OG box as active so the right row is dragged.
         SetActiveCell(this.id);
-
-        // // Getting the position of the box clicked by parsing the ID string.
-        // // There's a max of 9 rows so I don't think the first vlaue should ever be more than 1 digit, wheras col can be multiple.
-        // let ClickRow = Number(this.id.substring(3,4));
-        // let ClickCol = Number(this.id.substring(4));
-
-        // // Reseting the Box state to reset box classes to default, then setting the clicked box to be active. 
-        // ResetBoxState(); 
-        // boxtype.grid[ClickRow][ClickCol] = "active";
-        // CurrCol = ClickCol;
-        // CurrRow = ClickRow;
     }
     // Checks if the clicked box is active and opens the keyboard
     // Adding the second line here which does nothing, but it wasn't working originally, so testing if having this in here helps. 
@@ -763,6 +752,50 @@ function BoxDragged(event){
     document.addEventListener('mousemove', MouseMovingFunction);
     document.addEventListener('mouseup', MouseUpFunction);
 }
+
+function BoxDraggedMobile(event){
+
+    // Stores the original start X position (don't need Y since you can't drag in the vertical direction).
+    let StartX = event.clientX;
+
+    // Using this function here again so that if the user wants to drag another row that one will become active. 
+    SetActiveCell(this.id);
+
+    // Function which kicks in repeatedly while the box is being actively being dragged.
+    // This checks the current X and Y positions and compares them to the original X and Y positions to see if the boxes should be shifted or not.
+    const TouchMovingFunction = (e) => {
+        // Stores the current X and Y cords
+        let CurrX = e.clientX;
+
+        // Checks if we've move at least half a box and if the numbers are increasing (moving right) or decreasing (moving left)
+        if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) > 0){
+            console.log("MoveRight");
+            MoveRight();
+            StartX = CurrX;
+
+        }
+        else if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) < 0){
+            console.log("MoveLeft");
+            MoveLeft();
+            StartX = CurrX;
+        }
+        // Checks after to see if the person won and to update the grid.
+        isWinner(); 
+        updateGrid();
+      };
+    
+    // Function which triggers when the user let's go of the mouse button. 
+    // It only removes the event listers that control when the mouse is moving (MouseMovingFunction) and the function for when the mouse button is let go (MouseMovingFunction)
+    const TouchUpFunction = () => {
+        document.removeEventListener('touchmove', TouchMovingFunction);
+        document.removeEventListener('touchend', TouchUpFunction);
+    };
+
+    // Adds two event listeners that need to follow this event - mouse movement, and mouse up.
+    document.addEventListener('touchmove', TouchMovingFunction);
+    document.addEventListener('touchend', TouchUpFunction);
+}
+
 
 function SetActiveCell(ID){
     // Getting the position of the box clicked by parsing the ID string.
