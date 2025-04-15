@@ -19,7 +19,8 @@ body {
   justify-content: center;
   align-items: start;
   margin-top: 5rem;
-  width: 100%;
+  /* This might need to go back to 100% not sure. */
+  width: auto;
   height: 50%;
 }
 
