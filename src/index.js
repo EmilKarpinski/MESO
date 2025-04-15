@@ -692,16 +692,20 @@ function BoxClicked(){
 
         // Opens the keyboard on mobile.
         HiddenInput.focus();
-        // Getting the position of the box clicked by parsing the ID string.
-        // There's a max of 9 rows so I don't think the first vlaue should ever be more than 1 digit, wheras col can be multiple.
-        let ClickRow = Number(this.id.substring(3,4));
-        let ClickCol = Number(this.id.substring(4));
 
-        // Reseting the Box state to reset box classes to default, then setting the clicked box to be active. 
-        ResetBoxState(); 
-        boxtype.grid[ClickRow][ClickCol] = "active";
-        CurrCol = ClickCol;
-        CurrRow = ClickRow;
+        // Put a function here since when we click and drag we also want to set the OG box as active so the right row is dragged.
+        SetActiveCell(this.id);
+
+        // // Getting the position of the box clicked by parsing the ID string.
+        // // There's a max of 9 rows so I don't think the first vlaue should ever be more than 1 digit, wheras col can be multiple.
+        // let ClickRow = Number(this.id.substring(3,4));
+        // let ClickCol = Number(this.id.substring(4));
+
+        // // Reseting the Box state to reset box classes to default, then setting the clicked box to be active. 
+        // ResetBoxState(); 
+        // boxtype.grid[ClickRow][ClickCol] = "active";
+        // CurrCol = ClickCol;
+        // CurrRow = ClickRow;
     }
     // Checks if the clicked box is active and opens the keyboard
     // Adding the second line here which does nothing, but it wasn't working originally, so testing if having this in here helps. 
@@ -719,21 +723,19 @@ function BoxClicked(){
 // Function which kicks in when a box is being dragged.
 function BoxDragged(event){
 
-    // Stores the original start X and Y position.
-    // Storing Y here, but I think eventually I only need to concern myself with X since the user can't drag boxes up and down.
+    // Stores the original start X position (don't need Y since you can't drag in the vertical direction).
     let StartX = event.clientX;
-    let StartY = event.clientY;
+
+    // Using this function here again so that if the user wants to drag another row that one will become active. 
+    SetActiveCell(this.id);
 
     // Function which kicks in repeatedly while the box is being actively being dragged.
     // This checks the current X and Y positions and compares them to the original X and Y positions to see if the boxes should be shifted or not.
     const MouseMovingFunction = (e) => {
         // Stores the current X and Y cords
         let CurrX = e.clientX;
-        let CurrY = e.clientY;
 
-        console.log(this.id);
-        console.log("Dragging");
-        console.log(Math.abs(CurrX - StartX));
+        // Checks if we've move at least half a box and if the numbers are increasing (moving right) or decreasing (moving left)
         if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) > 0){
             console.log("MoveRight");
             MoveRight();
@@ -745,6 +747,7 @@ function BoxDragged(event){
             MoveLeft();
             StartX = CurrX;
         }
+        // Checks after to see if the person won and to update the grid.
         isWinner(); 
         updateGrid();
       };
@@ -759,4 +762,17 @@ function BoxDragged(event){
     // Adds two event listeners that need to follow this event - mouse movement, and mouse up.
     document.addEventListener('mousemove', MouseMovingFunction);
     document.addEventListener('mouseup', MouseUpFunction);
+}
+
+function SetActiveCell(ID){
+    // Getting the position of the box clicked by parsing the ID string.
+    // There's a max of 9 rows so I don't think the first vlaue should ever be more than 1 digit, wheras col can be multiple.
+    let ClickRow = Number(ID.substring(3,4));
+    let ClickCol = Number(ID.substring(4));
+
+    // Reseting the Box state to reset box classes to default, then setting the clicked box to be active. 
+    ResetBoxState(); 
+    boxtype.grid[ClickRow][ClickCol] = "active";
+    CurrCol = ClickCol;
+    CurrRow = ClickRow;
 }
