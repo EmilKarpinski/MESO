@@ -1,14 +1,13 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["BLACK", "A misfortunate feline"], 
-    "W2":["COFFEE", "Get's you up and keeps you going"],
-    "W3":["CHICKPEA", "Also sometimes refered to as a Garbanzo"],
-    "W4":["KIDNEY", "The thing you've got two of, but can live with just one"],
-    "W5":["SOY", "Often made into milk or tofu"]
+    "W1":["WRITE", "We used to _____ letters. Now we _____ emails"], 
+    "W2":["JOB", "Something you complain about, but still show up to every day"],
+    "W3":["SKILLS", "Per ND: 'Girls only want boyfriends who have great ______'"],
+    "W4":["BREAK", "A pause in your busy day"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "BEANS";
+export const Puzzle_ThemeWord = "WORK";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"
