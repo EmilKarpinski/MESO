@@ -730,13 +730,11 @@ function BoxDragged(event){
 
         // Checks if we've move at least half a box and if the numbers are increasing (moving right) or decreasing (moving left)
         if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) > 0){
-            console.log("MoveRight");
             MoveRight();
             StartX = CurrX;
 
         }
         else if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) < 0){
-            console.log("MoveLeft");
             MoveLeft();
             StartX = CurrX;
         }
@@ -777,13 +775,11 @@ function BoxDraggedMobile(event){
 
         // Checks if we've move at least half a box and if the numbers are increasing (moving right) or decreasing (moving left)
         if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) > 0){
-            console.log("MoveRight");
             MoveRight();
             StartX = CurrX;
 
         }
         else if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) < 0){
-            console.log("MoveLeft");
             MoveLeft();
             StartX = CurrX;
         }
