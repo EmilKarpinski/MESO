@@ -715,8 +715,12 @@ function BoxDragged(event){
     // Stores the original start X position (don't need Y since you can't drag in the vertical direction).
     let StartX = event.clientX;
 
-    // Using this function here again so that if the user wants to drag another row that one will become active. 
-    SetActiveCell(this.id);
+    // Checking if this is a cell that can be marked active for the box drag event. 
+    if (this.classList.contains("right") || this.classList.contains("wrong") || this.classList.contains("right-correct") || this.classList.contains("wrong-correct") ){
+        // Using this function here again so that if the user wants to drag another row that one will become active. 
+        SetActiveCell(this.id);
+    }
+
 
     // Function which kicks in repeatedly while the box is being actively being dragged.
     // This checks the current X and Y positions and compares them to the original X and Y positions to see if the boxes should be shifted or not.
@@ -808,4 +812,5 @@ function SetActiveCell(ID){
     boxtype.grid[ClickRow][ClickCol] = "active";
     CurrCol = ClickCol;
     CurrRow = ClickRow;
+    updateGrid();
 }
