@@ -2,7 +2,7 @@
 export const Puzzle_Word_List = {
     "W1":["LIZARD", "A reptile with a talent for sunbathing and tail regeneration"], 
     "W2":["BIRD", "A big one lives on Sesame street"],
-    "W3":["EXTINCT", "Not alive, not coming back, but still very interesting"],
+    "W3":["EXTINCT", "Not alive, not coming back, but still very interesting animals"],
     "W4":["RAPTOR", "E.g. hawks, eagles, falcons"],
     "W5":["FOSSIL", "A rock that used to be something alive"],
     "W6":["ANCIENT", "There's old then there's _______"],
