@@ -90,8 +90,8 @@ body {
 
 .box {
   /* Sets the size of the boxes and the border */
-  width: 3vw;
-  height: 3vw;
+  width: 5.76vw;
+  height: 5.76vw;
   border: 0px solid black;
   /* Changed the margin here to 0 to have the boxes side by side */
   margin: 0.07vw;
