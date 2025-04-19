@@ -35,19 +35,19 @@ body {
 
 /* Change settings depending on if the stuff is in portrait (mobile) or landscape (PC and mobile) */
 @media screen and (orientation:portrait) {
-  .title{font-size: 1rem};
-  .title-word-clone{font-size: 0.25rem};
-  .cluetitle{font-size: 2.5rem};
+  .title{font-size: 3rem};
+  .title-word-clone{font-size: 0.5rem};
+  .cluetitle{font-size: 2rem};
   .box{width: 3.5vw};
   .box{height: 3.5vw};
   .box{margin:0.07vw};
-  .box{font-size: 3rem};
+  .box{font-size: 3.25vw};
   .box.wrong{border: 0.1vw solid black};
-  .box.wrong-correct{border: 1vw solid black}
-  .box.right{border: 1vw solid black}
-  .box.right-correct{border: 1vw solid black}
-  .box.active{border: 1vw solid red}
-  .box.active-correct{border: 1vw solid red}
+  .box.wrong-correct{border: 0.1vw solid black}
+  .box.right{border: 0.1vw solid black}
+  .box.right-correct{border: 0.1vw solid black}
+  .box.active{border: 0.1vw solid red}
+  .box.active-correct{border: 0.1vw solid red}
   .footer{font-size: 1.5rem};
   .helpbutton{width: 7vw};
   .helpbutton{height: 7vw};
