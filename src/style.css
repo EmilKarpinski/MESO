@@ -10,7 +10,8 @@ body {
   --default: #121213;
   --empty: #FFECA1;
   --wrong: #F8EBC9;
-  --right: #CFFF8F; 
+  --right: #CFFF8F;
+  font-size:100%; 
 }
 
 
@@ -32,8 +33,23 @@ body {
   width: 100%;
 }
 
+/* Change settings depending on if the stuff is in portrait (mobile) or landscape (PC and mobile) */
+@media screen and (orientation:portrait) {
+  .title{size: 1rem};
+  .title{color: #8F0171};
+}
+
+@media screen and (orientation:landscape) {
+  .title{size: 10rem};
+  /* Landscape styles */
+  /* show your content*/
+ /* #example{width:200px} */
+
+}
+
+
 .title {
-  color: black;
+  /* color: black; */
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 4rem;
