@@ -19,10 +19,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: start;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   /* This might need to go back to 100% not sure. */
-  width: 99%;
-  height: 50%;
+  width: 100%;
+  /* height: 50%; */
 }
 
 #clue{
@@ -31,12 +31,15 @@ body {
   align-items: start;
   margin-top: 0rem;
   width: 100%;
+  margin-bottom: 2%;
 }
 
 /* Change settings depending on if the stuff is in portrait (mobile) or landscape (PC and mobile) */
 @media screen and (orientation:portrait) {
   .title{font-size: 3rem};
   .title-word-clone{font-size: 0.5rem};
+  #game{margin-top: 0.5vw};
+  #game{height: 50%};
   .cluetitle{font-size: 2rem};
   .box{width: 3.5vw};
   .box{height: 3.5vw};
@@ -54,8 +57,10 @@ body {
 }
 
 @media screen and (orientation:landscape) {
-  .title{font-size: 4rem};
+  .title{font-size: 4.5vw};
   .title-word-clone{font-size: 1rem};
+  #game{margin-top: 0.5vw};
+  #game{height: 50%};
   .cluetitle{font-size: 2.5rem};
   .box{width: 3.5vw};
   .box{height: 3.5vw};
@@ -243,7 +248,7 @@ hr {
   border-style: solid;
   border-color: black;
   border-width: 1px;
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
 }
 
 .footer {
