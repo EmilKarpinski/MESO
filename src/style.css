@@ -20,7 +20,7 @@ body {
   align-items: start;
   margin-top: 5rem;
   /* This might need to go back to 100% not sure. */
-  width: auto;
+  width: 98%;
   height: 50%;
 }
 
@@ -90,11 +90,11 @@ body {
 
 .box {
   /* Sets the size of the boxes and the border */
-  width: 60px;
-  height: 60px;
+  width: 3vw;
+  height: 3vw;
   border: 0px solid black;
   /* Changed the margin here to 0 to have the boxes side by side */
-  margin: 1px;
+  margin: 0.07vw;
   /* Everything from here down just makes the text unselectable by mouse to make it look a little prettier during dragging */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
