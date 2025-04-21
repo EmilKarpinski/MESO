@@ -38,23 +38,23 @@ body {
 @media screen and (orientation:portrait) {
   .title{font-size: 2rem};
   .title-word-clone{font-size: 0.5rem};
-  #game{margin-top: 0.5vw};
+  #game{margin-top: 0.5vh};
   #game{height: 50%};
   .cluetitle{font-size: 1.5rem};
   .ClueBox{font-size: 1rem};
-  .box{width: 3.5vw};
-  .box{height: 3.5vw};
-  .box{margin:0.07vw};
-  .box{font-size: 3.25vw};
-  .box.wrong{border: 0.1vw solid black};
-  .box.wrong-correct{border: 0.1vw solid black}
-  .box.right{border: 0.1vw solid black}
-  .box.right-correct{border: 0.1vw solid black}
-  .box.active{border: 0.1vw solid red}
-  .box.active-correct{border: 0.1vw solid red}
-  .footer{font-size: 1.5rem};
-  .helpbutton{width: 7vw};
-  .helpbutton{height: 7vw};
+  .box{width: 3.5vh};
+  .box{height: 3.5vh};
+  .box{margin:0.07vh};
+  .box{font-size: 3.25vh};
+  .box.wrong{border: 0.1vh solid black};
+  .box.wrong-correct{border: 0.1vh solid black}
+  .box.right{border: 0.1vh solid black}
+  .box.right-correct{border: 0.1vh solid black}
+  .box.active{border: 0.1vh solid red}
+  .box.active-correct{border: 0.1vh solid red}
+  .footer{font-size: 0.8rem};
+  .helpbutton{width: 7vh};
+  .helpbutton{height: 7vh};
 }
 
 @media screen and (orientation:landscape) {

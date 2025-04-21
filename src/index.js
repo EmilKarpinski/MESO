@@ -765,11 +765,15 @@ function BoxDraggedMobile(event){
     if (this.classList.contains("right") || this.classList.contains("wrong") || this.classList.contains("right-correct") || this.classList.contains("wrong-correct") ){
         // Using this function here again so that if the user wants to drag another row that one will become active. 
         SetActiveCell(this.id);
+        console.log(StartX);
     }
 
+    event.preventDefault();
     // Function which kicks in repeatedly while the box is being actively being dragged.
     // This checks the current X and Y positions and compares them to the original X and Y positions to see if the boxes should be shifted or not.
     const TouchMovingFunction = (e) => {
+        e.preventDefault();
+
         // Stores the current X and Y cords
         let CurrX = e.clientX;
 
@@ -790,7 +794,8 @@ function BoxDraggedMobile(event){
     
     // Function which triggers when the user let's go of the mouse button. 
     // It only removes the event listers that control when the mouse is moving (MouseMovingFunction) and the function for when the mouse button is let go (MouseMovingFunction)
-    const TouchUpFunction = () => {
+    const TouchUpFunction = (e) => {
+        e.preventDefault();
         document.removeEventListener('touchmove', TouchMovingFunction);
         document.removeEventListener('touchend', TouchUpFunction);
     };
