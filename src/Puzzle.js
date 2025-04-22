@@ -1,15 +1,14 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["EGGS", "Cracked open in the morning with some toast"], 
-    "W2":["LAMB", "Wool-covered cutie"],
-    "W3":["SPRING", "Bouncy season"],
-    "W4":["HUNT", "To chase or seek"],
-    "W5":["BUNNIES", "Cute hoppers with long ears"],
-    "W6":["BRUNCH", "A late morning feast"]
+    "W1":["BOARDWALK", "Wooden promenade"], 
+    "W2":["CASTLE", "Fortress fit for a king"],
+    "W3":["SAND", "It's coarse and rough and irritating and it gets everywhere"],
+    "W4":["OCEAN", "Big blue"],
+    "W5":["SHORE", "Water's edge"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "EASTER";
+export const Puzzle_ThemeWord = "BEACH";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"
