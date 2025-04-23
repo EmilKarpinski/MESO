@@ -537,6 +537,8 @@ function isWinner(){
         CookieState["FirstTimeHint"]  = "false";
     }
 
+    // Removing the event listeners for mouse movement and touchscreen dragging here to prevent sliding once the MESO is complete.
+
     // Checking to see if the central word is correct
     // Wrapping this in a timeout function set to 0.1s otherwise it prints the alert before the screen updates and freezes the update.
     setTimeout(() => {
@@ -729,12 +731,12 @@ function BoxDragged(event){
         let CurrX = e.clientX;
 
         // Checks if we've move at least half a box and if the numbers are increasing (moving right) or decreasing (moving left)
-        if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) > 0){
+        if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) > 0 && AlreadyWonFlag == false){
             MoveRight();
             StartX = CurrX;
 
         }
-        else if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) < 0){
+        else if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) < 0 && AlreadyWonFlag == false){
             MoveLeft();
             StartX = CurrX;
         }
@@ -758,8 +760,10 @@ function BoxDragged(event){
 // Probably don't need an entirely seperate function here and could have combined with the above, but keeping this here for legibility and troubleshooting. 
 function BoxDraggedMobile(event){
 
+    // Touch events store data differently and you need to denote the touch you're interested in
+    // This is done by calling the touches array for the event (touches[0] gets the first touch), then getting the X coord.
     // Stores the original start X position (don't need Y since you can't drag in the vertical direction).
-    let StartX = event.clientX;
+    let StartX = event.touches[0].clientX;
 
     // Checking if this is a cell that can be marked active for the box drag event. 
     if (this.classList.contains("right") || this.classList.contains("wrong") || this.classList.contains("right-correct") || this.classList.contains("wrong-correct") ){
@@ -768,22 +772,21 @@ function BoxDraggedMobile(event){
         console.log(StartX);
     }
 
-    event.preventDefault();
     // Function which kicks in repeatedly while the box is being actively being dragged.
     // This checks the current X and Y positions and compares them to the original X and Y positions to see if the boxes should be shifted or not.
     const TouchMovingFunction = (e) => {
-        e.preventDefault();
 
         // Stores the current X and Y cords
-        let CurrX = e.clientX;
+        // This is again different for touch events which store touch movement in an subarray called changedTouches (changedTouches[0] is the first of these.)
+        let CurrX = e.changedTouches[0].clientX;
 
         // Checks if we've move at least half a box and if the numbers are increasing (moving right) or decreasing (moving left)
-        if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) > 0){
+        if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) > 0 && AlreadyWonFlag == false){
             MoveRight();
             StartX = CurrX;
 
         }
-        else if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) < 0){
+        else if (Math.abs(CurrX - StartX)>(this.offsetWidth/2) && (CurrX - StartX) < 0 && AlreadyWonFlag == false){
             MoveLeft();
             StartX = CurrX;
         }
@@ -795,7 +798,6 @@ function BoxDraggedMobile(event){
     // Function which triggers when the user let's go of the mouse button. 
     // It only removes the event listers that control when the mouse is moving (MouseMovingFunction) and the function for when the mouse button is let go (MouseMovingFunction)
     const TouchUpFunction = (e) => {
-        e.preventDefault();
         document.removeEventListener('touchmove', TouchMovingFunction);
         document.removeEventListener('touchend', TouchUpFunction);
     };
