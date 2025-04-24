@@ -36,28 +36,30 @@ body {
 
 /* Change settings depending on if the stuff is in portrait (mobile) or landscape (PC and mobile) */
 @media screen and (orientation:portrait) {
+  .title{color: #CFFF8F};
   .title{font-size: 2rem};
-  .title-word-clone{font-size: 0.5rem};
-  #game{margin-top: 0.5vh};
+  .title-word-clone{font-size: 100rem};
+  #game{margin-top: 0.5dvh};
   #game{height: 50%};
   .cluetitle{font-size: 1.5rem};
   .ClueBox{font-size: 1rem};
-  .box{width: 3.5vh};
-  .box{height: 3.5vh};
-  .box{margin:0.07vh};
-  .box{font-size: 3.25vh};
-  .box.wrong{border: 0.1vh solid black};
-  .box.wrong-correct{border: 0.1vh solid black}
-  .box.right{border: 0.1vh solid black}
-  .box.right-correct{border: 0.1vh solid black}
-  .box.active{border: 0.1vh solid red}
-  .box.active-correct{border: 0.1vh solid red}
+  .box{width: 3.5dvh};
+  .box{height: 3.5dvh};
+  .box{margin:0.07dvh};
+  .box{font-size: 3.25dvh};
+  .box.wrong{border: 0.1dvh solid black};
+  .box.wrong-correct{border: 0.1dvh solid black}
+  .box.right{border: 0.1dvh solid black}
+  .box.right-correct{border: 0.1dvh solid black}
+  .box.active{border: 0.1dvh solid red}
+  .box.active-correct{border: 0.1dvh solid red}
   .footer{font-size: 0.8rem};
-  .helpbutton{width: 7vh};
-  .helpbutton{height: 7vh};
+  .helpbutton{width: 7dvh};
+  .helpbutton{height: 7dvh};
 }
 
 @media screen and (orientation:landscape) {
+  .title{color: black};
   .title{font-size: 4.5vw};
   .title-word-clone{font-size: 1rem};
   #game{margin-top: 0.5vw};
@@ -81,7 +83,7 @@ body {
 
 
 .title {
-  color: black;
+  /* color: black; */
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* font-size: 4rem; */
