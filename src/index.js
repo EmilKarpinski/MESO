@@ -533,7 +533,7 @@ function isWinner(){
             backdrop: 'rgba(212, 233, 214, 0.4)'
           })
         // Setting a cookie so this doesn't display again.
-        document.cookie = "FirstTimeHint=false";
+        document.cookie = "FirstTimeHint=false;expires=Thu, 24 Dec 2099 12:00:00 UTC; path=/";
         CookieState["FirstTimeHint"]  = "false";
     }
 
@@ -632,31 +632,32 @@ function FirstTime(){
           }).then((result) => {
             // If they would like to disable future popups we set a cookie to remember this choice.
             if (result.isConfirmed) {
-                document.cookie = "MesoWelcomeDisabled=true;";
+                document.cookie = "MesoWelcomeDisabled=true; expires=Thu, 24 Dec 2099 12:00:00 UTC; path=/";
             }
           });
     }
 }
 // Function checks if cookies are already present on the users computer, and if not then sets the placeholders
 function GetCookies(){
-    console.log(document.cookie);
-    if (document.cookie != ""){
-        // Getting the cookie string
-        let cookieString = document.cookie.split('; ');
+    // If there are no cookies, set the first time cookies.
+    // Added the expiration date here. Note this doesn't actually work - they just expire ~1 year from now. Wondering if there's a hardcoded upper limit on cookie age. 
+    if (document.cookie == ""){
+        document.cookie = "MesoWelcomeDisabled=false; expires=Thu, 24 Dec 2099 12:00:00 UTC; path=/"
+        document.cookie = "FirstTimeHint=true; expires=Thu, 24 Dec 2099 12:00:00 UTC; path=/"
+    }
+    
+    // Getting the cookie string
+    let cookieString = document.cookie.split('; ');
 
-        // Lopping through all obtained cookies to seed the object with key value pairs.
-        for (let c = 0; c < cookieString.length; c++){
-            let ThisCookie = cookieString[c].split('=');
-            let KEY = ThisCookie[0];
-            let VALUE = ThisCookie[1];
-            CookieState[KEY] = VALUE;
-        }
+    // Lopping through all obtained cookies to seed the object with key value pairs.
+    for (let c = 0; c < cookieString.length; c++){
+        let LongCookie = cookieString[c].split(';');
+        let ThisCookie = LongCookie[0].split('=');
+        let KEY = ThisCookie[0];
+        let VALUE = ThisCookie[1];
+        CookieState[KEY] = VALUE;
     }
-    // Else if there are no cookies, setting the two required cookies.
-    else {
-        document.cookie = "MesoWelcomeDisabled=false;"
-        document.cookie = "FirstTimeHint=true;"
-    }
+
 }
 
 
