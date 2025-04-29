@@ -1,14 +1,13 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["PISA", "A tilting tower"], 
-    "W2":["PASTA", "Carbs in many shapes"],
-    "W3":["PIZZA", "Favorite pie of adolescent turtles"],
-    "W4":["POLENTA", "Yellow and creamy cornmeal dish"],
-    "W5":["PAPACY", "This office runs the Catholic church"]
+    "W1":["WITCH", "The Lion, the _____, and the wardrobe"], 
+    "W2":["BURGLAR", "Sneaky individual who prefers to 'borrow' without asking"],
+    "W3":["BASTET", "Egyptian goddess who 'purr-sued' pleasure and protection"],
+    "W4":["SALEM", "Witchy town home to some famous trials"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "ITALY";
+export const Puzzle_ThemeWord = "CATS";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"
