@@ -1,13 +1,14 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["WITCH", "The Lion, the _____, and the wardrobe"], 
-    "W2":["BURGLAR", "Sneaky individual who prefers to 'borrow' without asking"],
-    "W3":["BASTET", "Egyptian goddess who 'purr-sued' pleasure and protection"],
-    "W4":["SALEM", "Witchy town home to some famous trials"]
+    "W1":["MUSHROOM", "Buttons for a 'Fun-gi'"], 
+    "W2":["JAPANESE", "Culture associated with sushi and soba"],
+    "W3":["PLUMBER", "Unclogs your worst problems"],
+    "W4":["ITALIAN", "Culture associated with pizza and pasta"],
+    "W5":["NINTENDO", "Wii switch'd the cube, then switch'd it again"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "CATS";
+export const Puzzle_ThemeWord = "MARIO";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"
