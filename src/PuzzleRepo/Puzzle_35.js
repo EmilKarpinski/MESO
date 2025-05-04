@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["NUMBER", ""], 
-    "W2":["CALCULUS", ""],
-    "W3":["GEOMETRY", ""],
-    "W4":["HOMEWORK", ""]
+    "W1":["NUMBER", "A countable thing."], 
+    "W2":["CALCULUS", "Advanced math that's integral for higher learning."],
+    "W3":["GEOMETRY", "Triangles and shapes all the way down."],
+    "W4":["HOMEWORK", "Lessons that follow you home."]
 };
 
 // Storing the central theme word

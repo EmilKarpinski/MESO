@@ -1,11 +1,11 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["HISTORY", ""], 
-    "W2":["RECESS", ""],
-    "W3":["TEACHER", ""],
-    "W4":["CLASSROOM", ""],
-    "W5":["OXFORD", ""],
-    "W6":["COLLEGE", ""],
+    "W1":["HISTORY", "Doesn't always repeat, but often rhymes."], 
+    "W2":["RECESS", "A break from class or in a courtroom."],
+    "W3":["TEACHER", "Instructor or sensei."],
+    "W4":["CLASSROOM", "Bored room for many students."],
+    "W5":["OXFORD", "British university with a classic lace-up."],
+    "W6":["COLLEGE", "Generates degrees and debt."],
 };
 
 // Storing the central theme word
