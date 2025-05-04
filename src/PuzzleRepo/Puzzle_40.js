@@ -1,11 +1,11 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["PATROL", ""], 
-    "W2":["PRISON", ""],
-    "W3":["LAW", ""],
-    "W4":["UNIFORM", ""],
-    "W5":["HANDCUFFS", ""],
-    "W6":["OFFICER", ""]
+    "W1":["PATROL", "Security's watchful walk."], 
+    "W2":["PRISON", "Place where you do time."],
+    "W3":["LAW", "Written, upheld, and sometimes broken."],
+    "W4":["UNIFORM", "Outfit for rank and file."],
+    "W5":["HANDCUFFS", "Usually steel sometimes fuzzy restraints."],
+    "W6":["OFFICER", "Title for a person with authority."]
 };
 
 // Storing the central theme word

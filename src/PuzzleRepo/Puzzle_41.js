@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["STEAM", ""], 
-    "W2":["TRACK", ""],
-    "W3":["SUBWAY", ""],
-    "W4":["RAIL", ""],
-    "W5":["CROSSING", ""]
+    "W1":["STEAM", "Hissess from a kettle."], 
+    "W2":["TRACK", "A path or lane."],
+    "W3":["SUBWAY", "Tunnel transit or sandwiches."],
+    "W4":["RAIL", "Can be used to slide down the stairs or grind with a skateboard."],
+    "W5":["CROSSING", "Where two roads meet."]
 };
 
 // Storing the central theme word
