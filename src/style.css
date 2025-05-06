@@ -73,6 +73,10 @@ body {
     width: calc(229 / 375 * 30vw);
     height: calc(60 / 375 * 30vw);
   }
+  .hintbutton{
+    width: calc(229 / 375 * 30vw);
+    height: calc(60 / 375 * 30vw);
+  }
 }
 /* Size for tablets and small laptops */
 @media screen and (min-width: 751px) and (max-width: 1599px){
@@ -132,6 +136,10 @@ body {
     width: calc(229 / 375 * 30vw);
     height: calc(60 / 375 * 30vw);
   }
+  .hintbutton{
+    width: calc(229 / 375 * 30vw);
+    height: calc(60 / 375 * 30vw);
+  }
 }
 /* Size for regular desktop PCs */
 @media (min-width: 1600px){
@@ -188,6 +196,10 @@ body {
     margin-right: 1vw;
   }
   .helpbutton{
+    width: calc(229 / 375 * 20vw);
+    height: calc(60 / 375 * 20vw);
+  }
+  .hintbutton{
     width: calc(229 / 375 * 20vw);
     height: calc(60 / 375 * 20vw);
   }
@@ -411,6 +423,13 @@ hr {
   position: absolute;
   top: 5px;
   right: 5px;
+  cursor: pointer;
+}
+.hintbutton{
+  display: flex;
+  position: absolute;
+  top: 5px;
+  left: 5px;
   cursor: pointer;
 }
 

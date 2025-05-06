@@ -608,6 +608,36 @@ function PrintHelpControls() {
         });
     });
 }
+
+// This function gives the player the current letter when they click it.
+function GiveHint(){
+    // Checking that the active row isn't already complete. If it is we do nothing.
+    if(CorrectRow[CurrRow] != 1){
+        // Gets and stores the correct word for the current row
+        // The [0] at the end here returns the first value in the key:value pair (i.e. the word:clue pair)
+        let CurrCorrectWord = Word_List[(Object.keys(Word_List)[CurrRow])][0];
+        console.log(CurrCorrectWord);
+        // Loops through the current row to figure out which cells are active and how many are there.
+        // Need a counter here which is used to track how many word boxes were present before the active cell. This corresponds to the letter in the word to be given minus 1 and is used to get the position in the string.
+        let CharCounter = 0;
+        let ActiveChar = 0;
+        for (let j = 0; j < boxtype.grid[CurrRow].length; j++) {        
+            if(boxtype.grid[CurrRow][j] == "word" || boxtype.grid[CurrRow][j] == "middle"){
+                CharCounter++;
+            }
+            else if(boxtype.grid[CurrRow][j] == "active"){
+                // We don't add one here since otherwise we'd have to substract one in the next step.
+                ActiveChar = CharCounter; 
+            }
+        }
+        addLetter(CurrCorrectWord[ActiveChar]);
+        // Then we check if the person has correctly solved all the clue puzzles and the central theme word
+        isWinner(); 
+        // After capturing the keystroke and making the requisite changes, we update the grid which resets the colouring and text contents.
+        updateGrid(); 
+    }
+}
+
 // Function to welcome the player for the first time, direct them to the help menu, and ask them if they'd like to disable the welcome menu with a cookie.
 function FirstTime(){
     // Checking if there's a cookie asking for the welcome message to be disabled. 
@@ -672,8 +702,12 @@ startup();
 // No idea why thefunction isn't refered to with the () here (i.e. PrintHelpControls()), but if you include them it prints right when the game starts.
 document.addEventListener('DOMContentLoaded', function () {
     var HelpPressed = document.getElementById('HelpButton');
+    var HintPressed = document.getElementById('HintButton');
     if (HelpPressed) {
         HelpPressed.addEventListener('click', PrintHelpControls);
+    }
+    if (HintPressed) {
+        HintPressed.addEventListener('click', GiveHint);
     }
     // Adding an input element off screen as well to catch input on mobile.
     const HiddenInput = document.createElement('HiddenInput');
