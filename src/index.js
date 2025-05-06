@@ -80,19 +80,25 @@ const keyboard = new Keyboard({
         default: [
             "Q W E R T Y U I O P",
             "A S D F G H J K L",
-            "Z X C V B N M {backspace}"
+            "Z X C V B N M {backspace}",
+            "{arrowleft} {arrowright}" 
         ]
     },
-    // theme: "SimpleKeyboard-DefaultTheme SimpleKeyboard-DefaultLayout Bksp-Key",
-    // buttonTheme: [
-    //     {
-    //         class: "Bksp-Key",
-    //         button:"{backspace}"
-    //     }
-    // ],
+    buttonTheme: [
+        {
+            class: "Bksp-Key",
+            buttons: "{backspace}"
+        },
+        {
+            class: "Other-Keys",
+            buttons: "Q W E R T Y U I O P A S D F G H J K L Z X C V B N M"
+        }
+    ],
     // Setting custom display for the backspace key.
     display: {
-        "{backspace}" : "← Backspace "
+        "{backspace}" : "← Backspace ",
+        "{arrowleft}" : "← Left",
+        "{arrowright}" : "Right →"
     },
     // Calls a reduced function for dealing with the mobile keyboard.
     // No arrow keys so we only care about adding or removing leters. 
@@ -319,12 +325,20 @@ function UpdateBox(row, col){
 // Function for adding/removing letters using the mobile keyboard.
 function onKeyPress(Button){
     // Adding the main function from the register keyboard events function here for dealing with the mobile keyboard.
+    // Adding also the left and right arrow keys if people would prefer to use them. 
     if (AlreadyWonFlag ==false){
         // Preforming checks for various keys. 
         // First checking for backspace which will call a function to delete the previous letter.
         // Also adding a check here to see if the current row has the correct word (CorrectRow[CurrRow] != 1). If so I disable editing the text of that row.
         if (Button == '{backspace}' && CorrectRow[CurrRow] != 1){
             removeLetter(); 
+        }
+        if (Button == '{arrowright}'){
+            MoveRight(); 
+        }
+        // Or to shift it to the left.
+        if (Button == '{arrowleft}'){
+            MoveLeft(); 
         }
         // Checks to see if a letter is pressed (using the isLetter function), and adds it to the current word.
         // Also adding a check here to see if the current row has the correct word (CorrectRow[CurrRow] != 1). If so I disable editing the text of that row.
