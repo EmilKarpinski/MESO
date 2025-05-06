@@ -559,17 +559,91 @@ function isWinner(){
     },100);
 }
 function WinDisplay(){
+
+    // Calling the confetti cannon function
+    ConfettiCanon();
+
     // Makes a fancier alert box using sweetalerts2
     Swal.fire({
         imageUrl: "./src/Assets/WinnerCrown.png",
         padding: "3em",
         text: 'Congratulations on completing today\'s puzzle. \n New puzzles every weekday by 10am EST!',
         confirmButtonText: 'Thanks For Playing',
-        backdrop: 'rgba(212, 233, 214, 0.4)'
+        backdrop: 'rgba(212, 233, 214, 0.1)'
       })
     // Would like to eventually also add some animation here (like the fireworks library)
 }
 
+function ConfettiCanon(){
+    // Parameters for the confetti package from tsparticles confetti.
+    confetti("tsparticles", {
+        angle: 90,
+        // This controls the amount of particles produced.
+        count: 100,
+        // This sets the start position (right now roughly aligned with the title.)
+        position: {
+            x: 50,
+            y: 5,
+        },
+        // Controls the spread. In this case it's a point explosion outwards into a circle.
+        spread: 360,
+        startVelocity: 45,
+        decay: 0.9,
+        gravity: 1,
+        drift: 30,
+        // Sets the time to fade (smaller values keep the images around longer).
+        ticks: 100,
+        shapes: ["image"],
+        // Sets the images for the confetti
+        shapeOptions: {
+            image: [{
+                src: "./src/Assets/TILES_Green_E.png",
+                width: 100,
+                height: 100,
+                },
+                {
+                src: "./src/Assets/TILES_Green_M.png",
+                width: 100,
+                height: 100,
+                },
+                {
+                src: "./src/Assets/TILES_Green_O.png",
+                width: 100,
+                height: 100,
+                },
+                {
+                src: "./src/Assets/TILES_Green_S.png",
+                width: 100,
+                height: 100,
+                },
+                {
+                src: "./src/Assets/TILES_White_E.png",
+                width: 100,
+                height: 100,
+                },
+                {
+                src: "./src/Assets/TILES_White_M.png",
+                width: 100,
+                height: 100,
+                },
+                {
+                src: "./src/Assets/TILES_White_O.png",
+                width: 100,
+                height: 100,
+                },
+                {
+                src: "./src/Assets/TILES_White_S.png",
+                width: 100,
+                height: 100,
+                },
+            ],
+        },
+        // Sets the size of the confetti. 
+        scalar: 5,
+        zIndex: 100,
+        disableForReducedMotion: true,
+    });    
+}
 
 // Prints a series of three pop-ups that explain the goal of the game and the controls. 
 // These are all nested so one comes after the other.
@@ -810,7 +884,6 @@ function BoxDraggedMobile(event){
     if (this.classList.contains("right") || this.classList.contains("wrong") || this.classList.contains("right-correct") || this.classList.contains("wrong-correct") ){
         // Using this function here again so that if the user wants to drag another row that one will become active. 
         SetActiveCell(this.id);
-        console.log(StartX);
     }
 
     // Function which kicks in repeatedly while the box is being actively being dragged.
