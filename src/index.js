@@ -70,10 +70,12 @@ const boxtype = {
     // currentCol: 0, 
 };
 
+// This defines and adds an onscreen custom keyboard so we don't have to use the default mobile ones which take up a lot of room.
 let Keyboard = window.SimpleKeyboard.default;
 const defaultTheme = "hg-theme-default";
 const keyboard = new Keyboard({
     theme: defaultTheme,
+    // Defining a custom layout without any keys that we don't need.
     layout:{
         default: [
             "Q W E R T Y U I O P",
@@ -88,18 +90,23 @@ const keyboard = new Keyboard({
     //         button:"{backspace}"
     //     }
     // ],
+    // Setting custom display for the backspace key.
     display: {
         "{backspace}" : "← Backspace "
     },
+    // Calls a reduced function for dealing with the mobile keyboard.
+    // No arrow keys so we only care about adding or removing leters. 
     onKeyPress: button => onKeyPress(button)
 });
 
+// Function which adds a class to the keyboard that makes it appear on smaller screens.
+// On desktops this does nothing, because the class that it adds is formatted at that breakpoint to hide the keyboard anyways.
 function showKeyboard() {
     keyboard.setOptions({
         theme: `${defaultTheme} show-keyboard`
     });
 }
-  
+// Function that removes that class and effectively hides it.
 function hideKeyboard() {
     keyboard.setOptions({
         theme: defaultTheme
