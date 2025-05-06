@@ -328,14 +328,20 @@ function registerKeyboardEvents(){
 
 // Removes a letter from the grid
 function removeLetter(){
-    //Checks if the current cursor position is in the leftmost column or if the box immediately to the left is empty (i.e. not active)
-    // If either is true then does nothing
-    if (CurrCol === 0 || boxtype.grid[CurrRow][CurrCol-1] == "empty"){
+    // Checking for two niche cases where the backspace breaks:
+    // First if statment checks if the current box is empty and it's in the very first column. Deleting here would cause it to jump off the grid.
+    if (state.grid[CurrRow][CurrCol] == "" && CurrCol ==  0){
         return; 
     }
+    // Second checks if the current active box is the leftmost active box in the row and the box immediately to the left is hidden. If so also does nothing. 
+    else if (state.grid[CurrRow][CurrCol] == "" && boxtype.grid[CurrRow][CurrCol-1] == "empty"){
+        return; 
+    }
+    // Else if there's something in the current box it just deletes it and leaves the active box where it is. 
     else if (state.grid[CurrRow][CurrCol] != ""){
         state.grid[CurrRow][CurrCol] = '';
     }
+    // If there was nothing in the box then it deletes the entry of the previous box and sets the focus there. 
     else {
         // Else, if there is something to delete sets the current character to an empty string (note this is actually the preceding character since focus shifts after typing.)
         state.grid[CurrRow][CurrCol-1] ='';
