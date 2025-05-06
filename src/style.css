@@ -70,8 +70,8 @@ body {
     margin-right: 0.4rem;
   }
   .helpbutton{
-    width: calc(60 / 375 * 100vw);
-    height: calc(60 / 375 * 100vw);
+    width: calc(229 / 375 * 30vw);
+    height: calc(60 / 375 * 30vw);
   }
 }
 /* Size for tablets and small laptops */
@@ -129,8 +129,8 @@ body {
     margin-right: 1vw;
   }
   .helpbutton{
-    width: calc(150 / 1599 * 100vw);
-    height: calc(150 / 1599 * 100vw);
+    width: calc(229 / 375 * 30vw);
+    height: calc(60 / 375 * 30vw);
   }
 }
 /* Size for regular desktop PCs */
@@ -188,11 +188,10 @@ body {
     margin-right: 1vw;
   }
   .helpbutton{
-    width: calc(100 / 1599 * 100vw);
-    height: calc(100 / 1599 * 100vw);
+    width: calc(229 / 375 * 20vw);
+    height: calc(60 / 375 * 20vw);
   }
 }
-
 
 #game {
   display: flex;
@@ -409,11 +408,9 @@ hr {
 
 .helpbutton{
   display: flex;
-  /* width: 75px; */
-  /* height: 75px; */
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 5px;
+  right: 5px;
   cursor: pointer;
 }
 
