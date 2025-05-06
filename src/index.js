@@ -70,6 +70,42 @@ const boxtype = {
     // currentCol: 0, 
 };
 
+let Keyboard = window.SimpleKeyboard.default;
+const defaultTheme = "hg-theme-default";
+const keyboard = new Keyboard({
+    theme: defaultTheme,
+    layout:{
+        default: [
+            "Q W E R T Y U I O P",
+            "A S D F G H J K L",
+            "Z X C V B N M {backspace}"
+        ]
+    },
+    // theme: "SimpleKeyboard-DefaultTheme SimpleKeyboard-DefaultLayout Bksp-Key",
+    // buttonTheme: [
+    //     {
+    //         class: "Bksp-Key",
+    //         button:"{backspace}"
+    //     }
+    // ],
+    display: {
+        "{backspace}" : "← Backspace "
+    },
+    onKeyPress: button => onKeyPress(button)
+});
+
+function showKeyboard() {
+    keyboard.setOptions({
+        theme: `${defaultTheme} show-keyboard`
+    });
+}
+  
+function hideKeyboard() {
+    keyboard.setOptions({
+        theme: defaultTheme
+    });
+}
+
 // Startup function. 
 function startup(){
     // I believe this retrieves the parameters for the game for the style.css file. 
@@ -271,6 +307,29 @@ function UpdateBox(row, col){
             box.classList.remove('active-correct');
         }
     }
+}
+
+// Function for adding/removing letters using the mobile keyboard.
+function onKeyPress(Button){
+    // Adding the main function from the register keyboard events function here for dealing with the mobile keyboard.
+    if (AlreadyWonFlag ==false){
+        // Preforming checks for various keys. 
+        // First checking for backspace which will call a function to delete the previous letter.
+        // Also adding a check here to see if the current row has the correct word (CorrectRow[CurrRow] != 1). If so I disable editing the text of that row.
+        if (Button == '{backspace}' && CorrectRow[CurrRow] != 1){
+            removeLetter(); 
+        }
+        // Checks to see if a letter is pressed (using the isLetter function), and adds it to the current word.
+        // Also adding a check here to see if the current row has the correct word (CorrectRow[CurrRow] != 1). If so I disable editing the text of that row.
+        if (isLetter(Button) && CorrectRow[CurrRow] != 1){
+            addLetter(Button); 
+        }
+    }
+
+    // Then we check if the person has correctly solved all the clue puzzles and the central theme word
+    isWinner(); 
+    // After capturing the keystroke and making the requisite changes, we update the grid which resets the colouring and text contents.
+    updateGrid(); 
 }
 
 
@@ -563,6 +622,9 @@ function WinDisplay(){
     // Calling the confetti cannon function
     ConfettiCanon();
 
+    // Hiding the onscreen keyboard if necessary.
+    hideKeyboard();
+
     // Makes a fancier alert box using sweetalerts2
     Swal.fire({
         imageUrl: "./src/Assets/WinnerCrown.png",
@@ -789,9 +851,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (HintPressed) {
         HintPressed.addEventListener('click', GiveHint);
     }
-    // Adding an input element off screen as well to catch input on mobile.
-    const HiddenInput = document.createElement('HiddenInput');
-    HiddenInput.focus();
 });
 
 // Adding Event Listeners for the boxes
@@ -805,23 +864,28 @@ for (var i = 0; i < BoxList.length; i++){
 
 // Function that makes the clicked box the active box. 
 function BoxClicked(){
-    if (this.classList.contains("right") || this.classList.contains("wrong") || this.classList.contains("right-correct") || this.classList.contains("wrong-correct") ){
+    // The below first if statment is depreciated. It doesn't work with the BoxDragged function, since that initiates on mouse down and a click requires a mouse down followed by mouse up.
+    // Since the BoxDragged function sets the mousedown cell to be active, it can never be any of these.
+    // As such the only thing it can ever click is an active or not active cell. 
+    // So removing this for a simplified IF statment that includes only those two options. 
+    // if (this.classList.contains("right") || this.classList.contains("wrong") || this.classList.contains("right-correct") || this.classList.contains("wrong-correct") ){
 
-        // Opens the keyboard on mobile.
-        HiddenInput.focus();
+    //     // Opens the keyboard on mobile.
+    //     HiddenInput.focus();
 
-        // Put a function here since when we click and drag we also want to set the OG box as active so the right row is dragged.
-        SetActiveCell(this.id);
-    }
-    // Checks if the clicked box is active and opens the keyboard
+    //     // Put a function here since when we click and drag we also want to set the OG box as active so the right row is dragged.
+    //     SetActiveCell(this.id);
+    // }
+
+    // Checks if the clicked box is active and opens the keyboard. 
     // Adding the second line here which does nothing, but it wasn't working originally, so testing if having this in here helps. 
-    else if (this.classList.contains("active")){
-        HiddenInput.focus();
+    if (this.classList.contains("active")){
+        showKeyboard();
         boxtype.grid[CurrRow][CurrCol] = "active";
     }
     // Checks if a box that is empty/hidden is clicked and hides the keyboard
-    else if (this.classList.contains("empty")){
-        HiddenInput.blur();
+    else {
+        hideKeyboard();
     }
     updateGrid(); 
 }

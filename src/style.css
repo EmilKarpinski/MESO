@@ -34,8 +34,6 @@ body {
     width: 85%;
   }
   .box{
-    /* width: 24px;
-    height: 24px; */
     width: calc(22.5 / 375 * 100vw);
     height: calc(22.5 / 375 * 100vw); 
     margin:0.2vw;
@@ -76,6 +74,12 @@ body {
   .hintbutton{
     width: calc(229 / 375 * 30vw);
     height: calc(60 / 375 * 30vw);
+  }
+  .simple-keyboard {
+    display: none;
+  }
+  .show-keyboard {
+    display: block;
   }
 }
 /* Size for tablets and small laptops */
@@ -140,6 +144,12 @@ body {
     width: calc(229 / 375 * 30vw);
     height: calc(60 / 375 * 30vw);
   }
+  .simple-keyboard {
+    display: none;
+  }
+  .show-keyboard {
+    display: block;
+  }
 }
 /* Size for regular desktop PCs */
 @media (min-width: 1600px){
@@ -202,6 +212,11 @@ body {
   .hintbutton{
     width: calc(229 / 375 * 20vw);
     height: calc(60 / 375 * 20vw);
+  }  .simple-keyboard {
+    display: none;
+  }
+  .show-keyboard {
+    display: none;
   }
 }
 
@@ -297,7 +312,7 @@ body {
 
 .box.empty {
   background: var(--empty);
-  color: slategray; 
+  color: slategray;
   text-transform: uppercase;
   /* centers and formats the text */
   display: grid;
@@ -439,3 +454,27 @@ hr {
   width: 1px;
   height: 1px;
 }
+
+.simple-keyboard {
+  margin: 0 auto;
+  /* justify-content: center; */
+}
+
+.show-keyboard {
+  max-width: 100%;
+}
+
+/* 
+.simple-keyboard.SimpleKeyboard-DefaultTheme {
+  border: 5px solid rgb(255, 0, 0, 0.7);
+  border-radius: 10px;
+  margin: 10px;
+  width: calc(100% - 20px);
+} */
+/* SimpleKeyboard-DefaultTheme SimpleKeyboard-DefaultLayout Bksp-Key */
+/* .simple-keyboard.SimpleKeyboard-DefaultLayout .Bksp-Key {
+  background: rgb(255, 0, 0, 0.7);
+  color: white;
+  width: 50px;
+}
+  */

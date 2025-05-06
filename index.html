@@ -23,7 +23,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.8.1/tsparticles.confetti.bundle.min.js"></script>
     <!-- This script gives us an onscreen keyboard -->
     <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard-layouts@latest/build/index.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-keyboard-layouts@latest/build/index.min.js"></script> -->
     <script src="./src/index.js" type="module"></script>
   </head>
 
@@ -36,13 +37,11 @@
       <a class="helpbutton" id="HelpButton" title="Controls" >
         <img src="./src/Assets/ControlsButton.png" />
       </a>
-      <!-- Addind a hidden input field off screen -->
-      <input type="text" id="HiddenInput" class="hiddeninput" autofocus autocomplete="off" maxlength="1"> 
     </span>
     <div id="game"></div>
     <p class="cluetitle"> <u>Clue</u></p>
     <div id = "clue"> </div>
-
+    <div class="simple-keyboard"></div>
     <!-- Adding simple analytics tracking -->
     <!-- 100% privacy-first analytics -->
     <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
