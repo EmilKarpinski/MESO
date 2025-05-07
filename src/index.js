@@ -911,7 +911,7 @@ function BoxClicked(){
 
     // Checks if the clicked box is active and opens the keyboard. 
     // Adding the second line here which does nothing, but it wasn't working originally, so testing if having this in here helps. 
-    if (this.classList.contains("active")){
+    if (this.classList.contains("active") || this.classList.contains("active-correct")){
         showKeyboard();
         boxtype.grid[CurrRow][CurrCol] = "active";
     }
