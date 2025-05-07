@@ -743,7 +743,7 @@ function PrintHelpControls() {
     }).then(() => {
         Swal.fire({
             title: "Controls",
-            html: "Use your keyboard to enter the word for each clue. <br />Correct words change color.",
+            html: "Use the keyboard to enter the word for each clue. <br />Correct words change color.",
             imageUrl: "./src/Assets/MESO_KeyboardControls.png",
             imageHeight: 220,
             imageWidth: 350,
@@ -757,15 +757,26 @@ function PrintHelpControls() {
                 padding: "3em",
                 confirmButtonColor: "#3085d6",
                 confirmButtonText: "Next &rarr;",
-                text: "Use the Up and Down arrow keys to move between words.",
+                text: "Use the Up and Down arrow keys or the mouse to to move between words.",
             }).then(() => {
                 Swal.fire({
                     imageUrl: "./src/Assets/Linkr_LeftToRight.png",
                     title: "Controls",
                     padding: "3em",
-                    confirmButtonColor: "Green",
-                    confirmButtonText: "Back to Game",
-                    text: "Use the Left and Right arrow keys to slide the current word left and right.",
+                    confirmButtonColor: "3085d6",
+                    confirmButtonText: "Next &rarr;",
+                    text: "Use the Left and Right arrow keys or click and drag to slide the current word left and right.",
+                }).then(() => {
+                    Swal.fire({
+                        title: "Winning the Game",
+                        html: "If you get stuck the Hint button will give you the correct letter for your current box.<br /><br /> Remember - The vertical MESO is related to all the words in the game. Use the words as clues to unscramble and solve the MESO!",
+                        imageUrl: "./src/Assets/Meso_Logo.png",
+                        imageHeight: 200,
+                        imageWidth: 250,
+                        padding: "3em",
+                        confirmButtonColor: "Green",
+                        confirmButtonText: "Back to Game",
+                    });
                 });
             });
         });
