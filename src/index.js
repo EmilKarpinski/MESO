@@ -4,7 +4,7 @@
 import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/+esm';
 
 // Importing the puzzle parameters
-import { Puzzle_Word_List, Puzzle_ThemeWord, Puzzle_Author } from './Puzzle.js';
+import { Puzzle_Word_List, Puzzle_ThemeWord, Puzzle_Author, Previous_Meso } from './Puzzle.js';
 
 // Setting variables to the imported puzzle parameters
 // The Word list which contains the crossword words and puzzles
@@ -16,12 +16,25 @@ const Author = Puzzle_Author;
 // Writing the puzzle author to the page.
 document.getElementById('Author').innerHTML="Puzzle By: " + Author;
 
-// QoL variables
+// --- QoL variables ---
 // AlreadyWonFlag is a boolean that stores if someone has already won. If they have it stops reading keyboard commands and stops the popup from appearing. 
 let AlreadyWonFlag = false; 
 
+// Setting two variables to deal with dates for cookie expiration
+// The first is just today's date.
+// Expiration date is originally just today's date, but then get's icremented by 1 (effiectively 1 year from today)
+const DateToday = new Date(); 
+const OneYearFromNow = new Date(DateToday);
+OneYearFromNow.setFullYear(OneYearFromNow.getFullYear()+1);
+const CookieExpirationDate = "expires=" + OneYearFromNow.toUTCString();
+
+// Setting a tracker for if a hint has been used or not
+let HintsUsed = 0;
+
 // Declaring an empty object to store to store cookies.
 const CookieState = {};
+
+// --- QoL variable end ---
 
 // Two constants which constrain the grid size. 
 // Columns will probably always be fixed as the white space padding on either side doesn't matter.
@@ -164,8 +177,7 @@ function drawGrid(container){
             // Undoing the minus one since I think it's actually not zero indexed.
             CurrCol = MidCol-start;
         }
-        // console.log(CurrRow, CurrCol);
-        // console.log(start);
+
         for (let j = 0; j < GridNumCols; j++){
             // The if statments are used to colour the boxes. 
             // First we check if its in the middle where the theme word is, and colour those
@@ -183,8 +195,6 @@ function drawGrid(container){
                 boxtype.grid[i][j] = "empty";
                 drawBox(grid, i, j);
             }
-            // console.log(boxtype.grid[i]);
-
         }
     }
 
@@ -461,7 +471,6 @@ function addLetter(letter){
 
 // Function which drops the current cursor to the next row
 function MoveDown(){
-    // console.log(CurrRow, GridNumRows);
     // Check if we're currently in the last row. If so do nothing.
     if (CurrRow+1 >= GridNumRows){
         return;
@@ -476,13 +485,11 @@ function MoveDown(){
         CurrCol = boxtype.grid[CurrRow+1].findIndex(pos => pos === 'word' || pos === 'middle');
         CurrRow++;
         boxtype.grid[CurrRow][CurrCol] = "active";
-        // console.log(CurrRow, CurrCol);
     }
 }
 
 // Opposite of the MoveDown() function. Moves the current curosor up to the previous row.
 function MoveUp(){
-    // console.log(CurrRow, GridNumRows);
     // Check if we're currently in the first row. If so do nothing.
     if (CurrRow <= 0){
         return;
@@ -497,7 +504,6 @@ function MoveUp(){
         CurrCol = boxtype.grid[CurrRow-1].findIndex(pos => pos === 'word' || pos === 'middle');
         CurrRow--;
         boxtype.grid[CurrRow][CurrCol] = "active";
-        // console.log(CurrRow, CurrCol);
     }
 }
 
@@ -513,7 +519,6 @@ function MoveRight(){
         // Moving everything over ont to the right.
         // Notes this runs from the right to the left otherwise we overwrite the entries we're trying to move.
         for (let i = GridNumCols-1; i > boxtype.grid[CurrRow].findIndex(pos => pos === 'word'|| pos === "active"); i--){
-            // console.log(i, boxtype.grid[CurrRow].findIndex(pos => pos === 'word'));
             if (boxtype.grid[CurrRow][i-1] == "word" || boxtype.grid[CurrRow][i-1] == "middle"){
                 boxtype.grid[CurrRow][i] = "word";
                 state.grid[CurrRow][i] = state.grid[CurrRow][i-1];
@@ -619,8 +624,11 @@ function isWinner(){
             backdrop: 'rgba(212, 233, 214, 0.4)'
           })
         // Setting a cookie so this doesn't display again.
-        document.cookie = "FirstTimeHint=false;expires=Thu, 24 Dec 2099 12:00:00 UTC; path=/";
+        document.cookie = `FirstTimeHint=false; ${CookieExpirationDate}; path=/`;
         CookieState["FirstTimeHint"]  = "false";
+    }
+    else if (CorrectRow.includes(0) == false && CookieState["FirstTimeHint"]  == "false"){
+        document.cookie = `FirstTimeHint=false; ${CookieExpirationDate}; path=/`;
     }
 
     // Removing the event listeners for mouse movement and touchscreen dragging here to prevent sliding once the MESO is complete.
@@ -790,7 +798,6 @@ function GiveHint(){
         // Gets and stores the correct word for the current row
         // The [0] at the end here returns the first value in the key:value pair (i.e. the word:clue pair)
         let CurrCorrectWord = Word_List[(Object.keys(Word_List)[CurrRow])][0];
-        console.log(CurrCorrectWord);
         // Loops through the current row to figure out which cells are active and how many are there.
         // Need a counter here which is used to track how many word boxes were present before the active cell. This corresponds to the letter in the word to be given minus 1 and is used to get the position in the string.
         let CharCounter = 0;
@@ -805,6 +812,8 @@ function GiveHint(){
             }
         }
         addLetter(CurrCorrectWord[ActiveChar]);
+        // Marking that a hint has been used and incrementing by one to track total hints for the puzzle.
+        HintsUsed++;
         // Then we check if the person has correctly solved all the clue puzzles and the central theme word
         isWinner(); 
         // After capturing the keystroke and making the requisite changes, we update the grid which resets the colouring and text contents.
@@ -817,6 +826,7 @@ function FirstTime(){
     // Checking if there's a cookie asking for the welcome message to be disabled. 
     // If not displaying the welcome message.
     if (CookieState["MesoWelcomeDisabled"] == "true"){
+        document.cookie = `MesoWelcomeDisabled=true; ${CookieExpirationDate}; path=/`;
         return;
     }
     // If a cookie is not detected, show the welcome pop-up and ask if the user wants to disable future welcome popups.
@@ -836,7 +846,7 @@ function FirstTime(){
           }).then((result) => {
             // If they would like to disable future popups we set a cookie to remember this choice.
             if (result.isConfirmed) {
-                document.cookie = "MesoWelcomeDisabled=true; expires=Thu, 24 Dec 2099 12:00:00 UTC; path=/";
+                document.cookie = `MesoWelcomeDisabled=true; ${CookieExpirationDate}; path=/`;
             }
           });
     }
@@ -846,8 +856,12 @@ function GetCookies(){
     // If there are no cookies, set the first time cookies.
     // Added the expiration date here. Note this doesn't actually work - they just expire ~1 year from now. Wondering if there's a hardcoded upper limit on cookie age. 
     if (document.cookie == ""){
-        document.cookie = "MesoWelcomeDisabled=false; expires=Thu, 24 Dec 2099 12:00:00 UTC; path=/"
-        document.cookie = "FirstTimeHint=true; expires=Thu, 24 Dec 2099 12:00:00 UTC; path=/"
+        // Change these to perpetually expire in 1 year.
+        document.cookie = `MesoWelcomeDisabled=false; ${CookieExpirationDate}; path=/`;
+        document.cookie = `FirstTimeHint=true; ${CookieExpirationDate}; path=/`;
+        document.cookie = `PreviousWord=A; ${CookieExpirationDate}; path=/`;
+        document.cookie = `Streak=0; ${CookieExpirationDate}; path=/`;
+        document.cookie = `PerfectStreak=0; ${CookieExpirationDate}; path=/`;
     }
     
     // Getting the cookie string
@@ -861,7 +875,6 @@ function GetCookies(){
         let VALUE = ThisCookie[1];
         CookieState[KEY] = VALUE;
     }
-
 }
 
 

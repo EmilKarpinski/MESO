@@ -11,6 +11,9 @@ export const Puzzle_Word_List = {
     "W9":["ALPS", "Where you'd find French or Swiss chalets."]
 };
 
+// Storing the previous meso for streak purposes
+export const Previous_Meso = "AA";
+
 // Storing the central theme word
 export const Puzzle_ThemeWord = "MOUNTAINS";
 
