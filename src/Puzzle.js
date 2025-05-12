@@ -2,7 +2,7 @@
 export const Puzzle_Word_List = {
     "W1":["BOOTS", "Lace up and hike out."], 
     "W2":["LEATHER", "Material from a former furry wearer."],
-    "W3":["BOX", "A container or type of combat sport.boo"],
+    "W3":["BOX", "A container or type of combat sport."],
     "W4":["NIKE", "Just do it."],
     "W5":["MOCCASIN", "Soft shoe with native roots."]
 };
