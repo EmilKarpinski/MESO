@@ -4,7 +4,7 @@
 import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/+esm';
 
 // Importing the puzzle parameters
-import { Puzzle_Word_List, Puzzle_ThemeWord, Puzzle_Author, Previous_Meso } from './Puzzle.js';
+import { Puzzle_Word_List, Puzzle_ThemeWord, Puzzle_Author, Previous_Meso} from './Puzzle.js';
 
 // Setting variables to the imported puzzle parameters
 // The Word list which contains the crossword words and puzzles
@@ -12,6 +12,7 @@ import { Puzzle_Word_List, Puzzle_ThemeWord, Puzzle_Author, Previous_Meso } from
 const Word_List = Puzzle_Word_List;
 const ThemeWord = Puzzle_ThemeWord;
 const Author = Puzzle_Author; 
+const Previous_Word = Previous_Meso; 
 
 // Writing the puzzle author to the page.
 document.getElementById('Author').innerHTML="Puzzle By: " + Author;
@@ -640,7 +641,42 @@ function isWinner(){
         if (CentralWord == ThemeWord && AlreadyWonFlag == false){
             // Should set a flag to stop keyboard events alerts popping up after.
             AlreadyWonFlag = true;
-            // alert("Congratulation! You Win!");
+
+            // Checking streak stuff
+            if (CookieState["PreviousWord"] == Previous_Word){
+                // Gets the value of streak and adds 1 to it. Wrapping this in a number here so it adds it as numbers. 
+                let streakcount = Number(CookieState["Streak"])+1;
+                document.cookie = `Streak=${streakcount}; ${CookieExpirationDate}; path=/`;
+                
+                // Checking if hints were used or not.
+                // If not then increasing the value of perfect streak as well.
+                if (HintsUsed == 0){
+                    let PerfectRun = Number(CookieState["PerfectStreak"])+1;
+                    document.cookie = `PerfectStreak=${PerfectRun}; ${CookieExpirationDate}; path=/`;
+                }
+            }
+            // If the word stores as a cookie is not equal to the previous word this means the person has missed the puzzle. 
+            // As such we reset streak to one. 
+            // Also need to check that's its not equal to the current word in case someone redoes it so that it doesn't wipe their streak.
+            else if (CookieState["PreviousWord"] != Previous_Word && CookieState["PreviousWord"] != ThemeWord){
+                // Don't need to consider a scenerio where this is won or not since these if statments will only trigger on a win.
+                document.cookie = `Streak=1; ${CookieExpirationDate}; path=/`;
+
+                // Checking if hints were used or not. 
+                if (HintsUsed == 0){
+                    // Again, impossible to get a perfect puzzle without completing one, so we can just set this to one. 
+                    document.cookie = `PerfectStreak=1; ${CookieExpirationDate}; path=/`;
+                }
+                else if (HintsUsed > 0){
+                    document.cookie = `PerfectStreak=0; ${CookieExpirationDate}; path=/`;
+                }
+            }
+            
+            // Setting a cookie to remember the middle word of the last puzzle solved
+            // This happens irrespective of whether this is a streak or not yet.
+            document.cookie = `PreviousWord=${ThemeWord}; ${CookieExpirationDate}; path=/`;
+            
+            // Displays the winner popup.
             WinDisplay();
 
         }
@@ -654,11 +690,13 @@ function WinDisplay(){
     // Hiding the onscreen keyboard if necessary.
     hideKeyboard();
 
+
+
     // Makes a fancier alert box using sweetalerts2
     Swal.fire({
         imageUrl: "./src/Assets/WinnerCrown.png",
         padding: "3em",
-        text: 'Congratulations on completing today\'s puzzle. \n New puzzles every weekday by 10am EST!',
+        html: `Congratulations on completing today\'s puzzle.<br /> New puzzles every weekday by 10am EST!`,
         confirmButtonText: 'Thanks For Playing',
         backdrop: 'rgba(212, 233, 214, 0.1)'
       })
