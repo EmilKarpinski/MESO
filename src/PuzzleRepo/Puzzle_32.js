@@ -7,6 +7,9 @@ export const Puzzle_Word_List = {
     "W5":["MOCCASIN", "Soft shoe with native roots."]
 };
 
+// Storing the previous meso for streak purposes
+export const Previous_Meso = "MOUNTAINS";
+
 // Storing the central theme word
 export const Puzzle_ThemeWord = "SHOES";
 

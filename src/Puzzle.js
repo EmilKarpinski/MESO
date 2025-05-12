@@ -12,7 +12,7 @@ export const Puzzle_Word_List = {
 };
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "MOUNTAIN";
+export const Previous_Meso = "";
 
 // Storing the central theme word
 export const Puzzle_ThemeWord = "MOUNTAINS";
