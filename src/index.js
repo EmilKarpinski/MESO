@@ -936,6 +936,16 @@ function GetCookies(){
         let VALUE = ThisCookie[1];
         CookieState[KEY] = VALUE;
     }
+
+    // Adding a short if statment here to deal with the case that the included cookies are new and need to be set one time.
+    // This essentially resets the cookies. 
+    if (cookieString.length < 3){
+        document.cookie = `MesoWelcomeDisabled=false; ${CookieExpirationDate}; path=/`;
+        document.cookie = `FirstTimeHint=true; ${CookieExpirationDate}; path=/`;
+        document.cookie = `PreviousWord=A; ${CookieExpirationDate}; path=/`;
+        document.cookie = `Streak=0; ${CookieExpirationDate}; path=/`;
+        document.cookie = `PerfectStreak=0; ${CookieExpirationDate}; path=/`;
+    }
 }
 
 
