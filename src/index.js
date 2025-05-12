@@ -894,7 +894,7 @@ function FirstTime(){
     else{
         Swal.fire({
             title: "Welcome to MESO",
-            html: "Gameplay instructions are available by clicking on the question mark (?) in the top right corner.<br /><br />Would you like to disable this popup in the future?<br /><br /><i>Note: MESO currently does not work on mobile.</i>",
+            html: "Gameplay instructions are available by clicking on the Controls button in the in the top right corner.<br /><br />If you're stuck the Hint button in the top left corner will give you the current letter of the box you're on. <br /><br />Would you like to disable this popup in the future?",
             imageUrl: "./src/Assets/Meso_Logo.png",
             imageHeight: 200,
             imageWidth: 250,
