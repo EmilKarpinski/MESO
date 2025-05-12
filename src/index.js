@@ -646,12 +646,14 @@ function isWinner(){
             if (CookieState["PreviousWord"] == Previous_Word){
                 // Gets the value of streak and adds 1 to it. Wrapping this in a number here so it adds it as numbers. 
                 let streakcount = Number(CookieState["Streak"])+1;
+                CookieState["Streak"] = streakcount;
                 document.cookie = `Streak=${streakcount}; ${CookieExpirationDate}; path=/`;
                 
                 // Checking if hints were used or not.
                 // If not then increasing the value of perfect streak as well.
                 if (HintsUsed == 0){
                     let PerfectRun = Number(CookieState["PerfectStreak"])+1;
+                    CookieState["PerfectStreak"] = PerfectRun; 
                     document.cookie = `PerfectStreak=${PerfectRun}; ${CookieExpirationDate}; path=/`;
                 }
             }
@@ -661,13 +663,16 @@ function isWinner(){
             else if (CookieState["PreviousWord"] != Previous_Word && CookieState["PreviousWord"] != ThemeWord){
                 // Don't need to consider a scenerio where this is won or not since these if statments will only trigger on a win.
                 document.cookie = `Streak=1; ${CookieExpirationDate}; path=/`;
+                CookieState["Streak"] = 1;
 
                 // Checking if hints were used or not. 
                 if (HintsUsed == 0){
-                    // Again, impossible to get a perfect puzzle without completing one, so we can just set this to one. 
+                    // Again, impossible to get a perfect puzzle without completing one, so we can just set this to one.
+                    CookieState["PerfectStreak"] = 1; 
                     document.cookie = `PerfectStreak=1; ${CookieExpirationDate}; path=/`;
                 }
                 else if (HintsUsed > 0){
+                    CookieState["PerfectStreak"] = 0; 
                     document.cookie = `PerfectStreak=0; ${CookieExpirationDate}; path=/`;
                 }
             }
@@ -677,12 +682,12 @@ function isWinner(){
             document.cookie = `PreviousWord=${ThemeWord}; ${CookieExpirationDate}; path=/`;
             
             // Displays the winner popup.
-            WinDisplay();
+            WinDisplay(HintsUsed);
 
         }
     },100);
 }
-function WinDisplay(){
+function WinDisplay(HintFlag){
 
     // Calling the confetti cannon function
     ConfettiCanon();
@@ -690,17 +695,35 @@ function WinDisplay(){
     // Hiding the onscreen keyboard if necessary.
     hideKeyboard();
 
+    if (HintFlag == 0){
+        // Makes a fancier alert box using sweetalerts2
+        Swal.fire({
+            imageUrl: "./src/Assets/WinnerCrown.png",
+            padding: "3em",
+            html: `Winner! And a perfect puzzle no less! <br />MESO-merizing!<br /><br /> Current Streak: ${CookieState["Streak"]} <br /> Perfect Puzzles in Streak: ${CookieState["PerfectStreak"]} <br /> <br /> New puzzles every weekday between 9-10am EST!`,
+            confirmButtonText: 'Thanks For Playing',
+            backdrop: 'rgba(212, 233, 214, 0.1)'
+        })
+    }
+    else if (HintFlag > 0 && HintFlag < 2){
+        Swal.fire({
+            imageUrl: "./src/Assets/WinnerCrown.png",
+            padding: "3em",
+            html: `Winner! And with only one hint! Congratulations! <br /><br /> Current Streak: ${CookieState["Streak"]} <br /> Perfect Puzzles in Streak: ${CookieState["PerfectStreak"]} <br /> <br /> New puzzles every weekday between 9-10am EST!`,
+            confirmButtonText: 'Thanks For Playing',
+            backdrop: 'rgba(212, 233, 214, 0.1)'
+        })
+    }
+    else if (HintFlag > 1){
+        Swal.fire({
+            imageUrl: "./src/Assets/WinnerCrown.png",
+            padding: "3em",
+            html: `Winner! Cogratulations! <br /> Hints Used: ${HintFlag}<br /> Current Streak: ${CookieState["Streak"]} <br /> Perfect Puzzles in Streak: ${CookieState["PerfectStreak"]} <br /> <br /> New puzzles every weekday between 9-10am EST!`,
+            confirmButtonText: 'Thanks For Playing',
+            backdrop: 'rgba(212, 233, 214, 0.1)'
+        })
+    }
 
-
-    // Makes a fancier alert box using sweetalerts2
-    Swal.fire({
-        imageUrl: "./src/Assets/WinnerCrown.png",
-        padding: "3em",
-        html: `Congratulations on completing today\'s puzzle.<br /> New puzzles every weekday by 10am EST!`,
-        confirmButtonText: 'Thanks For Playing',
-        backdrop: 'rgba(212, 233, 214, 0.1)'
-      })
-    // Would like to eventually also add some animation here (like the fireworks library)
 }
 
 function ConfettiCanon(){
