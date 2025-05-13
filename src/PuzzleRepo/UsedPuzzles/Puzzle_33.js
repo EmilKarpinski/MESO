@@ -5,7 +5,7 @@ export const Puzzle_Word_List = {
     "W3":["TEACHER", "Instructor or sensei."],
     "W4":["CLASSROOM", "Bored room for many students."],
     "W5":["OXFORD", "British university with a classic lace-up."],
-    "W6":["COLLEGE", "Generates degrees and debt."],
+    "W6":["COLLEGE", "Generates degrees and debt."]
 };
 
 // Storing the previous meso for streak purposes
