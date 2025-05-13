@@ -8,6 +8,9 @@ export const Puzzle_Word_List = {
     "W6":["COLLEGE", "Generates degrees and debt."],
 };
 
+// Storing the previous meso for streak purposes
+export const Previous_Meso = "SHOES";
+
 // Storing the central theme word
 export const Puzzle_ThemeWord = "SCHOOL";
 
