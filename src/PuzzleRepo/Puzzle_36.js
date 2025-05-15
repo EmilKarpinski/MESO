@@ -10,5 +10,8 @@ export const Puzzle_Word_List = {
 // Storing the central theme word
 export const Puzzle_ThemeWord = "SODAS";
 
+// Storing the previous meso for streak purposes
+export const Previous_Meso = "";
+
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"
