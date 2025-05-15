@@ -1,17 +1,18 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["SPAGHETTI", "Split by a pair of enamored dogs one beautiful night."], 
-    "W2":["CARBS", "Starchy, sugary fuel."],
-    "W3":["NOODLES", "e.g. ramen or chow mein."],
-    "W4":["TOMATO", "Juicy red foundation for sauces."],
-    "W5":["ITALIAN", "From the land of Venice and Rome."]
+    "W1":["PATROL", "A routine and watchful walk."], 
+    "W2":["PRISON", "Place where you do time."],
+    "W3":["LAW", "Written, upheld, and sometimes broken."],
+    "W4":["UNIFORM", "Outfit for rank and file."],
+    "W5":["HANDCUFFS", "Usually steel sometimes fuzzy restraints."],
+    "W6":["OFFICER", "Title for a blue person with authority."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "PASTA";
+export const Puzzle_ThemeWord = "POLICE";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "SCHOOL";
+export const Previous_Meso = "PASTA";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"
