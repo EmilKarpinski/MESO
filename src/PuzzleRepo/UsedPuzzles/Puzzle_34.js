@@ -8,7 +8,7 @@ export const Puzzle_Word_List = {
     "W6":["SCIENCE", "Hypothesis and experiments on repeat."],
     "W7":["ATOM", "Spliting one can lead to explosive results."],
     "W8":["ORGANIC", "Natural not synthetic."],
-    "W9":["HYDROGEN", "One of a throuple in water."]
+    "W9":["HYDROGEN", "Two of a throuple in water."]
 };
 
 // Storing the central theme word
