@@ -1,11 +1,11 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["TOWER", ""], 
-    "W2":["MAGIC", ""],
-    "W3":["OZ", ""],
-    "W4":["HAT", ""],
-    "W5":["ROBES", ""],
-    "W6":["BEARD", ""]
+    "W1":["TOWER", "Ivory or brick."], 
+    "W2":["MAGIC", "Tricks or illusions for the believing."],
+    "W3":["OZ", "Yellow brick pretender."],
+    "W4":["HATS", "You could wear many in small teams or workplaces."],
+    "W5":["ROBES", "Garment for kings or showerees."],
+    "W6":["BEARD", "Denotes wisdom and stores crumbs."]
 };
 
 // Storing the central theme word

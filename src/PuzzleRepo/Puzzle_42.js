@@ -1,12 +1,12 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["WAVES", ""], 
-    "W2":["WETSUIT", ""],
-    "W3":["BOARD", ""],
-    "W4":["FLOAT", ""],
-    "W5":["HAWAII", ""],
-    "W6":["BALANCE", ""],
-    "W7":["LIFEGUARD", ""]
+    "W1":["WAVES", "A hand gesture or formed by the ocean."], 
+    "W2":["WETSUIT", "Office attire for scubadivers."],
+    "W3":["BOARD", "Wood you could ride at the beach."],
+    "W4":["FLOAT", "Tubes, wings, or noodles might help with this."],
+    "W5":["HAWAII", "USA's tropical outlier."],
+    "W6":["BALANCE", "Difficult to maintain after a few drinks."],
+    "W7":["LIFEGUARD", "Sunscreened savior. "]
 };
 
 // Storing the central theme word
