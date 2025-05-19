@@ -1,11 +1,11 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["BLACK", ""], 
-    "W2":["CAPE", ""],
-    "W3":["VIGILANTE", ""],
-    "W4":["CRIME", ""],
-    "W5":["GADGETS", ""],
-    "W6":["ROBIN", ""]
+    "W1":["BLACK", "Night, bats, and bad moods."], 
+    "W2":["CAPE", "Billowing super symbol."],
+    "W3":["VIGILANTE", "Justice seeker or lawless criminal depending on the POV."],
+    "W4":["CRIME", "Disallowed by law."],
+    "W5":["GADGETS", "Supplied by Q to secret agents."],
+    "W6":["ROBIN", "Red chested flyer."]
 };
 
 // Storing the central theme word
