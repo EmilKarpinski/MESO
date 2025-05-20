@@ -712,6 +712,7 @@ function WinDisplay(HintFlag){
                     Swal.fire({
                         imageUrl: "./src/Assets/WinnerCrown.png",
                         padding: "3em",
+                        // Adding html here to create button links for all the social media (at least the ones that aren't annoying to share to)
                         html: `<a href="https://twitter.com/intent/tweet?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-x-twitter"></a>
                         <a href="https://www.facebook.com/sharer/sharer.php?u=meso-puzzle.com" target="_blank" rel="noopener" class="fa-brands fa-facebook-f"></a>
                         <a href="https://bsky.app/intent/compose?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-bluesky"></a>
@@ -741,6 +742,7 @@ function WinDisplay(HintFlag){
                 Swal.fire({
                     imageUrl: "./src/Assets/WinnerCrown.png",
                     padding: "3em",
+                    // Adding html here to create button links for all the social media (at least the ones that aren't annoying to share to)
                     html: `<a href="https://twitter.com/intent/tweet?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-x-twitter"></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=meso-puzzle.com" target="_blank" rel="noopener" class="fa-brands fa-facebook-f"></a>
                     <a href="https://bsky.app/intent/compose?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-bluesky"></a>
@@ -770,6 +772,7 @@ function WinDisplay(HintFlag){
                 Swal.fire({
                     imageUrl: "./src/Assets/WinnerCrown.png",
                     padding: "3em",
+                    // Adding html here to create button links for all the social media (at least the ones that aren't annoying to share to)
                     html: `<a href="https://twitter.com/intent/tweet?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-x-twitter"></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=meso-puzzle.com" target="_blank" rel="noopener" class="fa-brands fa-facebook-f"></a>
                     <a href="https://bsky.app/intent/compose?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-bluesky"></a>
