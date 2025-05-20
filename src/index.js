@@ -700,28 +700,88 @@ function WinDisplay(HintFlag){
         Swal.fire({
             imageUrl: "./src/Assets/WinnerCrown.png",
             padding: "3em",
-            html: `Winner! And a perfect puzzle no less! <br />MESO-merizing!<br /><br /> Current Streak: ${CookieState["Streak"]} <br /> Perfect Puzzles in Streak: ${CookieState["PerfectStreak"]} <br /> <br /> New puzzles every weekday between 9-10am EST!`,
-            confirmButtonText: 'Thanks For Playing',
+            html: `Winner! And a perfect puzzle no less! <br />MESO-merizing!<br /><br /> <b>Current Streak: ${CookieState["Streak"]} <br /> Perfect Puzzles in Streak: ${CookieState["PerfectStreak"]} </b><br /> <br /> New puzzles every weekday between 9-10am EST!`,
+            confirmButtonText: 'Share to Socials',
+            showCancelButton: true,
+            cancelButtonText: "Back To Puzzle",
+            cancelButtonColor: "#C73838",
             backdrop: 'rgba(212, 233, 214, 0.1)'
-        })
+        }).then((result) => {
+                // If they would like to disable future popups we set a cookie to remember this choice.
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        imageUrl: "./src/Assets/WinnerCrown.png",
+                        padding: "3em",
+                        html: `<a href="https://twitter.com/intent/tweet?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-x-twitter"></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=meso-puzzle.com" target="_blank" rel="noopener" class="fa-brands fa-facebook-f"></a>
+                        <a href="https://bsky.app/intent/compose?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-bluesky"></a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-linkedin-in"></a>
+                        <a href="https://api.whatsapp.com/send?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-whatsapp"></a>
+                        <a href="https://www.snapchat.com/share?link=https%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-snapchat"></a>`,
+                        confirmButtonText: 'Back To Puzzle',
+                        confirmButtonColor: '#C73838',
+                        backdrop: 'rgba(212, 233, 214, 0.1)'
+                    })
+                }
+            });
     }
     else if (HintFlag > 0 && HintFlag < 2){
         Swal.fire({
             imageUrl: "./src/Assets/WinnerCrown.png",
             padding: "3em",
-            html: `Winner! And with only one hint! Congratulations! <br /><br /> Current Streak: ${CookieState["Streak"]} <br /> Perfect Puzzles in Streak: ${CookieState["PerfectStreak"]} <br /> <br /> New puzzles every weekday between 9-10am EST!`,
-            confirmButtonText: 'Thanks For Playing',
+            html: `Winner! And with only one hint! Congratulations! <br /><br /> <b>Current Streak: ${CookieState["Streak"]} <br /> Perfect Puzzles in Streak: ${CookieState["PerfectStreak"]} <b><br /> <br /> New puzzles every weekday between 9-10am EST!`,
+            confirmButtonText: 'Share to Socials',
+            showCancelButton: true,
+            cancelButtonText: "Back To Puzzle",
+            cancelButtonColor: "#C73838",
             backdrop: 'rgba(212, 233, 214, 0.1)'
-        })
+        }).then((result) => {
+            // If they would like to disable future popups we set a cookie to remember this choice.
+            if (result.isConfirmed) {
+                Swal.fire({
+                    imageUrl: "./src/Assets/WinnerCrown.png",
+                    padding: "3em",
+                    html: `<a href="https://twitter.com/intent/tweet?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-x-twitter"></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=meso-puzzle.com" target="_blank" rel="noopener" class="fa-brands fa-facebook-f"></a>
+                    <a href="https://bsky.app/intent/compose?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-bluesky"></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-linkedin-in"></a>
+                    <a href="https://api.whatsapp.com/send?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-whatsapp"></a>
+                    <a href="https://www.snapchat.com/share?link=https%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-snapchat"></a>`,
+                    confirmButtonText: 'Back To Puzzle',
+                    confirmButtonColor: '#C73838',
+                    backdrop: 'rgba(212, 233, 214, 0.1)'
+                })
+            }
+        });
     }
     else if (HintFlag > 1){
         Swal.fire({
             imageUrl: "./src/Assets/WinnerCrown.png",
             padding: "3em",
-            html: `Winner! Cogratulations! <br /> Hints Used: ${HintFlag}<br /> Current Streak: ${CookieState["Streak"]} <br /> Perfect Puzzles in Streak: ${CookieState["PerfectStreak"]} <br /> <br /> New puzzles every weekday between 9-10am EST!`,
-            confirmButtonText: 'Thanks For Playing',
+            html: `Winner! Cogratulations! <br /> Hints Used: ${HintFlag}<br /> <b>Current Streak: ${CookieState["Streak"]} <br /> Perfect Puzzles in Streak: ${CookieState["PerfectStreak"]} <b><br /> <br /> New puzzles every weekday between 9-10am EST!`,
+            confirmButtonText: 'Share to Socials',
+            showCancelButton: true,
+            cancelButtonText: "Back To Puzzle",
+            cancelButtonColor: "#C73838",
             backdrop: 'rgba(212, 233, 214, 0.1)'
-        })
+        }).then((result) => {
+            // If they would like to disable future popups we set a cookie to remember this choice.
+            if (result.isConfirmed) {
+                Swal.fire({
+                    imageUrl: "./src/Assets/WinnerCrown.png",
+                    padding: "3em",
+                    html: `<a href="https://twitter.com/intent/tweet?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-x-twitter"></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=meso-puzzle.com" target="_blank" rel="noopener" class="fa-brands fa-facebook-f"></a>
+                    <a href="https://bsky.app/intent/compose?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-bluesky"></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-linkedin-in"></a>
+                    <a href="https://api.whatsapp.com/send?text=Come%20play%20MESO%20with%20me%21%0A%0A%23MESO%0A%0Ahttps%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-whatsapp"></a>
+                    <a href="https://www.snapchat.com/share?link=https%3A%2F%2Fwww.meso-puzzle.com" class="fa-brands fa-snapchat"></a>`,
+                    confirmButtonText: 'Back To Puzzle',
+                    confirmButtonColor: '#C73838',
+                    backdrop: 'rgba(212, 233, 214, 0.1)'
+                })
+            }
+        });
     }
 
 }
