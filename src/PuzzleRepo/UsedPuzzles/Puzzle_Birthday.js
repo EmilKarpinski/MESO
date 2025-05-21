@@ -17,4 +17,4 @@ export const Puzzle_ThemeWord = "BIRTHDAY";
 export const Previous_Meso = "BATMAN";
 
 // Exporting the puzzle author
-export const Puzzle_Author = "Emil Karpinski"
+export const Puzzle_Author = "Emil Karpinski";
