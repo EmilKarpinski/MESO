@@ -1,20 +1,18 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["BIRTH", "An individual's initial debut."], 
-    "W2":["GIFTS", "Beware of strangers bearing these."],
-    "W3":["CELEBRATE", "Drink, eat, and be merry."],
-    "W4":["INVITE", "Social summons (verb)."],
-    "W5":["HATS", "Festive forehead fashions."],
-    "W6":["DATE", "Circled or marked on calendars."],
-    "W7":["PINATA", "A donkey where the stick is the only appropriate choice."],
-    "W8":["PARTY", "Could be for dinner could be for dancing."]
+    "W1":["MATTRESS", "Springboard for your dreams."], 
+    "W2":["BOXES", "Cardboard cubes."],
+    "W3":["HEAVY", "Not light, emotionally or physically."],
+    "W4":["SHIPPING", "To move things by boat or truck."],
+    "W5":["FRIENDS", "Supportive chosen family."],
+    "W6":["FRAGILE", "Easily broken."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "BIRTHDAY";
+export const Puzzle_ThemeWord = "MOVING";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "BATMAN";
+export const Previous_Meso = "BIRTHDAY";
 
 // Exporting the puzzle author
-export const Puzzle_Author = "Emil Karpinski";
+export const Puzzle_Author = "Emil Karpinski"
