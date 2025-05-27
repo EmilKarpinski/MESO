@@ -1,17 +1,18 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["STEAM", "Hisses from a kettle."], 
-    "W2":["TRACK", "A path or lane."],
-    "W3":["SUBWAY", "Tunnel transit or sandwiches."],
-    "W4":["RAIL", "Can be used to slide down the stairs or grind with a skateboard."],
-    "W5":["CROSSING", "Where two roads meet."]
+    "W1":["CINEMA", "Big screen venue."], 
+    "W2":["POPCORN", "Mini microwavable explosive snacks."],
+    "W3":["VISUAL", "The effected part of VFX."],
+    "W4":["STUDIO", "Recording room."],
+    "W5":["DIRECTOR", "Set shotcaller."],
+    "W6":["ACTRESS", "Leading lady."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "TRAIN";
+export const Puzzle_ThemeWord = "MOVIES";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "UNICORN";
+export const Previous_Meso = "TRAIN";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski"
