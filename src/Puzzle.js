@@ -1,18 +1,18 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["IRONMAN", "Triathlon competitor or armored fighter (two words)."], 
-    "W2":["PANTHER", "Leopard with a darker coat."],
-    "W3":["WOLVERINE", "Ferocious forest dweller or mutant with sharp claws."],
-    "W4":["AVENGERS", "They assemble to seek retribution or give protection."],
-    "W5":["SPIDERMAN", "'With great power comes great resposibility' recipient."],
-    "W6":["HULK", "A greener Jekyll and Hyde."]
+    "W1":["TOWER", "Ivory or brick."], 
+    "W2":["MAGIC", "Tricks or illusions for the believing."],
+    "W3":["OZ", "Yellow brick pretender."],
+    "W4":["HATS", "You could wear many in small teams or workplaces."],
+    "W5":["ROBE", "Garment for kings or showerees."],
+    "W6":["BEARD", "Denotes wisdom and stores crumbs."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "MARVEL";
+export const Puzzle_ThemeWord = "WIZARD";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "MOVIES";
+export const Previous_Meso = "MARVEL";
 
 // Exporting the puzzle author
-export const Puzzle_Author = "Emil Karpinski";
+export const Puzzle_Author = "Emil Karpinski"
