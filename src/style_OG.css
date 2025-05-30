@@ -13,15 +13,223 @@ body {
   --right: #CFFF8F; 
 }
 
+/* Size for smartphones in portrait mode */
+@media screen and (max-width: 750px){
+  .title{
+    color: black;
+    font-size: 2.5rem;
+  }
+  .title-word-clone{
+    font-size: 0.75rem;
+    left: calc(50% + 1rem);
+  }
+  #game{
+    margin-top: 1rem;
+  }
+  .cluetitle{
+    font-size: 1.5em;
+  }
+  .ClueBox{
+    font-size: 1.5em;
+    width: 85%;
+  }
+  .box{
+    width: calc(22.5 / 375 * 100vw);
+    height: calc(22.5 / 375 * 100vw); 
+    margin:0.2vw;
+    font-size: 4.5vw;
+  }
+  .box.wrong{
+    border: 0.5vw solid black;
+  }
+  .box.wrong-correct{
+    border: 0.5vw solid black;
+  }
+  .box.right{
+    border: 0.5vw solid black;
+  }
+  .box.right-correct{
+    border: 0.5vw solid black;
+  }
+  .box.active{
+    border: 0.5vw solid red;
+  }
+  .box.active-correct{
+    border: 0.5vw solid red;
+  }
+  .hr{
+    margin-top: 10vw;
+  }
+  .footer{
+    font-size: 0.8rem;
+  }
+  .v-separator{
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+  }
+  .helpbutton{
+    width: calc(229 / 375 * 30vw);
+    height: calc(60 / 375 * 30vw);
+  }
+  .hintbutton{
+    width: calc(229 / 375 * 30vw);
+    height: calc(60 / 375 * 30vw);
+  }
+  .simple-keyboard {
+    font-size: 4vw;
+    display: none;
+  }
+  .show-keyboard {
+    display: block;
+  }
+}
+/* Size for tablets and small laptops */
+@media screen and (min-width: 751px) and (max-width: 1599px){
+  .title{
+    color: black;
+    font-size: 6vw;
+  }
+  .title-word-clone{
+    font-size: 1.5vw;
+    left: calc(50% + 2vw);
+  }
+  #game{
+    margin-top: 2rem;
+  }
+  .cluetitle{
+    font-size: 4.8vw;
+  }
+  .ClueBox{
+    font-size: 4vw;
+    width: 85%;
+  }
+  .box{
+    width: calc(75 / 1599 * 100vw);
+    height: calc(75 / 1599 * 100vw); 
+    margin:0.2vw;
+    font-size: 4.5vw;
+  }
+  .box.wrong{
+    border: 0.3vw solid black;
+  }
+  .box.wrong-correct{
+    border: 0.3vw solid black;
+  }
+  .box.right{
+    border: 0.3vw solid black;
+  }
+  .box.right-correct{
+    border: 0.3vw solid black;
+  }
+  .box.active{
+    border: 0.3vw solid red;
+  }
+  .box.active-correct{
+    border: 0.3vw solid red;
+  }
+  .hr{
+    margin-top: 10vw;
+  }
+  .footer{
+    font-size: 2.5vw;
+  }
+  .v-separator{
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  .helpbutton{
+    width: calc(229 / 375 * 30vw);
+    height: calc(60 / 375 * 30vw);
+  }
+  .hintbutton{
+    width: calc(229 / 375 * 30vw);
+    height: calc(60 / 375 * 30vw);
+  }
+  .simple-keyboard {
+    display: none;
+    font-size: 4vw;
+  }
+  .show-keyboard {
+    display: block;
+  }
+}
+/* Size for regular desktop PCs */
+@media (min-width: 1600px){
+  .title{
+    color: black;
+    font-size: 4vw;
+  }
+  .title-word-clone{
+    font-size: 1vw;
+    left: calc(50% + 1vw);
+  }
+  #game{
+    margin-top: 2rem;
+  }
+  .cluetitle{
+    font-size: 3.3vw;
+  }
+  .ClueBox{
+    font-size: 2.5vw;
+    width: 85%;
+  }
+  .box{
+    width: calc(40 / 1600 * 100vw);
+    height: calc(40 / 1600 * 100vw); 
+    margin:0.14vw;
+    font-size: 2.5vw;
+  }
+  .box.wrong{
+    border: 0.2vw solid black;
+  }
+  .box.wrong-correct{
+    border: 0.2vw solid black;
+  }
+  .box.right{
+    border: 0.2vw solid black;
+  }
+  .box.right-correct{
+    border: 0.2vw solid black;
+  }
+  .box.active{
+    border: 0.2vw solid red;
+  }
+  .box.active-correct{
+    border: 0.2vw solid red;
+  }
+  .hr{
+    margin-top: 10vw;
+  }
+  .footer{
+    font-size: 1.5vw;
+  }
+  .v-separator{
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  .helpbutton{
+    width: calc(229 / 375 * 20vw);
+    height: calc(60 / 375 * 20vw);
+  }
+  .hintbutton{
+    width: calc(229 / 375 * 20vw);
+    height: calc(60 / 375 * 20vw);
+  }  .simple-keyboard {
+    display: none;
+  }
+  .show-keyboard {
+    display: none;
+  }
+}
 
 #game {
   display: flex;
   justify-content: center;
   align-items: start;
-  margin-top: 5rem;
+  /* margin-top: 1rem; */
   /* This might need to go back to 100% not sure. */
-  width: auto;
-  height: 50%;
+  width: 100%;
+  height: auto;
 }
 
 #clue{
@@ -33,10 +241,10 @@ body {
 }
 
 .title {
-  color: black;
+  /* color: black; */
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 4rem;
+  /* font-size: 4rem; */
   /* font-weight: 900; */
   margin-bottom: 0;
   position: relative;
@@ -44,17 +252,17 @@ body {
 
 .title-word-clone {
   position: absolute;
-  left: calc(50% + 75px);
+  /* left: calc(50% + 75px); */
   transform: rotate(25deg);
   color: purple;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
 }
 
 .cluetitle {
   color: black;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2.7rem;
+  /* font-size: 2.7rem; */
   margin-bottom: 0;
   font-weight: bold;
   position: relative;
@@ -62,7 +270,7 @@ body {
 
 .ClueBox{
   /* Sets the size of the boxes and the border */
-  width: 75%;
+  /* width: 75%; */
   height: 100%;
   border: 0px solid var(--empty);
   /* Changed the margin here to 0 to have the boxes side by side */
@@ -74,7 +282,7 @@ body {
   place-items: center;
   /* font settings */
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  /* font-size: 2.4rem; */
 }
 
 .grid {
@@ -90,11 +298,11 @@ body {
 
 .box {
   /* Sets the size of the boxes and the border */
-  width: 60px;
-  height: 60px;
-  border: 0px solid black;
+  /* width: 60px; */
+  /* height: 60px; */
+  /* border: 0px solid black; */
   /* Changed the margin here to 0 to have the boxes side by side */
-  margin: 1px;
+  /* margin: 1px; */
   /* Everything from here down just makes the text unselectable by mouse to make it look a little prettier during dragging */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -106,19 +314,19 @@ body {
 
 .box.empty {
   background: var(--empty);
-  color: slategray; 
+  color: slategray;
   text-transform: uppercase;
   /* centers and formats the text */
   display: grid;
   place-items: center;
   /* font settings */
   font-family: "Courier New", Courier, monospace;
-  font-size: 3rem;
+  /* font-size: 3rem; */
 }
 
 .box.wrong {
   background: var(--wrong);
-  border: 3px solid black; 
+  /* border: 3px solid black;  */
   color: black; 
   text-transform: uppercase;
   /* centers and formats the text */
@@ -126,12 +334,12 @@ body {
   place-items: center;
   /* font settings */
   font-family: "Courier New", Courier, monospace;
-  font-size: 3rem;
+  /* font-size: 3rem; */
 }
 
 .box.wrong-correct {
   background: var(--wrong);
-  border: 3px solid black;
+  /* border: 3px solid black; */
   color: #8F0171; 
   text-transform: uppercase;
   /* centers and formats the text */
@@ -139,13 +347,13 @@ body {
   place-items: center;
   /* font settings */
   font-family: "Courier New", Courier, monospace;
-  font-size: 3rem;
+  /* font-size: 3rem; */
   font-weight: bold;
 }
 
 .box.right {
   background: var(--right);
-  border: 3px solid black;
+  /* border: 3px solid black; */
   color: black; 
   text-transform: uppercase;
   /* centers and formats the text */
@@ -153,12 +361,12 @@ body {
   place-items: center;
   /* font settings */
   font-family: "Courier New", Courier, monospace;
-  font-size: 3rem; 
+  /* font-size: 3rem;  */
 }
 
 .box.right-correct {
   background: var(--right);
-  border: 3px solid black;
+  /* border: 3px solid black; */
   color: #8F0171; 
   text-transform: uppercase;
   /* centers and formats the text */
@@ -166,13 +374,13 @@ body {
   place-items: center;
   /* font settings */
   font-family: "Courier New", Courier, monospace;
-  font-size: 3rem;
+  /* font-size: 3rem; */
   font-weight: bold;
 }
 
 .box.active {
   background: var(--empty);
-  border: 3px solid red;
+  /* border: 3px solid red; */
   color: black; 
   text-transform: uppercase;
   /* centers and formats the text */
@@ -180,12 +388,12 @@ body {
   place-items: center;
   /* font settings */
   font-family: "Courier New", Courier, monospace;
-  font-size: 3rem;
+  /* font-size: 3rem; */
 }
 
 .box.active-correct {
   background: var(--empty);
-  border: 3px solid red;
+  /* border: 3px solid red; */
   color: #8F0171; 
   text-transform: uppercase;
   /* centers and formats the text */
@@ -193,7 +401,7 @@ body {
   place-items: center;
   /* font settings */
   font-family: "Courier New", Courier, monospace;
-  font-size: 3rem;
+  /* font-size: 3rem; */
   font-weight: bold;
 }
 
@@ -201,7 +409,7 @@ hr {
   border-style: solid;
   border-color: black;
   border-width: 1px;
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
 }
 
 .footer {
@@ -209,13 +417,14 @@ hr {
   justify-content: center;
   color: black;
   text-align: center;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .v-separator {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  color: black;
+  /* margin-left: 1rem; */
+  /* margin-right: 1rem; */
 }
 
 .social-media-link {
@@ -228,11 +437,16 @@ hr {
 
 .helpbutton{
   display: flex;
-  width: 75px;
-  height: 75px;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+.hintbutton{
+  display: flex;
+  position: absolute;
+  top: 5px;
+  left: 5px;
   cursor: pointer;
 }
 
@@ -241,4 +455,56 @@ hr {
   left: -9999px;
   width: 1px;
   height: 1px;
+}
+
+.simple-keyboard {
+  margin: 0 auto;
+}
+
+.simple-keyboard.hg-theme-default{
+  margin-top: 10px;
+  background: #cfc9c3;
+}
+
+.show-keyboard {
+  max-width: 100%;
+}
+
+/* Don't know why this has to be structured this way, but removing any other part from the class name breaks it. */
+.simple-keyboard .hg-button.Bksp-Key{
+  background:#dab4d1;
+  width: 20vw;
+  height: 6vh;
+}
+
+.simple-keyboard .hg-button.Other-Keys{
+  background: #e7f7d2;
+  width: 10vw;
+  height: 6vh;
+}
+
+.fa-brands {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-solid {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-brands:hover {
+    opacity: 0.7;
+}
+
+.fa-solid:hover {
+  opacity: 0.7;
 }

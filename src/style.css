@@ -84,7 +84,7 @@ body {
   }
 }
 /* Size for tablets and small laptops */
-@media screen and (min-width: 751px) and (max-width: 1599px){
+@media screen and (min-width: 751px) and (max-width: 1279px){
   .title{
     color: black;
     font-size: 6vw;
@@ -153,8 +153,7 @@ body {
     display: block;
   }
 }
-/* Size for regular desktop PCs */
-@media (min-width: 1600px){
+@media screen and (min-width: 1280px) and (max-width: 1940px){
   .title{
     color: black;
     font-size: 4vw;
@@ -214,7 +213,77 @@ body {
   .hintbutton{
     width: calc(229 / 375 * 20vw);
     height: calc(60 / 375 * 20vw);
-  }  .simple-keyboard {
+  }  
+  .simple-keyboard {
+    display: none;
+  }
+  .show-keyboard {
+    display: none;
+  }
+}
+/* Size for anything larger than an HD PCs */
+@media (min-width: 1941px){
+  .title{
+    color: black;
+    font-size: 2vw;
+  }
+  .title-word-clone{
+    font-size: 0.75vw;
+    left: calc(50% + 1vw);
+  }
+  #game{
+    margin-top: 1rem;
+  }
+  .cluetitle{
+    font-size: 1.8vw;
+  }
+  .ClueBox{
+    font-size: 1.5vw;
+    width: 85%;
+  }
+  .box{
+    width: calc(40 / 1941 * 100vw);
+    height: calc(40 / 1941 * 100vw); 
+    margin:0.14vw;
+    font-size: 2vw;
+  }
+  .box.wrong{
+    border: 0.2vw solid black;
+  }
+  .box.wrong-correct{
+    border: 0.2vw solid black;
+  }
+  .box.right{
+    border: 0.2vw solid black;
+  }
+  .box.right-correct{
+    border: 0.2vw solid black;
+  }
+  .box.active{
+    border: 0.2vw solid red;
+  }
+  .box.active-correct{
+    border: 0.2vw solid red;
+  }
+  .hr{
+    margin-top: 10vw;
+  }
+  .footer{
+    font-size: 1.5vw;
+  }
+  .v-separator{
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  .helpbutton{
+    width: calc(229 / 375 * 20vw);
+    height: calc(60 / 375 * 20vw);
+  }
+  .hintbutton{
+    width: calc(229 / 375 * 20vw);
+    height: calc(60 / 375 * 20vw);
+  }  
+  .simple-keyboard {
     display: none;
   }
   .show-keyboard {
