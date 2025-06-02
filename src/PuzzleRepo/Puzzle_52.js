@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["THYME", ""], 
-    "W2":["ROSEMARY", ""],
-    "W3":["PARSLEY", ""],
-    "W4":["BASIL", ""]
+    "W1":["THYME", "Fragrant plant that clocks in?"], 
+    "W2":["ROSEMARY", "Good for cooking, not great for professing love or marriage."],
+    "W3":["PARSLEY", "Curly or flat garnish."],
+    "W4":["BASIL", "Key ingredient in pesto."]
 };
 
 // Storing the central theme word
