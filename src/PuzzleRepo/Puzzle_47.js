@@ -1,7 +1,7 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
     "W1":["TRIUMPH", "A significant victory."], 
-    "W2":["ROMANCE", "Novel kind of love."],
+    "W2":["ROMANCE", "'Novel' kind of love."],
     "W3":["TOWER", "Tall architecture."],
     "W4":["LIGHTS", "Signal stop or go."],
     "W5":["CROISSANT", "Layered edible crescent."]
