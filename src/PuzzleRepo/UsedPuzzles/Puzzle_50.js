@@ -2,7 +2,7 @@
 export const Puzzle_Word_List = {
     "W1":["PRICKLY", "Not smooth to touch or talk to."], 
     "W2":["PLANT", "Grows or manufactures."],
-    "W3":["SUCCULENT", "Juicy plant, or a a steak."],
+    "W3":["SUCCULENT", "Juicy plant, or a steak."],
     "W4":["DESERT", "Full of sand not snacks."],
     "W5":["FRUITS", "Grown, picked, and juiced."],
     "W6":["SPINES", "Common to porcupines and books."]
