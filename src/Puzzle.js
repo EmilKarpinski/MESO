@@ -1,18 +1,19 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["PRICKLY", "Not smooth to touch or talk to."], 
-    "W2":["PLANT", "Grows or manufactures."],
-    "W3":["SUCCULENT", "Juicy plant, or a steak."],
-    "W4":["DESERT", "Full of sand not snacks."],
-    "W5":["FRUITS", "Grown, picked, and juiced."],
-    "W6":["SPINES", "Common to porcupines and books."]
+    "W1":["EVIL", "At least a little worse than just bad."], 
+    "W2":["FANGS", "Biting tools for a snake."],
+    "W3":["MONSTER", "Mistakenly believed to hide under beds."],
+    "W4":["CAPE", "Roughly half a powerful poncho."],
+    "W5":["COFFIN", "Eternal slumber sleeper."],
+    "W6":["GARLIC", "Clove with a culinary bite."],
+    "W7":["STAKE", "Wood with a point to make."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "CACTUS";
+export const Puzzle_ThemeWord = "VAMPIRE";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "TREE";
+export const Previous_Meso = "CACTUS";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
