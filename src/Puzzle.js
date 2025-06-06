@@ -1,19 +1,17 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["EVIL", "At least a little worse than just bad."], 
-    "W2":["FANGS", "Biting tools for a snake."],
-    "W3":["MONSTER", "Mistakenly believed to hide under beds."],
-    "W4":["CAPE", "Roughly half a powerful poncho."],
-    "W5":["COFFIN", "Eternal slumber sleeper."],
-    "W6":["GARLIC", "Clove with a culinary bite."],
-    "W7":["STAKE", "Wood with a point to make."]
+    "W1":["TRIUMPH", "A significant victory."], 
+    "W2":["ROMANCE", "'Novel' kind of love."],
+    "W3":["TOWER", "Tall architecture."],
+    "W4":["LIGHTS", "Signal stop or go."],
+    "W5":["CROISSANT", "Layered edible crescent."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "VAMPIRE";
+export const Puzzle_ThemeWord = "PARIS";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "CACTUS";
+export const Previous_Meso = "VAMPIRE";
 
 // Exporting the puzzle author
-export const Puzzle_Author = "Emil Karpinski";
+export const Puzzle_Author = "Emil Karpinski"
