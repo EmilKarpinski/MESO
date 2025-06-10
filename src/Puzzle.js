@@ -2,7 +2,7 @@
 export const Puzzle_Word_List = {
     "W1":["LIPS", "Loose ones may occasionally sink ships."], 
     "W2":["DIMPLES", "Cheeky indentations."],
-    "W3":["PICTURE", "Still phyiscal memory."],
+    "W3":["PICTURE", "Still physical memory."],
     "W4":["LAUGH", "Audible joy or nerves."],
     "W5":["TEETH", "Some are sweet, some just bite."]
 };
