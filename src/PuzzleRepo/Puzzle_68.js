@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["SPINE", ""], 
-    "W2":["SYNAPSE", ""],
-    "W3":["BRAIN", ""],
-    "W4":["BRAVERY", ""],
+    "W1":["SPINE", "Keeps you upright."], 
+    "W2":["SYNAPSE", "Tiny gap where neurons meet."],
+    "W3":["BRAIN", "Control center of the body."],
+    "W4":["BRAVERY", "Award winning courage."],
     "W5":["CELLS", "Organisms and prisons are both made of these."]
 };
 

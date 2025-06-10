@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["RIDE", ""], 
-    "W2":["CLOWN", ""],
-    "W3":["STAMPEDE", ""],
-    "W4":["HORSE", ""],
-    "W5":["COWBOY", ""]
+    "W1":["RIDE", "What you do on a horse or a bus."], 
+    "W2":["CLOWN", "Found in many circuses or sewers."],
+    "W3":["STAMPEDE", "A panic-driven herd."],
+    "W4":["HORSE", "Faithful steed."],
+    "W5":["COWBOY", "Ranch hand."]
 };
 
 // Storing the central theme word

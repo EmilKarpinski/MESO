@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["HEAVEN", ""], 
-    "W2":["HORN", ""],
-    "W3":["WINGS", ""],
-    "W4":["DEVIL", ""],
-    "W5":["HALO", ""]
+    "W1":["HEAVEN", "Paradise above."], 
+    "W2":["HORN", "Animal's pointy projection."],
+    "W3":["WINGS", "Airborne appendages."],
+    "W4":["DEVIL", "Fiend with a pitchfork."],
+    "W5":["HALO", "Divine doughnut."]
 };
 
 // Storing the central theme word

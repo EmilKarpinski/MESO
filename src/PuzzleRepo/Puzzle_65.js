@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["BAKE", ""], 
-    "W2":["FLOUR", ""],
-    "W3":["YEAST", ""],
-    "W4":["WATER", ""],
-    "W5":["DOUGH", ""]
+    "W1":["BAKE", "Cook in an oven."], 
+    "W2":["FLOUR", "All purpose baking powder."],
+    "W3":["YEAST", "Fermentation powerhouse."],
+    "W4":["WATER", "Essential act to keep plants alive."],
+    "W5":["DOUGH", "Rises in a bowl."]
 };
 
 // Storing the central theme word

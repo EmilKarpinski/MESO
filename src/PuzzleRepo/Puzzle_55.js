@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["ANDROID", ""], 
-    "W2":["COMPUTER", ""],
-    "W3":["CYBORG", ""],
-    "W4":["ASMIMOV", ""],
-    "W5":["METAL", ""]
+    "W1":["ANDROID", "Artificial non-Siri person."], 
+    "W2":["COMPUTER", "Thinking machine."],
+    "W3":["CYBORG", "Half human, half hardware."],
+    "W4":["ASMIMOV", "Foundation-al science fiction author"],
+    "W5":["METAL", "Conducts and rocks out."]
 };
 
 // Storing the central theme word

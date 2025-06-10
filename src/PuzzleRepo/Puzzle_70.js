@@ -1,11 +1,11 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["COSTUME", ""], 
-    "W2":["SHIFT", ""],
-    "W3":["VARY", ""],
+    "W1":["COSTUME", "Like a uniform but fun to wear."], 
+    "W2":["SHIFT", "Alter position or gear."],
+    "W3":["VARY", "Not always the same."],
     "W4":["COINS", "Pennies, nickels, and dimes."],
-    "W5":["UPGRADE", ""],
-    "W6":["TRANSFER", ""]
+    "W5":["UPGRADE", "Replace with something better."],
+    "W6":["TRANSFER", "Move from one place to another."]
 };
 
 // Storing the central theme word

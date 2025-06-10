@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["KNOB", ""], 
-    "W2":["LOCK", ""],
-    "W3":["PORTAL", ""],
-    "W4":["TRAP", ""]
+    "W1":["KNOB", "Twist to open or set volume."], 
+    "W2":["LOCK", "Needs a key or a code."],
+    "W3":["PORTAL", "Magic entrance or gateway."],
+    "W4":["TRAP", "Hidden snare or pitfall."]
 };
 
 // Storing the central theme word

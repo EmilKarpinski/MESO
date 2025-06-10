@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["STORM", ""], 
-    "W2":["WINTER", ""],
-    "W3":["COLD", ""],
-    "W4":["WHITE", ""]
+    "W1":["STORM", "Tempest or tantrum."], 
+    "W2":["WINTER", "Fourth quarter freeze."],
+    "W3":["COLD", "Short on warmth, or emotion."],
+    "W4":["WHITE", "Shade of surrender."]
 };
 
 // Storing the central theme word

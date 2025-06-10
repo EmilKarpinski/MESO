@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["LIGHT", ""], 
-    "W2":["BEAM", ""],
-    "W3":["SHOW", ""],
-    "W4":["RED", ""],
-    "W5":["CONCERT", ""]
+    "W1":["LIGHT", "Opposite of dark and dense."], 
+    "W2":["BEAM", "Supports or to radiate happiness."],
+    "W3":["SHOW", "Put on display."],
+    "W4":["RED", "Favored hood color of forest girls."],
+    "W5":["CONCERT", "Live music performance. "]
 };
 
 // Storing the central theme word

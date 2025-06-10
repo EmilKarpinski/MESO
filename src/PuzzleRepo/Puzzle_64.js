@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["BLAST", ""], 
-    "W2":["EXPLOSION", ""],
-    "W3":["TIMER", ""],
-    "W4":["BOOBYTRAP", "(two words)"]
+    "W1":["BLAST", "Party or a bang."], 
+    "W2":["EXPLOSION", "Detonation event."],
+    "W3":["TIMER", "Coutdown device."],
+    "W4":["BOOBYTRAP", "Sneaky snare for the unaware (two words)."]
 };
 
 // Storing the central theme word

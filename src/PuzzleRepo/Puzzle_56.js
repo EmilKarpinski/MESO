@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["LIPS", ""], 
-    "W2":["DIMPLES", ""],
-    "W3":["PICTURE", ""],
-    "W4":["LAUGH", ""],
-    "W5":["TEETH", ""]
+    "W1":["LIPS", "Loose ones may occasionally sink ships."], 
+    "W2":["DIMPLES", "Cheeky indentations."],
+    "W3":["PICTURE", "Still phyiscal memory."],
+    "W4":["LAUGH", "Audible joy or nerves."],
+    "W5":["TEETH", "Some are sweet, some just bite."]
 };
 
 // Storing the central theme word

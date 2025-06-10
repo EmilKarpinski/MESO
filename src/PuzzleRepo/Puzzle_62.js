@@ -1,13 +1,13 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["MAZE", ""], 
-    "W2":["POSEIDON", ""],
-    "W3":["LABYRINTH", ""],
-    "W4":["BODY", ""],
-    "W5":["MONSTER", ""],
-    "W6":["HALF", ""],
-    "W7":["BULL", ""],
-    "W8":["GREEK", ""]
+    "W1":["MAZE", "Easy to get lost in this."], 
+    "W2":["POSEIDON", "Father of waves."],
+    "W3":["LABYRINTH", "Even more than regular maze."],
+    "W4":["BODY", "The bulk of your physical form, and your essay's."],
+    "W5":["MONSTER", "Evil creature antagonist."],
+    "W6":["HALF", "50%."],
+    "W7":["BULL", "Headstrong creature with horns."],
+    "W8":["GREEK", "It's all this to someone who doesn't understand."]
 };
 
 // Storing the central theme word

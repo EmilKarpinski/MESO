@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["WHITE", ""], 
-    "W2":["CARVE", ""],
-    "W3":["BONE", ""],
-    "W4":["ORNAMENT", ""],
-    "W5":["EBONY", ""]
+    "W1":["WHITE", "Shade of surrender or snow."], 
+    "W2":["CARVE", "Shape by cutting away."],
+    "W3":["BONE", "Skeletal element."],
+    "W4":["ORNAMENT", "What you might put on a Christmas tree."],
+    "W5":["EBONY", "Dark hardwood, nearly black."]
 };
 
 // Storing the central theme word

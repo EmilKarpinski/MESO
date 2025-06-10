@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["VISA", ""], 
-    "W2":["LETTER", ""],
-    "W3":["NOTARY", ""],
-    "W4":["IMPRINT", ""],
-    "W5":["POSTAGE", ""]
+    "W1":["VISA", "Rival to Mastercard."], 
+    "W2":["LETTER", "Scrabble tile?"],
+    "W3":["NOTARY", "Official witness."],
+    "W4":["IMPRINT", "Mark or impression left behind."],
+    "W5":["POSTAGE", "Mailing charge."]
 };
 
 // Storing the central theme word
