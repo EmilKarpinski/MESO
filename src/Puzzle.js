@@ -1,16 +1,17 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["THYME", "Fragrant plant that clocks in?"], 
-    "W2":["ROSEMARY", "Good for cooking, not great for professing love or marriage."],
-    "W3":["PARSLEY", "Curly or flat garnish."],
-    "W4":["BASIL", "Key ingredient in pesto."]
+    "W1":["LIPS", "Loose ones may occasionally sink ships."], 
+    "W2":["DIMPLES", "Cheeky indentations."],
+    "W3":["PICTURE", "Still phyiscal memory."],
+    "W4":["LAUGH", "Audible joy or nerves."],
+    "W5":["TEETH", "Some are sweet, some just bite."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "HERB";
+export const Puzzle_ThemeWord = "SMILE";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "PARIS";
+export const Previous_Meso = "HERB";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
