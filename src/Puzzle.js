@@ -1,17 +1,17 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["AIRPORT", "Terminal destination."], 
-    "W2":["FLY", "What time and some insects do."],
-    "W3":["SURFACE", "Top layer or to break through water."],
-    "W4":["FLATTEN", "Smooth or knock out."],
-    "W5":["FIELD", "Home to crops or players."]
+    "W1":["VISA", "Rival to Mastercard."], 
+    "W2":["LETTER", "Scrabble tile?"],
+    "W3":["NOTARY", "Official witness."],
+    "W4":["IMPRINT", "Mark or impression left behind."],
+    "W5":["POSTAGE", "Mailing charge."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "PLANE";
+export const Puzzle_ThemeWord = "STAMP";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "SMILE";
+export const Previous_Meso = "PLANE";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
