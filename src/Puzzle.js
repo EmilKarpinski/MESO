@@ -1,17 +1,18 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["VISA", "Rival to Mastercard."], 
-    "W2":["LETTER", "Scrabble tile?"],
-    "W3":["NOTARY", "Official witness."],
-    "W4":["IMPRINT", "Mark or impression left behind."],
-    "W5":["POSTAGE", "Mailing charge."]
+    "W1":["COSTUME", "Like a uniform but fun to wear."], 
+    "W2":["SHIFT", "Alter position or gear."],
+    "W3":["VARIES", "Not always the same."],
+    "W4":["COINS", "Pennies, nickels, and dimes."],
+    "W5":["UPGRADE", "Replace with something better."],
+    "W6":["TRANSFER", "Move from one place to another."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "STAMP";
+export const Puzzle_ThemeWord = "CHANGE";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "PLANE";
+export const Previous_Meso = "STAMP";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
