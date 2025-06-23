@@ -18,11 +18,12 @@ body {
 /* Size for smartphones in portrait mode */
 @media screen and (max-width: 750px){
   /* Adding a seperate rule here so it scales on iOS phones.  */
-  @supports (-webkit-touch-callout: none){
+  /* Removing it cause it doesn't play nice with popup boxes and hides them. Fucking safari. */
+  /* @supports (-webkit-touch-callout: none){
     html,body{
       scale: 0.90;
-    } 
-  }
+    }  
+  } */
   .title{
     color: black;
     font-size: 2.5rem;
