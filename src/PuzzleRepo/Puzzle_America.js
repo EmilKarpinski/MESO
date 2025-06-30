@@ -1,12 +1,12 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
     "W1":["EAGLE", "Avian national icon."], 
-    "W2":["HAMBURGER", ""],
-    "W3":["NEWYORK", ""],
-    "W4":["FIREWORKS", ""],
-    "W5":["COLONIES", ""],
-    "W6":["COUNTRY", ""],
-    "W7":["BARBECUE", ""]
+    "W2":["HAMBURGER", "Iconic cookout food."],
+    "W3":["NEWYORK", "Big Apple (two words)."],
+    "W4":["FIREWORKS", "Booms and sparks in the sky."],
+    "W5":["COLONIES", "British overseas holdings before a disastorous tea party."],
+    "W6":["COUNTRY", "Nation or homeland."],
+    "W7":["BARBECUE", "Southern outdoor feast worth the wait."]
 };
 
 // Storing the central theme word
