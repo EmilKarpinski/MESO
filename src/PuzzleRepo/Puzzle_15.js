@@ -1,11 +1,11 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["ARCTIC", ""], 
-    "W2":["SHRUB", ""],
-    "W3":["CANADA", ""],
-    "W4":["DESERT", ""],
-    "W5":["CARIBOU", ""],
-    "W6":["GLACIER", ""]
+    "W1":["ARCTIC", "Opposite of Antarctic."], 
+    "W2":["SHRUB", "Small woody plant (categorically)."],
+    "W3":["CANADA", "Where you might find Mounties."],
+    "W4":["DESERT", "Dry sandy cactus home."],
+    "W5":["CARIBOU", "North American reindeer."],
+    "W6":["GLACIER", "A really, really big ice cube."]
 };
 
 // Storing the central theme word

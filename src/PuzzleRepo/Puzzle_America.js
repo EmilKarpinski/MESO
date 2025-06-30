@@ -1,6 +1,6 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["EAGLE", ""], 
+    "W1":["EAGLE", "Avian national icon."], 
     "W2":["HAMBURGER", ""],
     "W3":["NEWYORK", ""],
     "W4":["FIREWORKS", ""],

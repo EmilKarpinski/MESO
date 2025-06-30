@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["HOCKEY", ""], 
-    "W2":["MAPLE", ""],
-    "W3":["PROVINCE", ""],
-    "W4":["PRARIES", ""],
-    "W5":["COLD", ""],
+    "W1":["HOCKEY", "Slippery puck pursuit."], 
+    "W2":["MAPLE", "Found on a flag or pancakes."],
+    "W3":["PROVINCE", "An administrative district or division of a country."],
+    "W4":["PRAIRIES", "e.g. grasslands or steppes."],
+    "W5":["COLD", "Far from warm."],
     "W6":["GREAT", "Some really large and fantastic lakes (name)."]
 };
 
