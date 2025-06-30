@@ -1,17 +1,17 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["SPINE", "Keeps you upright."], 
-    "W2":["SYNAPSE", "Tiny gap where neurons meet."],
-    "W3":["BRAIN", "Control center of the body."],
-    "W4":["BRAVERY", "Award winning courage."],
-    "W5":["CELLS", "Organisms and prisons are both made of these."]
+    "W1":["BAKE", "Cook in an oven."], 
+    "W2":["FLOUR", "All purpose baking powder."],
+    "W3":["YEAST", "Fermentation powerhouse."],
+    "W4":["WATER", "Essential act to keep plants alive."],
+    "W5":["DOUGH", "Rises in a bowl."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "NERVE";
+export const Puzzle_ThemeWord = "BREAD";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "ANGEL";
+export const Previous_Meso = "NERVE";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
