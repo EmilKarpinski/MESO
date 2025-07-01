@@ -1,7 +1,7 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
     "W1":["HOCKEY", "Slippery puck pursuit."], 
-    "W2":["MAPLE", "Found on a flag or pancakes."],
+    "W2":["MAPLE", "Found on a flag or as a syrup on pancakes."],
     "W3":["PROVINCE", "An administrative district or division of a country."],
     "W4":["PRAIRIES", "e.g. grasslands or steppes."],
     "W5":["COLD", "Far from warm."],
