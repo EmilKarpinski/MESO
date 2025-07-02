@@ -1,3 +1,5 @@
+// This PUZZLE IS CURRENTLY NONFUNCTIONAL
+
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
     "W1":["KNOB", "Twist to open or set volume."], 
@@ -10,7 +12,7 @@ export const Puzzle_Word_List = {
 export const Puzzle_ThemeWord = "DOOR";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "";
+export const Previous_Meso = "CANADA";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
