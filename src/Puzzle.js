@@ -2,7 +2,7 @@
 export const Puzzle_Word_List = {
     "W1":["TOMB", "Final, fancy resting place."], 
     "W2":["UNDEAD", "Not quite alive or dead."],
-    "W3":["PYRAMID", "Square or traingular geometry."],
+    "W3":["PYRAMID", "Square or triangular geometry."],
     "W4":["ZOMBIE", "Cerebrum coveter."],
     "W5":["EGYPT", "Land of pharaohs."]
 };
