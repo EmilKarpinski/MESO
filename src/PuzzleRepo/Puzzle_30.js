@@ -15,4 +15,4 @@ export const Puzzle_ThemeWord = "HONORS";
 export const Previous_Meso = "";
 
 // Exporting the puzzle author
-export const Puzzle_Author = "Beth Green and Emil Karpinski"
+export const Puzzle_Author = "Beth Green"
