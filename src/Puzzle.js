@@ -1,19 +1,18 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["EAGLE", "Avian national icon."], 
-    "W2":["HAMBURGER", "Iconic cookout food."],
-    "W3":["NEWYORK", "Big Apple (two words)."],
-    "W4":["FIREWORKS", "Booms and sparks in the sky."],
-    "W5":["COLONIES", "British overseas holdings before a disastorous tea party."],
-    "W6":["COUNTRY", "Nation or homeland."],
-    "W7":["BARBECUE", "Southern outdoor feast worth the wait."]
+    "W1":["PRINCESS", "e.g. Ariel, Cindarella, Rapunzel"], 
+    "W2":["MEDIEVAL", "Time of knights and castles"],
+    "W3":["CHESS", "Checkmate"],
+    "W4":["FORT", "You build one with blankets"],
+    "W5":["HOWL", "Wolf's moonbound cry."],
+    "W6":["SIEGE", "To surround and assault (a structure)"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "AMERICA";
+export const Puzzle_ThemeWord = "CASTLE";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "CASINO";
+export const Previous_Meso = "AMERICA";
 
 // Exporting the puzzle author
-export const Puzzle_Author = "Emil Karpinski"
+export const Puzzle_Author = "Sophie Reilly";
