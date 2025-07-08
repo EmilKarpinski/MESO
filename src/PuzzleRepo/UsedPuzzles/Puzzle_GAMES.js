@@ -8,7 +8,7 @@ export const Puzzle_Word_List = {
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "Games";
+export const Puzzle_ThemeWord = "GAMES";
 
 // Storing the previous meso for streak purposes
 export const Previous_Meso = "CASTLE";

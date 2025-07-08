@@ -1,18 +1,17 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["PRINCESS", "e.g. Ariel, Cindarella, Rapunzel."], 
-    "W2":["MEDIEVAL", "Time of knights and kings."],
-    "W3":["CHESS", "Checkmate."],
-    "W4":["FORT", "You build one with blankets."],
-    "W5":["HOWL", "Wolf's moonbound cry."],
-    "W6":["SIEGE", "To surround and assault (a structure)."]
+    "W1":["STRATEGY", "Grander than tactics."], 
+    "W2":["PAWN", "A minor, expendable agent."],
+    "W3":["MONOPOLY", "Real-estate deals and arguments on a square board."],
+    "W4":["FROGGER", "Where the virtual frogs crossed the road."],
+    "W5":["SNAKEEYES", "Two ones (two words)"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "CASTLE";
+export const Puzzle_ThemeWord = "GAMES";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "AMERICA";
+export const Previous_Meso = "CASTLE";
 
 // Exporting the puzzle author
-export const Puzzle_Author = "Sophie Reilly";
+export const Puzzle_Author = "Wouter van den Berg"
