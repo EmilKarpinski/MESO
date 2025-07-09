@@ -15,4 +15,4 @@ export const Puzzle_ThemeWord = "TUNDRA";
 export const Previous_Meso = "GAMES";
 
 // Exporting the puzzle author
-export const Puzzle_Author = "Sophie Reilly"
+export const Puzzle_Author = "Sophie Reilly";
