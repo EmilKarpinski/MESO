@@ -1,17 +1,18 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["STRATEGY", "Grander than tactics."], 
-    "W2":["PAWN", "A minor, expendable agent."],
-    "W3":["MONOPOLY", "Real-estate deals and arguments on a square board."],
-    "W4":["FROGGER", "Where the virtual frogs crossed the road."],
-    "W5":["SNAKEEYES", "Two ones (two words)"]
+    "W1":["ARCTIC", "Opposite of Antarctic."], 
+    "W2":["SHRUB", "Small woody plant (categorically)."],
+    "W3":["CANADA", "Where you might find Mounties."],
+    "W4":["DESERT", "Dry sandy cactus home."],
+    "W5":["CARIBOU", "North American reindeer."],
+    "W6":["GLACIER", "A really, really big ice cube."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "GAMES";
+export const Puzzle_ThemeWord = "TUNDRA";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "CASTLE";
+export const Previous_Meso = "GAMES";
 
 // Exporting the puzzle author
-export const Puzzle_Author = "Wouter van den Berg"
+export const Puzzle_Author = "Sophie Reilly"
