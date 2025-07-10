@@ -1,7 +1,7 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
     "W1":["CALCULATE", "To work out a solution (usually with math)."], 
-    "W2":["OPPOSE", "To stand against or "],
+    "W2":["OPPOSE", "To stand against. ie. to ______"],
     "W3":["MEASURE", "What you might use a ruler for."],
     "W4":["KITCHEN", "The hearth of the home."],
     "W5":["TALLY", "A running count of stuff."],
