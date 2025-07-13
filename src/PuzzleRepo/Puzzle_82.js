@@ -1,13 +1,14 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["", ""], 
-    "W2":["", ""],
-    "W3":["", ""],
-    "W4":["", ""]
+    "W1":["PAJAMA", ""], 
+    "W2":["SLACKS", ""],
+    "W3":["JEANS", ""],
+    "W4":["SHORTS", ""],
+    "W5":["DRESS", ""]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "";
+export const Puzzle_ThemeWord = "PANTS";
 
 // Storing the previous meso for streak purposes
 export const Previous_Meso = "";

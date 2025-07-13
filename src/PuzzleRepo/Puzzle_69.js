@@ -2,7 +2,7 @@
 
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["HANDLE", "Generally pulled or twisted, not pushed."], 
+    "W1":["THRESHOLD", "On the brink of something. i.e. the _________"], 
     "W2":["LOCK", "Needs a key or a code."],
     "W3":["KNOB", "Twist to open or set volume."],
     "W4":["TRAP", "Hidden snare or pitfall."]
