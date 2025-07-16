@@ -1,13 +1,13 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["PERU", ""], 
-    "W2":["ROOT", ""],
-    "W3":["PLANT", ""],
-    "W4":["VODKA", ""],
-    "W5":["STARCH", ""],
-    "W6":["GNOCCHI", ""],
-    "W7":["IRELAND", ""],
-    "W8":["CHIPS", ""]
+    "W1":["PERU", "Lima land full of llamas."], 
+    "W2":["ROOT", "Math function or plant part."],
+    "W3":["PLANT", "Grows or manufactures."],
+    "W4":["VODKA", "Liquid courage, Slavic edition?"],
+    "W5":["STARCH", "Corn power-d thickener."],
+    "W6":["GNOCCHI", "Little carb-full pillows."],
+    "W7":["IRELAND", "Green isle with a rich history."],
+    "W8":["CHIPS", "Poker or edible varieties."]
 };
 
 // Storing the central theme word

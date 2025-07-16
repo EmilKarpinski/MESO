@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["PAJAMA", ""], 
-    "W2":["SLACKS", ""],
-    "W3":["JEANS", ""],
-    "W4":["SHORTS", ""],
-    "W5":["DRESS", ""]
+    "W1":["PAJAMA", "Nighttime attire."], 
+    "W2":["SLACKS", "Business casual bottoms."],
+    "W3":["JEANS", "Half a canadian tuxedo."],
+    "W4":["SHORTS", "Half-off pants!"],
+    "W5":["DRESS", "Flowy or fitted frock."]
 };
 
 // Storing the central theme word

@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["FLAME", ""], 
-    "W2":["IGNITE", ""],
-    "W3":["SPARK", ""],
-    "W4":["HEAT", ""]
+    "W1":["FLAME", "Torch bearer's burden."], 
+    "W2":["IGNITE", "Light up (a match or a movement)"],
+    "W3":["SPARK", "Electric or from striking rocks."],
+    "W4":["HEAT", "You might run in one during a race, or from them after a crime."]
 };
 
 // Storing the central theme word

@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["SKIRT", ""], 
-    "W2":["COSTUME", ""],
-    "W3":["BALLET", ""],
-    "W4":["UNITARD", ""]
+    "W1":["SKIRT", "Waist-bound garment for twirling "], 
+    "W2":["COSTUME", "Outfit for Halloween or the theater."],
+    "W3":["BALLET", "Dance on tiptoe."],
+    "W4":["UNITARD", "One-piece dancewear."]
 };
 
 // Storing the central theme word

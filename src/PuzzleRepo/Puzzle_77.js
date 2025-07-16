@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["SNOW", ""], 
-    "W2":["LUGE", ""],
-    "W3":["REINDEER", ""],
-    "W4":["DOGS", ""]
+    "W1":["SNOW", "White winter blanket."], 
+    "W2":["LUGE", "Icy Olympic thrill ride."],
+    "W3":["REINDEER", "Christmasy caribou."],
+    "W4":["DOGS", "Furry friends."]
 };
 
 // Storing the central theme word

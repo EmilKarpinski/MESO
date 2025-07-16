@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["BARITONE", ""], 
-    "W2":["ANGLER", ""],
-    "W3":["VOCALIST", ""],
-    "W4":["SOUND", ""]
+    "W1":["BARITONE", "Deep singing voice."], 
+    "W2":["ANGLER", "Hooked on the hobby?"],
+    "W3":["VOCALIST", "Preformer with biological pipes."],
+    "W4":["SOUND", "Noise or music."]
 };
 
 // Storing the central theme word

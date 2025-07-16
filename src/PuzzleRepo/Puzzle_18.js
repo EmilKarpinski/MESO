@@ -1,12 +1,12 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["HEATWAVE", ""], 
-    "W2":["SEASON", ""],
-    "W3":["HAIL", ""],
-    "W4":["LIGHTNING", ""],
-    "W5":["DROUGHT", ""],
-    "W6":["SUNSHINE", ""],
-    "W7":["RADAR", ""]
+    "W1":["HEATWAVE", "Sweltering streak."], 
+    "W2":["SEASON", "Quarter of a year."],
+    "W3":["HAIL", "Glacial pelleting pellets."],
+    "W4":["LIGHTNING", "Seen before it's heard."],
+    "W5":["DROUGHT", "Parched period."],
+    "W6":["SUNSHINE", "Ray of light or optimism."],
+    "W7":["RADAR", "Terrestrial sonar."]
 };
 
 // Storing the central theme word

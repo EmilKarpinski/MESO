@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["LEFT", ""], 
-    "W2":["SOCKS", ""],
-    "W3":["TOE", ""],
-    "W4":["WART", ""]
+    "W1":["LEFT", "Not right."], 
+    "W2":["SOCKS", "Often lost in the laundry."],
+    "W3":["TOE", "Needed to count past 10."],
+    "W4":["WART", "Hallmark of witches and toads."]
 };
 
 // Storing the central theme word
