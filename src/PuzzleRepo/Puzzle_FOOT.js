@@ -2,7 +2,7 @@
 export const Puzzle_Word_List = {
     "W1":["LEFT", "Not right."], 
     "W2":["SOCKS", "Often lost in the laundry."],
-    "W3":["TOE", "Needed to count past 10."],
+    "W3":["TOES", "Needed to count past 10."],
     "W4":["WART", "Hallmark of witches and toads."]
 };
 
