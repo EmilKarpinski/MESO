@@ -1,16 +1,16 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["SKIRT", "Waist-bound garment for twirling "], 
-    "W2":["COSTUME", "Outfit for Halloween or the theater."],
-    "W3":["BALLET", "Dance on tiptoe."],
-    "W4":["UNITARD", "One-piece dancewear."]
+    "W1":["FLAME", "Torch bearer's burden."], 
+    "W2":["IGNITE", "Light up (a match or a movement)"],
+    "W3":["SPARK", "Electric or from striking rocks."],
+    "W4":["HEAT", "You might run in one during a race, or from them after a crime."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "TUTU";
+export const Puzzle_ThemeWord = "FIRE";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "FOOT";
+export const Previous_Meso = "TUTU";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
