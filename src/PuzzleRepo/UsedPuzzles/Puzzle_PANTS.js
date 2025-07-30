@@ -3,7 +3,7 @@ export const Puzzle_Word_List = {
     "W1":["PAJAMA", "Nighttime attire."], 
     "W2":["SLACKS", "Business casual bottoms."],
     "W3":["JEANS", "Half a canadian tuxedo."],
-    "W4":["SHORTS", "Half-off pants!"],
+    "W4":["SHORTS", "Half-off bottoms!"],
     "W5":["DRESS", "Flowy or fitted frock."]
 };
 
