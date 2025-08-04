@@ -1,20 +1,21 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["FRINGE", "Alternative arts or English bangs."], 
-    "W2":["CONCERT", "A ticketed singing show."],
-    "W3":["MUSIC", "What a band produces, ideally."],
-    "W4":["OUTDOORS", "Hiker's habitat."],
-    "W5":["FAIR", "Place which might have rides and ribbons."],
-    "W6":["HARVEST", "Aka to reap what you've sown."],
-    "W7":["STAGE", "Where the actors play."],
-    "W8":["ANNUAL", "Once a year."]
+    "W1":["CEMETERY", "Where the dead lie in wait."], 
+    "W2":["GHOST", "Ethereal haunter."],
+    "W3":["ZOMBIE", "Undead with slow shuffle."],
+    "W4":["CATACOMBS", "Creepy corridors beneath between many old cities."],
+    "W5":["CASKET", "Graverobber's treasure chest."], 
+    "W6":["CRYPT", "Churh's burial chamber."],
+    "W7":["OBELISK", "Needle-like memorial."],
+    "W8":["MONUMENT", "Built to remember and honor of past events."],
+    "W9":["GRAVEYARD", "Final earthly home for everyone."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "FESTIVAL";
+export const Puzzle_ThemeWord = "TOMBSTONE";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "POTATOES";
+export const Previous_Meso = "FESTIVAL";
 
 // Exporting the puzzle author
-export const Puzzle_Author = "Sophie Reilly"
+export const Puzzle_Author = "Emil Karpinski";
