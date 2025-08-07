@@ -1,17 +1,17 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["CLUB", "Blunt instrument or gathering place for members."], 
-    "W2":["HEART", "Might be broken or skip a beat."],
-    "W3":["JOKER", "Class clown."],
-    "W4":["DIAMOND", "Found on rings or at baseball games."],
-    "W5":["SPADE", "Handheld gardening tool to dig."]
+    "W1":["OFFICE", "Where you go to work."], 
+    "W2":["COUCH", "Larger loveseat."],
+    "W3":["ARM", "Not your leg."],
+    "W4":["ROCKING", "_______ around the Christmas tree."],
+    "W5":["BOARD", "Surf_____ or _____walk"]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "CARDS";
+export const Puzzle_ThemeWord = "CHAIR";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "CAT";
+export const Previous_Meso = "CARDS";
 
 // Exporting the puzzle author
-export const Puzzle_Author = "Emil Karpinski";
+export const Puzzle_Author = "Sophie Reilly";
