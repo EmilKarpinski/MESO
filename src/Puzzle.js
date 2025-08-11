@@ -1,19 +1,16 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["BLACK", "Absence of light."], 
-    "W2":["BLUE", "Feeling down."],
-    "W3":["RASP", "Harsh grating noise."],
-    "W4":["STRAW", "Plastic or paper drinkware."],
-    "W5":["WILD","Where the ____ things are."],
-    "W6":["ELDER","Aged source of wisdom."],
-    "W7":["GOOSE","Known for honking and V formations. (Singular)"]
+    "W1":["CREAM", "Rises to the top."], 
+    "W2":["SKIM", "Remove from the surface to clean or enrich yourself."],
+    "W3":["WHOLE", "Unbroken or complete."],
+    "W4":["DRINK", "Take a swig."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "BERRIES";
+export const Puzzle_ThemeWord = "MILK";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "CHAIR";
+export const Previous_Meso = "BERRIES";
 
 // Exporting the puzzle author
-export const Puzzle_Author = "Sophie Reilly";
+export const Puzzle_Author = "Emil Karpinski";
