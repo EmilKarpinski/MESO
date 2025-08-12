@@ -1,16 +1,17 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["CREAM", "Rises to the top."], 
-    "W2":["SKIM", "Remove from the surface to clean or enrich yourself."],
-    "W3":["WHOLE", "Unbroken or complete."],
-    "W4":["DRINK", "Take a swig."]
+    "W1":["MELODY", "Catchy musical line."], 
+    "W2":["CHORUS", "Repeated section in a song."],
+    "W3":["SINGER", "Preformer witth pipes."],
+    "W4":["LYRICS", "Musical poetry."],
+    "W5":["ORCHESTRA", "Conductor's crew."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "MILK";
+export const Puzzle_ThemeWord = "MUSIC";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "BERRIES";
+export const Previous_Meso = "MILK";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
