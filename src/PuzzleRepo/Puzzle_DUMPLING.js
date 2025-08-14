@@ -1,13 +1,13 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["FRIED", ""], 
-    "W2":["DIMSUM", ""],
-    "W3":["SAMOSA", ""],
-    "W4":["WRAPPER", ""],
-    "W5":["FILLING", ""],
-    "W6":["PIEROGI", ""],
-    "W7":["EMPANADA", ""],
-    "W8":["GNOCCHI", ""]
+    "W1":["DIMSUM", "Assorted Chinese bites, often shared (2 words)."], 
+    "W2":["FUFU", "African starchy soup add-in."],
+    "W3":["SAMOSA", "Triangle-shaped Indian snack."],
+    "W4":["WRAPPER", "Edible casing."],
+    "W5":["FILLING", "e.g. Spiced meat or veggies."],
+    "W6":["PIEROGI", "Half-moon shaped Eastern European dough pockets."],
+    "W7":["EMPANADA", "Stuffed pastry found across Latin America."],
+    "W8":["GNOCCHI", "Pillowy pasta bites often served with sauce."]
 };
 
 // Storing the central theme word
