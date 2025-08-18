@@ -1,19 +1,16 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["DRUNK", "Sloshed or smashed."], 
-    "W2":["BAR", "Pub synonym."],
-    "W3":["LYRICS", "Singable script."],
-    "W4":["JAPAN", "Home of cherry blossoms and bullet trains."],
-    "W5":["SONG", "Something you might sing."],
-    "W6":["JUKEBOX", "Coin operated DJ."],
-    "W7":["CONCERT", "Show of harmony?"]
+    "W1":["CLOVER", "Four-leaf charm."], 
+    "W2":["FORTUNE", "Great wealth or luck."],
+    "W3":["CHANCE", "A random possibility."],
+    "W4":["FLUKE", "Unlikely success."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "KARAOKE";
+export const Puzzle_ThemeWord = "LUCK";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "DUMPLING";
+export const Previous_Meso = "KARAOKE";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
