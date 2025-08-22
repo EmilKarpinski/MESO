@@ -1,17 +1,16 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["PRESS", "Apply pressure."], 
-    "W2":["TRANSMIT", "Pass along a message, or a disease."],
-    "W3":["AUDIO", "Sound-only output."],
-    "W4":["AIR", "To vent or express something publically."],
-    "W5":["BROADCAST", "Widespread telecommunications."]
+    "W1":["POCKET", "Small place for loose change or keys."], 
+    "W2":["TOURNEY", "A short tournament (literally)."],
+    "W3":["PARLOR", "Old-timey social room."],
+    "W4":["TABLE", "A place for a meeting or to temporarily end a topic during that meeting."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "RADIO";
+export const Puzzle_ThemeWord = "POOL";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "CHOIR";
+export const Previous_Meso = "RADIO";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
