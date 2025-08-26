@@ -1,15 +1,16 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["ALMOND", "Main part of marzipan."], 
-    "W2":["BUTTER", "Spread that's churned."],
-    "W3":["PISTACHIO", "Flavor of gelator or baklava."]
+    "W1":["BULB", "Plant starter or source of light."], 
+    "W2":["SHADE", "Thrown by trees or tweets."],
+    "W3":["MOTH", "Fatally attracted to the light."],
+    "W4":["APPLIANCE", "Plugged in domestic device."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "NUT";
+export const Puzzle_ThemeWord = "LAMP";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "POOL";
+export const Previous_Meso = "NUT";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";

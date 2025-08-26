@@ -1,6 +1,6 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["BULB", "Plant starte or source of light."], 
+    "W1":["BULB", "Plant starter or source of light."], 
     "W2":["SHADE", "Thrown by trees or tweets."],
     "W3":["MOTH", "Fatally attracted to the light."],
     "W4":["APPLIANCE", "Plugged in domestic device."]
