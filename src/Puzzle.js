@@ -1,18 +1,16 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["SHAPE", "A geometric figure."], 
-    "W2":["EQUAL", "Fair and even."],
-    "W3":["CUBE", "e.g. Die, buildling block."],
-    "W4":["MATH", "Subject where you might have to count your mistakes."],
-    "W5":["AREA", "A measure of how much space something covers."],
-    "W6":["RECTANGLE","e.g. Domino, slab pizza."]
+    "W1":["POWER", "Enery or influence."], 
+    "W2":["INTERNET", "Needed to access the online world."],
+    "W3":["TELEGRAM", "Electric note from the old days."],
+    "W4":["COPPER", "Reddish metal, great conductor."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "SQUARE";
+export const Puzzle_ThemeWord = "WIRE";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "SALAD";
+export const Previous_Meso = "SQUARE";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
