@@ -1,18 +1,16 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["FUEL", "e.g. gasoline or coal."], 
-    "W2":["GREEN", "Color of leaves or nature."],
-    "W3":["POWER", "Capability to produce an effect."],
-    "W4":["WORK", "What you do (occupation or profession)."],
-    "W5":["GAS", "State of matter or pumped at a station."],
-    "W6":["CAPACITY", "Maximum volume."],    
+    "W1":["MONTH", "Usually contain 30 or 31."], 
+    "W2":["MINUTE", "Just a ______."],
+    "W3":["MILLENNIA", "We just finished two on the Gregorian calendar."],
+    "W4":["WEEK", "Seven days."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "ENERGY";
+export const Puzzle_ThemeWord = "TIME";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "WIRE";
+export const Previous_Meso = "ENERGY";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
