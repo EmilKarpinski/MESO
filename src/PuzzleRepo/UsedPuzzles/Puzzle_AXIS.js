@@ -3,7 +3,7 @@ export const Puzzle_Word_List = {
     "W1":["PARALLEL", "Never intersecting."], 
     "W2":["XY", "The two human sex chromosomes."],
     "W3":["POINT", "A singular spot or to indicate."],
-    "W4":["SLOPE", "An incline."]  
+    "W4":["SLOPE", "An incline."]
 };
 
 // Storing the central theme word
