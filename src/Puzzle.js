@@ -1,16 +1,15 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["PARALLEL", "Never intersecting."], 
-    "W2":["XY", "The two human sex chromosomes."],
-    "W3":["POINT", "A singular spot or to indicate."],
-    "W4":["SLOPE", "An incline."]
+    "W1":["DISCHARGE", "To let out or leaks out."], 
+    "W2":["STORY", "A narrative in words."],
+    "W3":["CURVE", "Gentle bend of test takers hope."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "AXIS";
+export const Puzzle_ThemeWord = "ARC";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "BILL";
+export const Previous_Meso = "AXIS";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
