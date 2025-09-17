@@ -1,15 +1,16 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["LARVA", "Grub-like baby."], 
-    "W2":["QUEEN", "Royal title or chess piece."],
-    "W3":["NEST", "Tree branch home."]  
+    "W1":["BOY", "Little dude."], 
+    "W2":["BIRTHDAY", "Once-a-year party."],
+    "W3":["BOTTLE", "Milk or beer container."],
+    "W4":["CRY", "Wail or sob."]    
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "ANT";
+export const Puzzle_ThemeWord = "BABY";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "OIL";
+export const Previous_Meso = "ANT";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
