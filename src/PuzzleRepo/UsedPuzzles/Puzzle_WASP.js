@@ -2,7 +2,7 @@
 export const Puzzle_Word_List = {
     "W1":["YELLOW", "Corn, sunflowers, and canaries."], 
     "W2":["JACKET", "Outerwear for humans or books."],
-    "W3":["STING", "Painful sting."],
+    "W3":["STING", "Painful prick or a bust."],
     "W4":["PEST", "Bothersome. A ____"]
 };
 
