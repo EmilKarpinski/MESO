@@ -1,16 +1,16 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["YELLOW", "Corn, sunflowers, and canaries."], 
-    "W2":["JACKET", "Outerwear for humans or books."],
-    "W3":["STING", "Painful prick or a bust."],
-    "W4":["PEST", "Bothersome. A ____"]
+    "W1":["EVENING", "Late greeting with good."], 
+    "W2":["REPORTER", "Gives an account of something or someone."],
+    "W3":["WEATHER", "External thermostat."],
+    "W4":["SPORTS", "Uniformed games."]    
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "WASP";
+export const Puzzle_ThemeWord = "NEWS";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "MOLE";
+export const Previous_Meso = "WASP";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
