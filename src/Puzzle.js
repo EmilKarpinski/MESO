@@ -1,16 +1,17 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["EVENING", "Late greeting with good."], 
-    "W2":["REPORTER", "Gives an account of something or someone."],
-    "W3":["WEATHER", "External thermostat."],
-    "W4":["SPORTS", "Uniformed games."]    
+    "W1":["PEDAL", "Speed foot contorller."], 
+    "W2":["WHITE", "Moves first on a chessboard."],
+    "W3":["BLACK", "Often paried against the above word."],
+    "W4":["GRAND", "Vast; amazing."],
+    "W5":["KEYBOARD", "Clacks when you type."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "NEWS";
+export const Puzzle_ThemeWord = "PIANO";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "WASP";
+export const Previous_Meso = "NEWS";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
