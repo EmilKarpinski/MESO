@@ -2,7 +2,7 @@
 export const Puzzle_Word_List = {
     "W1":["BIRD", "Nester."], 
     "W2":["ISLAND", "Surrounded territory."],
-    "W3":["NATURAL", "aka rganic or wild."],
+    "W3":["NATURAL", "aka organic or wild."],
     "W4":["LAW", "Authority and order."],
     "W5":["FINCH", "Small-beaked singer."],
     "W6":["EVOLUTION", "Pokemon progression."],

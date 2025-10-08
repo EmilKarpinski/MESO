@@ -3,7 +3,7 @@ export const Puzzle_Word_List = {
     "W1":["QUESTION", "Indicated by a raised hand."], 
     "W2":["PANEL", "Opinionated group."],
     "W3":["EXPERT", "Master of a subject."],
-    "W4":["QUOTE", "Contains these words."],
+    "W4":["QUOTE", "Contains specific words."],
     "W5":["PRESS", "News force or to apply pressure."],
     "W6":["VIDEO", "Watched not read."],
     "W7":["HIRE", "Bring on board."],

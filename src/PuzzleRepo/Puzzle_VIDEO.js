@@ -4,7 +4,7 @@ export const Puzzle_Word_List = {
     "W2":["FILM", "Thin Hollywood layer."],
     "W3":["MEDIA", "e.g. Radio and TV."],
     "W4":["PAUSE", "Brief break."],
-    "W5":["STOP", "Cease."],
+    "W5":["STOP", "Cease."]
 };
 
 // Storing the central theme word
