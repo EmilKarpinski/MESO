@@ -3,7 +3,7 @@ export const Puzzle_Word_List = {
     "W1":["BULLETIN", "Distributed notice."], 
     "W2":["WOOD", "Carpenter's material."],
     "W3":["PLANK", "Flat piece or abdominal exercise."],
-    "W4":["ENTER", "Proceed on in."],
+    "W4":["CHAIR", "Place to sit."],
     "W5":["CARD", "Paymnet plastic."]
 };
 
