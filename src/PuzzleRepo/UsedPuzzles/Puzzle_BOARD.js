@@ -4,7 +4,7 @@ export const Puzzle_Word_List = {
     "W2":["WOOD", "Carpenter's material."],
     "W3":["PLANK", "Flat piece or abdominal exercise."],
     "W4":["CHAIR", "Place to sit."],
-    "W5":["CARD", "Paymnet plastic."]
+    "W5":["CARD", "Payment plastic."]
 };
 
 // Storing the central theme word
