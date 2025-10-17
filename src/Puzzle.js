@@ -1,18 +1,18 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["FIND", "Item or action of discovery."], 
-    "W2":["ROCK", "also Rolls?"],
-    "W3":["DINOSAUR", "Only birds of this still exist."],
-    "W4":["JURASSIC", "First part of a famous predatory park."],
-    "W5":["ANIMAL", "Not a plant."],
-    "W6":["SHELL", "Hard home for a crab."],
+    "W1":["EGGS", "Laid and fried."], 
+    "W2":["BARGE", "Pushy entry."],
+    "W3":["BICEPS", "Two key arm muscles."],
+    "W4":["BEAUTY", "In the eye of the beholder."],
+    "W5":["BOOTS", "Winter footwear."],
+    "W6":["BRAWN", "Might over mind?"],
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "FOSSIL";
+export const Puzzle_ThemeWord = "GASTON";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "BOARD";
+export const Previous_Meso = "FOSSIL";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
