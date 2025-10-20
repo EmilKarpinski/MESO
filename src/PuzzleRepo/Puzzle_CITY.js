@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["COUNCIL", ""], 
-    "W2":["BULIDINGS", ""],
-    "W3":["STREETS", ""],
-    "W4":["MAYOR", ""]
+    "W1":["COUNCIL", "Local governing group."], 
+    "W2":["BUILDINGS", "Skyline structures."],
+    "W3":["STREETS", "Paved paths."],
+    "W4":["MAYOR", "Local leader."]
 };
 
 // Storing the central theme word

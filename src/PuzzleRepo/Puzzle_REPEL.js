@@ -1,10 +1,10 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["DRIVE", ""], 
-    "W2":["REMOVE", ""],
-    "W3":["STOP", ""],
-    "W4":["COUNTER", ""],
-    "W5":["BLOCK", ""]
+    "W1":["DRIVE", "Operate a car or boat."], 
+    "W2":["REMOVE", "Take away."],
+    "W3":["STOP", "'Freeze!'"],
+    "W4":["COUNTER", "Oppose or respond in kind."],
+    "W5":["BLOCK", "Obstruct passage."]
 };
 
 // Storing the central theme word

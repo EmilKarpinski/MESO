@@ -1,9 +1,9 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["PRESS", ""], 
-    "W2":["BULL", ""],
-    "W3":["SHOVE", ""],
-    "W4":["HIT", ""]
+    "W1":["PRESS", "Media collective."], 
+    "W2":["BULL", "A cow that would be difficult to get milk from."],
+    "W3":["SHOVE", "Move aside roughly."],
+    "W4":["HIT", "Chart-topper."]
 };
 
 // Storing the central theme word

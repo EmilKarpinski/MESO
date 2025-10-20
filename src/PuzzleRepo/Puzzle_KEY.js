@@ -1,13 +1,12 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["BOTTOM", "Lowest point."], 
-    "W2":["ARMY", "Rank and file."],
-    "W3":["POST", "Stick a notice or deliver it."],
-    "W4":["PLATE", "Dinner dish."]
+    "W1":["PADLOCK", "Might be used to secure a bike or shed."], 
+    "W2":["CODE", "Spoken secret phrase."],
+    "W3":["ENTRY", "An opening."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "BASE";
+export const Puzzle_ThemeWord = "KEY";
 
 // Storing the previous meso for streak purposes
 export const Previous_Meso = "";
