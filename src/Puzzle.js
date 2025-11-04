@@ -1,17 +1,15 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["PROBLEMS", "Things to be solved."], 
-    "W2":["PRACTICE", "Repetition repitition."],
-    "W3":["SUBJECT", "A topic or field of study."],
-    "W4":["READ", "A fun activity before bed."],
-    "W5":["ANALYZE", "Look for patterns/answers."]
+    "W1":["PADLOCK", "Might be used to secure a bike or shed."], 
+    "W2":["CODE", "Spoken secret phrase."],
+    "W3":["ENTRY", "An opening."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "STUDY";
+export const Puzzle_ThemeWord = "KEY";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "PUSH";
+export const Previous_Meso = "STUDY";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
