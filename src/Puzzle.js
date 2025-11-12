@@ -1,17 +1,15 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["SODA", "Fizzy can."], 
-    "W2":["SYRUP", "Sweet arborial treat."],
-    "W3":["HIGH", "Elevated in mood."],
-    "W4":["CANDY", "Wrapped delight."],
-    "W5":["ICECREAM", "Coned comfort. (2 words)"]
+    "W1":["PUBLIC", "Open to all."], 
+    "W2":["ROUTE", "Path to a destination."],
+    "W3":["STATION", "Start, stop, or waypoint structure."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "SUGAR";
+export const Puzzle_ThemeWord = "BUS";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "HAT";
+export const Previous_Meso = "SUGAR";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
