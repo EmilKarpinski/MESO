@@ -1,18 +1,16 @@
 // Storing the puzzle information (words and clues for export)
 export const Puzzle_Word_List = {
-    "W1":["THIGH", "Upper leg portion."], 
-    "W2":["STUFFED", "Too full."],
-    "W3":["ROAST", "Oven-cooked."],
-    "W4":["DRUMSTICK", "Piece with a handle."],
-    "W5":["MEAL", "Described by a menu."],
-    "W6":["POULTRY", "Edible feathered friends."]
+    "W1":["SOW", "Scatter in a field."], 
+    "W2":["GERMINATE", "Sprout."],
+    "W3":["FARMER", "Rural producer."],
+    "W4":["FUND", "Pot of money set aside for various purposes."]
 };
 
 // Storing the central theme word
-export const Puzzle_ThemeWord = "TURKEY";
+export const Puzzle_ThemeWord = "SEED";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "BRICK";
+export const Previous_Meso = "TURKEY";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";

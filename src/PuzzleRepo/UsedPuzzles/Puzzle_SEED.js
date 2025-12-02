@@ -10,7 +10,7 @@ export const Puzzle_Word_List = {
 export const Puzzle_ThemeWord = "SEED";
 
 // Storing the previous meso for streak purposes
-export const Previous_Meso = "CONSUME";
+export const Previous_Meso = "TURKEY";
 
 // Exporting the puzzle author
 export const Puzzle_Author = "Emil Karpinski";
